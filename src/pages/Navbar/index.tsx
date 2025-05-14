@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import peidiLogo from '../assets/peidi.webp';
+import peidiLogo from '../../assets/peidi.webp';
 import { Link } from 'react-router-dom';
 
 const menu = [
