@@ -1,6 +1,7 @@
 import Navbar from './pages/Navbar'
 import { BrowserRouter } from 'react-router-dom'
-import AppRouter from './router'
+import AppRouter from './router';
+import { useEffect } from 'react';
 
 export default function App() {
   return (
