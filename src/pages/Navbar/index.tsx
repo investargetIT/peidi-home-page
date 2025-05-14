@@ -62,12 +62,13 @@ export default function Navbar() {
         </div>
         {/* 菜单 */}
         <div className="md:flex flex-1 items-center">
-          <div className="flex flex-nowrap space-x-4">
+          <div className="flex flex-nowrap gap-x-4">
             {menu.slice(0, -1).map((item) =>
               item.children ? (
                 <div key={item.name} className="relative group">
                   <button
-                    className="px-2 py-1 rounded font-medium text-base hover:text-blue-200 transition-colors flex items-center"
+                    className="px-2 py-1 rounded font-medium text-base text-white whitespace-nowrap bg-transparent hover:text-blue-200 transition-colors flex items-center"
+                    style={{ background: 'transparent', color: '#fff' }}
                     onMouseEnter={() => setOpenDropdown(item.name)}
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
@@ -95,7 +96,8 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   to={item.link}
-                  className="px-2 py-1 rounded font-medium text-base hover:text-blue-200 transition-colors"
+                  className="px-2 py-1 rounded font-medium text-base hover:text-blue-200 transition-colors whitespace-nowrap"
+                  style={{ color: '#fff' }}
                 >
                   {item.name}
                 </Link>
