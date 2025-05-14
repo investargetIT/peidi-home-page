@@ -5,11 +5,11 @@ import AppRouter from './router'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-100 pt-16">
+      <div className="min-h-screen min-w-screen bg-gray-100 pt-12 w-full">
         <Navbar />
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <main className="max-w-7xl mx-auto px-4 py-8">
           <AppRouter />
-        </div>
+        </main>
       </div>
     </BrowserRouter>
   )
