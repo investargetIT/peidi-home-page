@@ -6,30 +6,37 @@ const menu = [
   {
     name: '关于佩蒂',
     children: [
-      { name: '公司简介', link: '/about/profile' },
-      { name: '发展历程', link: '/about/history' },
-      { name: '企业文化', link: '/about/culture' },
+      { name: '企业理念', link: '/pages/corporate-philosophy' },
+      { name: '企业文化', link: '/pages/company-culture' },
+      { name: '发展历程', link: '/pages/development-path' },
+      { name: '集团架构', link: '/pages/group-structure' },
     ],
   },
   {
     name: 'OEM/ODM 业务',
     children: [
-      { name: 'OEM介绍', link: '/oem/intro' },
-      { name: 'ODM介绍', link: '/odm/intro' },
+      { name: '生产基地', link: '/pages/production-base' },
+      { name: '生产能力', link: '/pages/production-capacity' },
+      { name: '研发能力', link: '/pages/r-d-capabilities' },
+      { name: '质量管理', link: '/pages/quality-control' },
+      { name: '订单流程', link: '/pages/order-process' },
+      { name: '产品中心', link: '/pages/product-center' },
     ],
   },
   {
     name: '品牌产品',
     children: [
-      { name: '狗产品', link: '/products/dog' },
-      { name: '猫产品', link: '/products/cat' },
+      { name: '爵宴', link: '/collection/meatyway' },
+      { name: '好适嘉', link: 'collection/health' },
+      { name: '齿能', link: '/collection/chewnergy' },
+      { name: 'SmartBones', link: '/collection/smartbones' },
     ],
   },
   {
     name: '新闻中心',
     children: [
-      { name: '公司新闻', link: '/news/company' },
-      { name: '行业新闻', link: '/news/industry' },
+      { name: '企业新闻', link: '/blogs/news' },
+      { name: '视频', link: '/pages/video' },
     ],
   },
   { name: '联系我们', link: '/contact' },
