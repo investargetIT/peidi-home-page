@@ -1,47 +1,7 @@
 import React, { useState } from 'react';
 import peidiLogo from '@/assets/peidi.webp';
 import { Link } from 'react-router-dom';
-
-const menu = [
-  { name: '首页', link: '/' },
-  {
-    name: '关于佩蒂',
-    children: [
-      { name: '企业理念', link: '/pages/corporate-philosophy' },
-      { name: '企业文化', link: '/pages/company-culture' },
-      { name: '发展历程', link: '/pages/development-path' },
-      { name: '集团架构', link: '/pages/group-structure' },
-    ],
-  },
-  {
-    name: 'OEM/ODM 业务',
-    children: [
-      { name: '生产基地', link: '/pages/production-base' },
-      { name: '生产能力', link: '/pages/production-capacity' },
-      { name: '研发能力', link: '/pages/r-d-capabilities' },
-      { name: '质量管理', link: '/pages/quality-control' },
-      { name: '订单流程', link: '/pages/order-process' },
-      { name: '产品中心', link: '/pages/product-center' },
-    ],
-  },
-  {
-    name: '品牌产品',
-    children: [
-      { name: '爵宴', link: '/collection/meatyway' },
-      { name: '好适嘉', link: 'collection/health' },
-      { name: '齿能', link: '/collection/chewnergy' },
-      { name: 'SmartBones', link: '/collection/smartbones' },
-    ],
-  },
-  {
-    name: '新闻中心',
-    children: [
-      { name: '企业新闻', link: '/blogs/news' },
-      { name: '视频', link: '/pages/video' },
-    ],
-  },
-  { name: '联系我们', link: '/contact-us' },
-];
+import { menu } from '@/constants';
 
 const languages = [
   { label: '中文简体', value: 'zh' },

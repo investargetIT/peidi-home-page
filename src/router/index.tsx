@@ -15,6 +15,7 @@ import QualityControl from '../pages/OEM/QualityControl';
 import OrderProcess from '../pages/OEM/OrderProcess';
 import ProductCenter from '../pages/OEM/ProductCenter';
 // 品牌产品
+import AllProducts from '../pages/Collection/AllProducts';
 import Meatyway from '../pages/Collection/Meatyway';
 import Health from '../pages/Collection/Health';
 import Chewnergy from '../pages/Collection/Chewnergy';
@@ -42,6 +43,7 @@ export default function AppRouter() {
       <Route path="/pages/order-process" element={<OrderProcess />} />
       <Route path="/pages/product-center" element={<ProductCenter />} />
       {/* 品牌产品 */}
+      <Route path="/products" element={<AllProducts />} />
       <Route path="/collection/meatyway" element={<Meatyway />} />
       <Route path="/collection/health" element={<Health />} />
       <Route path="/collection/chewnergy" element={<Chewnergy />} />
