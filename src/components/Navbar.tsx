@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import peidiLogo from '../assets/peidi.webp';
+import { Link } from 'react-router-dom';
 
 const menu = [
   { name: '首页', link: '/' },
@@ -39,7 +40,7 @@ const menu = [
       { name: '视频', link: '/pages/video' },
     ],
   },
-  { name: '联系我们', link: '/contact' },
+  { name: '联系我们', link: '/contact-us' },
 ];
 
 const languages = [
@@ -79,24 +80,25 @@ export default function Navbar() {
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
                     {item.children.map((sub) => (
-                      <a
+                      <Link
                         key={sub.name}
-                        href={sub.link}
+                        to={sub.link}
                         className="block px-4 py-1 hover:text-blue-200 text-sm"
+                        onClick={() => setOpenDropdown(null)}
                       >
                         {sub.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               ) : (
-                <a
+                <Link
                   key={item.name}
-                  href={item.link}
+                  to={item.link}
                   className="px-2 py-1 rounded font-medium text-base hover:text-blue-200 transition-colors"
                 >
                   {item.name}
-                </a>
+                </Link>
               )
             )}
           </div>
@@ -144,25 +146,27 @@ export default function Navbar() {
                 {openDropdown === item.name && (
                   <div className="pl-4">
                     {item.children.map((sub) => (
-                      <a
+                      <Link
                         key={sub.name}
-                        href={sub.link}
+                        to={sub.link}
                         className="block px-4 py-2 hover:bg-blue-100 text-white text-base"
+                        onClick={() => setMobileOpen(false)}
                       >
                         {sub.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ) : (
-              <a
+              <Link
                 key={item.name}
-                href={item.link}
+                to={item.link}
                 className="block px-4 py-2 rounded hover:bg-[#1856a3] text-base font-medium"
+                onClick={() => setMobileOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             )
           )}
           {/* Language Switch */}
@@ -181,7 +185,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* 联系我们按钮 */}
-          <a href="/contact" className="block mt-2 px-5 py-2 border border-white rounded bg-white text-[#0a3c7d] hover:bg-[#0a3c7d] hover:text-white transition text-center text-base font-semibold">联系我们</a>
+          <Link to="/contact" className="block mt-2 px-5 py-2 border border-white rounded bg-white text-[#0a3c7d] hover:bg-[#0a3c7d] hover:text-white transition text-center text-base font-semibold" onClick={() => setMobileOpen(false)}>联系我们</Link>
         </div>
       )}
     </nav>
