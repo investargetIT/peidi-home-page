@@ -107,13 +107,9 @@ export default function Navbar() {
         <div className="md:flex items-center space-x-2 ml-8">
           {/* 语言切换 */}
           <div className="relative group"><button className="flex items-center px-2 py-1 rounded hover:bg-[#1856a3]"><svg className="w-4 h-4 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeWidth="2" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" /></svg><span className="mr-1 text-sm text-white font-medium">{languages.find(l => l.value === lang)?.label}</span><svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></button><div className="absolute right-0 mt-1 w-24 bg-[#0a3c7d] text-white rounded-sm z-20 hidden group-hover:block">{languages.map(l => (<button key={l.value} onClick={() => setLang(l.value)} className="block w-full text-left px-4 py-1 hover:text-blue-200 text-sm">{l.label}</button>))}</div></div>
-          {/* 搜索icon */}
-          <button className="p-1 rounded hover:bg-[#1856a3]">
-            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" strokeWidth="2" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-2-2" /></svg>
-          </button>
           {/* 联系我们按钮 */}
           <a
-            href="/contact"
+            href="/contact-us"
             className="ml-2 px-4 py-1 rounded bg-white text-[#0a3c7d] hover:bg-[#0a3c7d] hover:text-white transition text-sm font-semibold"
             style={{ minWidth: '90px', textAlign: 'center' }}
           >
@@ -185,7 +181,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* 联系我们按钮 */}
-          <Link to="/contact" className="block mt-2 px-5 py-2 border border-white rounded bg-white text-[#0a3c7d] hover:bg-[#0a3c7d] hover:text-white transition text-center text-base font-semibold" onClick={() => setMobileOpen(false)}>联系我们</Link>
+          <Link to="/contact-us" className="block mt-2 px-5 py-2 border border-white rounded bg-white text-[#0a3c7d] hover:bg-[#0a3c7d] hover:text-white transition text-center text-base font-semibold" onClick={() => setMobileOpen(false)}>联系我们</Link>
         </div>
       )}
     </nav>
