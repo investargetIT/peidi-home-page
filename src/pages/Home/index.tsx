@@ -27,10 +27,12 @@ export default function Home() {
     </div>
     <div className="brand-tip-icon-wrapper">
       <div className="brand-tip-icon-container">
-        <img src={ChewIcon} alt="chew" className="brand-tip-icon" />
-        <img src={HealthIcon} alt="health" className="brand-tip-icon" />
+        <div></div>
         <img src={MeatIcon} alt="meat" className="brand-tip-icon" />
+        <img src={HealthIcon} alt="health" className="brand-tip-icon" />
+        <img src={ChewIcon} alt="chew" className="brand-tip-icon" />
         <img src={SmartIcon} alt="smart" className="brand-tip-icon" />
+        <div></div>
       </div>
 
     </div>
