@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import BannerBg from './images/banner.webp';
 import './index.less';
 export default function Home() {
@@ -8,8 +9,8 @@ export default function Home() {
       <div className="bg-tip-content">
         用全球好产品推动宠物健康标准升级
       </div>
-      <div className="bg-tip-btn">
-        了解更多
+      <div className="bg-tip-btn-container">
+        <Button className="bg-tip-btn" type="primary">了解更多</Button>
       </div>
     </div>
   </div>;
