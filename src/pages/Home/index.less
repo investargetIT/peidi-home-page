@@ -29,17 +29,7 @@
       align-items: flex-start;
     }
 
-    @media (min-width: 769px) {
-      .banner-tip-content {
-        font-size: var(--pad-font-size);
-      }
-    }
 
-    @media (min-width: 1321px) {
-      .banner-tip-content {
-        font-size: var(--pc-font-size);
-      }
-    }
 
     .banner-tip-btn-container {
       margin-top: 40px;
@@ -63,36 +53,12 @@
   }
 }
 
-@media (min-width: 1px) {
-
-  .banner-tip-btn {
-    padding-top: 11px;
-    padding-bottom: 11px;
-    font-size: 14px;
-    padding-inline-start: 12px;
-    padding-inline-end: 12px;
-  }
-}
-
-@media (min-width: 769px) {
-  .banner-tip-btn-container {
-    margin-top: 40px;
-    gap: 32px;
-  }
-
-  .banner-tip-btn {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    font-size: 16px;
-    padding-inline-start: 36px;
-    padding-inline-end: 36px;
-  }
-}
-
 .brand-tip-wrapper {
   background-color: #fff;
   padding-left: 24px;
   padding-right: 24px;
+  padding-top: 40px;
+  padding-bottom: 16px;
 
   .brand-tip-container {
     display: flex;
@@ -103,5 +69,92 @@
     .brand-tip-title {
       font-size: 16px;
     }
+
+    .brand-tip-subtitle {
+      font-size: 48px;
+      margin-top: 32px;
+      color: #222;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .brand-tip-content {
+      margin-top: 16px;
+      font-size: 16px;
+      color: #888;
+      line-height: 1.8;
+      padding-top: 16px;
+      padding-bottom: 0px;
+      padding-left: 250px;
+      padding-right: 250px;
+    }
+  }
+}
+
+
+
+
+@media (min-width: 1px) {
+  .banner-tip-btn {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 14px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+  }
+
+  .brand-tip-title {
+    font-size: 12px !important;
+  }
+
+  .brand-tip-subtitle {
+    font-size: 24px !important;
+  }
+
+  .brand-tip-content {
+    font-size: 14px !important;
+    padding-inline: 10px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .banner-tip-btn-container {
+    margin-top: 40px;
+    gap: 32px;
+  }
+
+  .banner-tip-content {
+    font-size: var(--pad-font-size);
+  }
+
+  .banner-tip-btn {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 16px;
+    padding-inline-start: 36px;
+    padding-inline-end: 36px;
+  }
+
+  .brand-tip-title {
+    font-size: 12px !important;
+  }
+
+  .brand-tip-content {
+    font-size: 14px !important;
+  }
+}
+
+
+@media (min-width: 1321px) {
+  .banner-tip-content {
+    font-size: var(--pc-font-size);
+  }
+
+  .brand-tip-title {
+    font-size: 14px !important;
+  }
+
+  .brand-tip-subtitle {
+    font-size: 48px !important;
   }
 }
