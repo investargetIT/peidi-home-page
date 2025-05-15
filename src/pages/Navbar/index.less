@@ -1,0 +1,52 @@
+.headerContainer {
+  transition: 0.4s ease-in;
+  min-height: 74px;
+  background-color: rgb(9, 52, 139);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .headerContent {
+    --max-width: 1280px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    .imgContainer {
+      width: 105px;
+      height: 35px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .menuContainer {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin: 0 48px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      .menuItem {
+        cursor: pointer;
+
+        a {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+
+  // @media (min-width: 769px) {
+  //   .sa-container-auto___gBhJv {
+  //     -webkit-padding-start: 24px;
+  //     padding-inline-start: 24px;
+  //     -webkit-padding-end: 24px;
+  //     padding-inline-end: 24px;
+  //   }
+  // }
+}

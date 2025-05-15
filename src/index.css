@@ -1,3 +1,4 @@
+@import "../global.less";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,6 +16,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* 全局自定义变量 */
+  --mm-font-size: 32px;
+  --pad-font-size: 44px;
+  --pc-font-size: 56px;
+  --font-color: #ffffff;
+  --max-line: 0;
+  --text-decorate: unset;
+  --line-height: 1.2;
+  --font-weight: bold;
+  --letter-spacing: 0px;
+  --font-family: Inter;
+  --text-align: inherit;
+  --main-overflow: visible;
 }
 
 a {

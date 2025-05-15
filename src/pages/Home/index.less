@@ -1,0 +1,40 @@
+.home-banner-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .home-banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: transparent;
+  }
+
+  .bg-tip-container {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    // transform: translate(-50%, -50%);
+
+    .bg-tip-content {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      word-wrap: break-word;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 769px) {
+      .bg-tip-content {
+        font-size: var(--pad-font-size);
+      }
+    }
+
+    @media (min-width: 1321px) {
+      .bg-tip-content {
+        font-size: var(--pc-font-size);
+      }
+    }
+  }
+}
