@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // 首页
 import Home from '../pages/Home';
@@ -25,6 +24,10 @@ import Contact from '../pages/Contact';
 // 新闻中心
 import News from '../pages/NewsCenter/News';
 import Video from '../pages/NewsCenter/Video';
+// 投资关系
+import InvestorRelations from '../pages/InvestorRelations';
+// 全球行业业务
+import GlobalBusiness from '../pages/GlobalBusiness';
 
 export default function AppRouter() {
   return (
@@ -53,6 +56,10 @@ export default function AppRouter() {
       <Route path="/blogs/video" element={<Video />} />
       {/* 联系我们 */}
       <Route path="/contact-us" element={<Contact />} />
+      {/* 投资关系 */}
+      <Route path="/investor-relations" element={<InvestorRelations />} />
+      {/* 全球行业业务 */}
+      <Route path="/global-industry-business" element={<GlobalBusiness />} />
     </Routes>
   );
 } 
