@@ -3,10 +3,10 @@
  * 展示公司全球各地工厂的轮播图和详细信息
  */
 import { useState, useEffect } from 'react';
-import FactoryWenzhou from '../images/factory-wenzhou.webp';
-import FactoryVietnam from '../images/factory-vietnam.webp';
-import FactoryCambodia from '../images/factory-cambodia.webp';
-import FactoryNewZealand from '../images/factory-new-zealand.webp';
+import FactoryWenzhou from './images/factory-wenzhou.webp';
+import FactoryVietnam from './images/factory-vietnam.webp';
+import FactoryCambodia from './images/factory-cambodia.webp';
+import FactoryNewZealand from './images/factory-new-zealand.webp';
 import './index.less';
 
 export default function FactoryShowcase() {
