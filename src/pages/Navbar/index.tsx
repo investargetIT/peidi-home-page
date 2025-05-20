@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* 菜单 */}
           <div className="navbar-menu">
             <div className="navbar-menu-items">
-              {menu.slice(0, -1).map((item: MenuItem) =>
+              {menu.map((item: MenuItem) =>
                 item.children ? (
                   <div key={item.name} className="navbar-dropdown">
                     <button
