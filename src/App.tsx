@@ -37,7 +37,7 @@ export default function App() {
       <TitleUpdater />
       <div className="min-h-screen min-w-screen bg-gray-100 pt-12 w-full flex flex-col">
         <Navbar />
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <main className="w-full py-8">
           <AppRouter />
         </main>
       </div>
