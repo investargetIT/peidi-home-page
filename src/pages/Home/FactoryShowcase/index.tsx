@@ -1,3 +1,7 @@
+/**
+ * 工厂展示组件
+ * 展示公司全球各地工厂的轮播图和详细信息
+ */
 import { useState, useEffect } from 'react';
 import FactoryWenzhou from '../images/factory-wenzhou.webp';
 import FactoryVietnam from '../images/factory-vietnam.webp';
@@ -6,8 +10,10 @@ import FactoryNewZealand from '../images/factory-new-zealand.webp';
 import './index.less';
 
 export default function FactoryShowcase() {
+  // 当前活动轮播项的索引
   const [activeSlide, setActiveSlide] = useState(0);
 
+  // 工厂图片和信息数据
   const factoryImages = [
     {
       src: FactoryWenzhou, alt: "中国温州生产基地", config: [
@@ -63,6 +69,7 @@ export default function FactoryShowcase() {
     },
   ];
 
+  // 设置自动轮播效果
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % factoryImages.length);
@@ -70,6 +77,7 @@ export default function FactoryShowcase() {
     return () => clearInterval(interval);
   }, [factoryImages.length]);
 
+  // 处理指示器点击事件
   const handleIndicatorClick = (index: number): void => {
     setActiveSlide(index);
   };
@@ -77,8 +85,12 @@ export default function FactoryShowcase() {
   return (
     <div className="factory-showcase-wrapper">
       <div className="factory-showcase-container">
+        {/* 工厂信息左侧区域 */}
         <div className="factory-showcase-left">
+          {/* 工厂标题 */}
           <h2 className="factory-showcase-title">{factoryImages[activeSlide].alt}</h2>
+
+          {/* 工厂详细信息内容 */}
           <div className="factory-showcase-content">
             <ul className="factory-showcase-list">
               {factoryImages[activeSlide].config.map((item, itemIndex) => (
@@ -92,8 +104,11 @@ export default function FactoryShowcase() {
             </ul>
           </div>
         </div>
+
+        {/* 工厂图片右侧区域 */}
         <div className="factory-showcase-right">
           <div className="factory-showcase-carousel">
+            {/* 轮播图片容器 */}
             <div className="factory-showcase-slides">
               {factoryImages.map((image, index) => (
                 <img
@@ -104,6 +119,8 @@ export default function FactoryShowcase() {
                 />
               ))}
             </div>
+
+            {/* 轮播指示器 */}
             <div className="factory-showcase-indicators">
               {factoryImages.map((_, index) => (
                 <span

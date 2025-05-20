@@ -1,9 +1,14 @@
+/**
+ * 页脚导航组件
+ * 展示网站底部的导航链接区域
+ */
 import './index.less';
 
 export default function FooterNav() {
   return (
     <div className="footer-nav-wrapper">
       <div className="footer-nav-container">
+        {/* 佩蒂创新导航栏 */}
         <div className="footer-nav-column">
           <h3 className="footer-nav-title">佩蒂创新</h3>
           <ul className="footer-nav-links">
@@ -15,6 +20,8 @@ export default function FooterNav() {
             <li><a href="#">产品中心</a></li>
           </ul>
         </div>
+
+        {/* 主菜单导航栏 */}
         <div className="footer-nav-column">
           <h3 className="footer-nav-title">主菜单</h3>
           <ul className="footer-nav-links">
@@ -25,6 +32,8 @@ export default function FooterNav() {
             <li><a href="#">联系我们</a></li>
           </ul>
         </div>
+
+        {/* 品牌产品导航栏 */}
         <div className="footer-nav-column">
           <h3 className="footer-nav-title">品牌产品</h3>
           <ul className="footer-nav-links">
