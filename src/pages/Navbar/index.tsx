@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import peidiLogo from '@/assets/peidi.webp';
 import { Link } from 'react-router-dom';
-import { menu } from '@/constants';
+import { menu } from '../../constants';
 import './index.less';
 
 // 添加类型定义
-interface MenuItem {
-  name: string;
-  link: string;
-  children?: SubMenuItem[];
-}
-
 interface SubMenuItem {
   name: string;
   link: string;
+  title: string;
+}
+
+interface MenuItem {
+  name: string;
+  link?: string;
+  title?: string;
+  children?: SubMenuItem[];
 }
 
 const languages = [
@@ -70,7 +72,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     key={item.name}
-                    to={item.link}
+                    to={item.link || '/'}
                     className="navbar-link"
                   >
                     {item.name}
@@ -161,7 +163,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   key={item.name}
-                  to={item.link}
+                  to={item.link || '/'}
                   className="mobile-menu-item"
                   onClick={() => setMobileOpen(false)}
                 >
