@@ -1,4 +1,5 @@
 import { Button } from 'antd';
+import { useState, useEffect } from 'react';
 import BannerBg from './images/banner.webp';
 import ChewIcon from './images/chew.webp';
 import HealthIcon from './images/health.webp';
@@ -8,8 +9,32 @@ import ConceptIcon from './images/concept.webp';
 import CoreIcon from './images/core.webp';
 import MissionIcon from './images/mission.webp';
 import VisionIcon from './images/vision.webp';
+import FactoryWenzhou from './images/factory-wenzhou.webp';
+import FactoryVietnam from './images/factory-vietnam.webp';
+import FactoryCambodia from './images/factory-cambodia.webp';
+import FactoryNewZealand from './images/factory-new-zealand.webp';
 import './index.less';
+
 export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const factoryImages = [
+    { src: FactoryWenzhou, alt: "温州工厂" },
+    { src: FactoryVietnam, alt: "越南工厂" },
+    { src: FactoryCambodia, alt: "柬埔寨工厂" },
+    { src: FactoryNewZealand, alt: "新西兰工厂" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % factoryImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [factoryImages.length]);
+
+  const handleIndicatorClick = (index) => {
+    setActiveSlide(index);
+  };
+
   return <>
     <div className="home-banner-container">
       <img src={BannerBg} alt="banner" className="home-banner-banner" />
@@ -31,12 +56,18 @@ export default function Home() {
     </div>
     <div className="brand-tip-icon-wrapper">
       <div className="brand-tip-icon-container">
-        <div></div>
-        <img src={MeatIcon} alt="meat" className="brand-tip-icon" />
-        <img src={HealthIcon} alt="health" className="brand-tip-icon" />
-        <img src={ChewIcon} alt="chew" className="brand-tip-icon" />
-        <img src={SmartIcon} alt="smart" className="brand-tip-icon" />
-        <div></div>
+        <div className="brand-tip-icon-item">
+          <img src={MeatIcon} alt="meat" className="brand-tip-icon" />
+        </div>
+        <div className="brand-tip-icon-item">
+          <img src={HealthIcon} alt="health" className="brand-tip-icon" />
+        </div>
+        <div className="brand-tip-icon-item">
+          <img src={ChewIcon} alt="chew" className="brand-tip-icon" />
+        </div>
+        <div className="brand-tip-icon-item">
+          <img src={SmartIcon} alt="smart" className="brand-tip-icon" />
+        </div>
       </div>
     </div>
     <div className="brand-about-us-wrapper">
@@ -56,28 +87,26 @@ export default function Home() {
     </div>
     <div className="brand-culture-icon-wrapper">
       <div className="brand-culture-icon-container">
-        <div></div>
-        <div className="brand-culture-icon-item">
-          <img src={ConceptIcon} alt="concept" className="brand-tip-icon" />
-          <div className="brand-culture -icon-item-title">愿景</div>
-          <div className="brand-culture-icon-item-content">成为人宠和谐健康生态卓越建设者</div>
+        <div className="brand-culture-item">
+          <img src={ConceptIcon} alt="concept" className="brand-culture-icon" />
+          <div className="brand-culture-title">愿景</div>
+          <div className="brand-culture-desc">成为人宠和谐健康生态卓越建设者</div>
         </div>
-        <div className="brand-culture-icon-item">
-          <img src={CoreIcon} alt="core" className="brand-tip-icon" />
-          <div className="brand-culture-icon-item-title">理念</div>
-          <div className="brand-culture-icon-item-content">诚信、创新、发展</div>
+        <div className="brand-culture-item">
+          <img src={CoreIcon} alt="core" className="brand-culture-icon" />
+          <div className="brand-culture-title">理念</div>
+          <div className="brand-culture-desc">诚信、创新、发展</div>
         </div>
-        <div className="brand-culture-icon-item">
-          <img src={MissionIcon} alt="mission" className="brand-tip-icon" />
-          <div className="brand-culture-icon-item-title">核心价值观</div>
-          <div className="brand-culture-icon-item-content">阳光、保鲜、担当、靠谱</div>
+        <div className="brand-culture-item">
+          <img src={MissionIcon} alt="mission" className="brand-culture-icon" />
+          <div className="brand-culture-title">核心价值观</div>
+          <div className="brand-culture-desc">阳光、保鲜、担当、靠谱</div>
         </div>
-        <div className="brand-culture-icon-item">
-          <img src={VisionIcon} alt="vision" className="brand-tip-icon" />
-          <div className="brand-culture-icon-item-title">使命</div>
-          <div className="brand-culture-icon-item-content">用全球好产品推动宠物健康标准升级</div>
+        <div className="brand-culture-item">
+          <img src={VisionIcon} alt="vision" className="brand-culture-icon" />
+          <div className="brand-culture-title">使命</div>
+          <div className="brand-culture-desc">用全球好产品推动宠物健康标准升级</div>
         </div>
-        <div></div>
       </div>
     </div>
     <div className="brand-factory-wrapper">
@@ -86,6 +115,58 @@ export default function Home() {
         <div className="brand-factory-content">佩蒂的生产基地遍布中国、越南、柬埔寨、新西兰等全球多个国家，获评国家高新技术企业、浙江省级高新技术企业研发中心、浙江省省级企业研究院、温州市博士创新工作站，有效专利57个，3个国际发明专利、8个国家发明专利。</div>
         <div className="brand-factory-btn-container">
           <Button className="brand-factory-btn" type="primary">了解更多</Button>
+        </div>
+      </div>
+    </div>
+    <div className="factory-showcase-wrapper">
+      <div className="factory-showcase-container">
+        <div className="factory-showcase-left">
+          <h2 className="factory-showcase-title">中国温州生产基地</h2>
+          <div className="factory-showcase-content">
+            <ul className="factory-showcase-list">
+              <li>
+                <span className="factory-showcase-bullet">•</span>
+                <div className="factory-showcase-text">
+                  <strong>工厂概况：</strong>温州微零工厂于2002年正式成立，占地面积约33000平方米，目前拥有9000吨宠物零食产能，另有3万吨新型干粮产能在建。
+                </div>
+              </li>
+              <li>
+                <span className="factory-showcase-bullet">•</span>
+                <div className="factory-showcase-text">
+                  <strong>设备：</strong>配备辐照灭菌、废水处理、自动化包装冻水线、实现高效生产。
+                </div>
+              </li>
+              <li>
+                <span className="factory-showcase-bullet">•</span>
+                <div className="factory-showcase-text">
+                  <strong>检测体系：</strong>拥有微生物分析、理化指标、兽药残留等完备的检测体系。
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="factory-showcase-right">
+          <div className="factory-showcase-carousel">
+            <div className="factory-showcase-slides">
+              {factoryImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`factory-showcase-image ${index === activeSlide ? 'active' : ''}`}
+                />
+              ))}
+            </div>
+            <div className="factory-showcase-indicators">
+              {factoryImages.map((_, index) => (
+                <span
+                  key={index}
+                  className={`factory-indicator ${index === activeSlide ? 'active' : ''}`}
+                  onClick={() => handleIndicatorClick(index)}
+                ></span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
