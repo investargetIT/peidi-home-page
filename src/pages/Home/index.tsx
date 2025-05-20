@@ -2,6 +2,8 @@ import { Button } from 'antd';
 import { useState, useEffect } from 'react';
 import HomeBanner from './HomeBanner';
 import BrandTip from './BrandTip';
+import AboutUs from './AboutUs';
+
 import ConceptIcon from './images/concept.webp';
 import CoreIcon from './images/core.webp';
 import MissionIcon from './images/mission.webp';
@@ -84,15 +86,7 @@ export default function Home() {
   return <>
     <HomeBanner onLearnMoreClick={() => console.log('Learn more clicked')} />
     <BrandTip />
-    <div className="brand-about-us-wrapper">
-      <div className="brand-about-us-container">
-        <div className="brand-about-us-title">关于我们</div>
-        <div className="brand-about-us-content">佩蒂成立于1992年，是中国宠物行业首家上市公司，服务全球宠物30余年，改变的是配方和技术，不变的是对品质的坚持。佩蒂帮助全球宠物品牌设计、生产产品，业务覆盖欧洲、美国、澳洲、日韩、东南亚等国家，旗下拥有Health+、Meatyway、Chewnergy等自主品牌。</div>
-        <div className="brand-about-us-btn-container">
-          <Button className="brand-about-us-btn" type="primary">了解更多</Button>
-        </div>
-      </div>
-    </div>
+    <AboutUs onLearnMoreClick={() => console.log('About us learn more clicked')} />
     <div className="brand-factory-wrapper">
       <div className="brand-factory-container">
         <div className="brand-factory-title">企业文化</div>

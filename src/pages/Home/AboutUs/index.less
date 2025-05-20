@@ -1,0 +1,129 @@
+.brand-about-us-wrapper {
+  background-color: #fff;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 40px;
+  padding-bottom: 8px;
+  background-attachment: unset;
+  background-image: linear-gradient(0deg, #0a358b 0%, #08245d 100%);
+
+  .brand-about-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .brand-about-us-title {
+      font-size: 34px;
+      color: #fff;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .brand-about-us-subtitle {
+      font-size: 48px;
+      margin-top: 32px;
+      color: #222;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .brand-about-us-content {
+      margin-top: 16px;
+      font-size: 16px;
+      color: #888;
+      line-height: 1.8;
+      padding-top: 16px;
+      padding-bottom: 0px;
+      padding-left: 250px;
+      padding-right: 250px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .brand-about-us-btn-container {
+      margin-top: 40px;
+      margin-bottom: 24px;
+
+      .brand-about-us-btn {
+        background: var(--button-color);
+        color: var(--text-color);
+        border-width: var(--border-width);
+        border-style: solid;
+        border-color: transparent;
+        transition: .4s;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 36px;
+        padding-right: 36px;
+        border-radius: var(--border-top-left-radius) var(--border-top-right-radius) var(--border-bottom-right-radius) var(--border-bottom-left-radius);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-about-us-wrapper {
+    .brand-about-us-container {
+      .brand-about-us-title {
+        font-size: 28px;
+      }
+
+      .brand-about-us-content {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1px) {
+  .brand-about-us-title {
+    font-size: 24px !important;
+  }
+
+  .brand-about-us-content {
+    font-size: 14px !important;
+    padding-inline: 10px !important;
+  }
+
+  .brand-about-us-btn {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    font-size: 14px !important;
+    padding-inline-start: 12px !important;
+    padding-inline-end: 12px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .brand-about-us-title {
+    font-size: 32px !important;
+  }
+
+  .brand-about-us-content {
+    font-size: 15px !important;
+    padding-right: 250px !important;
+    padding-left: 250px !important;
+  }
+
+  .brand-about-us-btn {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    font-size: 16px !important;
+    padding-inline-start: 36px !important;
+    padding-inline-end: 36px !important;
+  }
+}
+
+@media (min-width: 1321px) {
+  .brand-about-us-title {
+    font-size: 34px !important;
+  }
+
+  .brand-about-us-content {
+    font-size: 16px !important;
+  }
+}
