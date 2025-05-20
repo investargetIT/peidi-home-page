@@ -281,5 +281,10 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <div className="copyright-footer">
+      <div className="copyright-text">
+        Copyright © 2024 佩蒂 保留所有权利.
+      </div>
+    </div>
   </>
 } 
