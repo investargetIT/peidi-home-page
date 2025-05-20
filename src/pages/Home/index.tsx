@@ -1,4 +1,3 @@
-import { Button } from 'antd';
 import HomeBanner from './HomeBanner';
 import BrandTip from './BrandTip';
 import AboutUs from './AboutUs';
@@ -6,6 +5,7 @@ import CompanyCulture from './CompanyCulture';
 import CultureIcons from './CultureIcons';
 import FactoryIntro from './FactoryIntro';
 import FactoryShowcase from './FactoryShowcase';
+import ProductInnovation from './ProductInnovation';
 import './index.less';
 
 export default function Home() {
@@ -17,12 +17,7 @@ export default function Home() {
     <CultureIcons />
     <FactoryIntro onLearnMoreClick={() => console.log('Factory intro learn more clicked')} />
     <FactoryShowcase />
-    <div className="product-innovation-wrapper">
-      <div className="product-innovation-container">
-        <h2 className="product-innovation-title">产品创新</h2>
-        <Button className="product-innovation-button">了解更多</Button>
-      </div>
-    </div>
+    <ProductInnovation onLearnMoreClick={() => console.log('Product innovation learn more clicked')} />
     <div className="research-development-wrapper">
       <div className="research-development-container">
         <div className="research-column">

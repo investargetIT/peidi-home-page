@@ -1,0 +1,81 @@
+.product-innovation-wrapper {
+  background-color: #002169;
+  padding: 50px 0;
+  color: #ffffff;
+  width: 100%;
+
+  .product-innovation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .product-innovation-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .product-innovation-button {
+    background-color: #F28B31;
+    color: #ffffff;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #E57A20;
+    }
+  }
+}
+
+@media (min-width: 1px) {
+  .product-innovation-wrapper {
+    padding: 30px 0;
+
+    .product-innovation-container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .product-innovation-title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .product-innovation-wrapper {
+    padding: 40px 0;
+
+    .product-innovation-container {
+      flex-direction: row;
+      text-align: left;
+      padding: 0 30px;
+    }
+
+    .product-innovation-title {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (min-width: 1321px) {
+  .product-innovation-wrapper {
+    padding: 50px 0;
+
+    .product-innovation-title {
+      font-size: 32px;
+    }
+  }
+}
