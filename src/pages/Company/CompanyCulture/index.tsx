@@ -70,17 +70,21 @@ export default function CorporatePhilosopy() {
           <h2 className="mission-title">企业文化</h2>
           <div className="mission-overlay">
             <div className="mission-content">
-              <div className="mission-item">
-                <p className="mission-text">用全球好产品推动宠物健康标准升级的企业使命；</p>
+              <div className="mission-left">
+                <div className="mission-item">
+                  <p className="mission-text">用全球好产品推动宠物健康标准升级的企业使命；</p>
+                </div>
+                <div className="mission-item">
+                  <p className="mission-text">"阳光、智慧、担当、真诚"的核心价值观；</p>
+                </div>
               </div>
-              <div className="mission-item">
-                <p className="mission-text">成为人宠和谐健康生态卓越建设者的愿景；</p>
-              </div>
-              <div className="mission-item">
-                <p className="mission-text">"阳光、智慧、担当、真诚"的核心价值观；</p>
-              </div>
-              <div className="mission-item">
-                <p className="mission-text">"诚信、创新、发展"的经营理念以及"以诚取信，以信立业"的社会责任。</p>
+              <div className="mission-right">
+                <div className="mission-item">
+                  <p className="mission-text">成为人宠和谐健康生态卓越建设者的愿景；</p>
+                </div>
+                <div className="mission-item">
+                  <p className="mission-text">"诚信、创新、发展"的经营理念以及"以诚取信，以信立业"的社会责任。</p>
+                </div>
               </div>
             </div>
           </div>
