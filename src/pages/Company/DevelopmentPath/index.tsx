@@ -32,7 +32,7 @@ export default function DevelopmentPath() {
         <div className="philosophy-header">
           <h2 className="philosophy-title">佩蒂30余年发展历程</h2>
         </div>
-
+        {/* todo ,此处展示及动画效果，后续投入优化 */}
         <div className="company-history-section">
           <div className="timeline-container" ref={timelineRef}>
             <div className="timeline-track">
