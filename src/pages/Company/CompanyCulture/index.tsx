@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from './images/banner.webp';
 import './index.less';
 import FooterNav from '@/components/FooterNav';
@@ -7,6 +7,22 @@ import Image1 from './images/1.webp';
 import Image2 from './images/2.webp';
 import Image4 from './images/4.webp';
 export default function CorporatePhilosopy() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const backgroundPosition = `center ${50 + (scrollPosition * 0.05)}%`;
+
   return (
     <div className="philosophy-page">
       <div className="banner-container">
@@ -50,7 +66,7 @@ export default function CorporatePhilosopy() {
           <p className="philosophy-slogan">我们相信：心存高远，未来从来不远。</p>
         </div>
 
-        <div className="corporate-mission-section">
+        <div className="corporate-mission-section" style={{ backgroundPosition }}>
           <h2 className="mission-title">企业文化</h2>
           <div className="mission-overlay">
             <div className="mission-content">
