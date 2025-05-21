@@ -11,8 +11,8 @@ import FactoryIntro from './FactoryIntro';
 import FactoryShowcase from './FactoryShowcase';
 import ProductInnovation from './ProductInnovation';
 import ResearchDevelopment from './ResearchDevelopment';
-import FooterNav from './FooterNav';
-import CopyrightFooter from './CopyrightFooter';
+import FooterNav from '@/components/FooterNav';
+import CopyrightFooter from '@/components/CopyrightFooter';
 import './index.less';
 
 export default function Home() {
