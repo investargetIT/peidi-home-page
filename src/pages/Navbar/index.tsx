@@ -18,15 +18,9 @@ interface MenuItem {
   children?: SubMenuItem[];
 }
 
-const languages = [
-  { label: '中文简体', value: 'zh' },
-  { label: 'English', value: 'en' },
-];
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [lang, setLang] = useState('zh');
   const dropdownTimerRef = useRef<number | null>(null);
 
   // Function to handle dropdown hover
@@ -73,12 +67,20 @@ export default function Navbar() {
                     onMouseEnter={() => handleDropdownEnter(item.name)}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <button
-                      className="navbar-dropdown-btn"
-                    >
+                    <button className="navbar-dropdown-btn">
                       <span>{item.name}</span>
-                      <svg className="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="dropdown-icon"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
                     <div
@@ -97,11 +99,7 @@ export default function Navbar() {
                     </div>
                   </div>
                 ) : (
-                  <Link
-                    key={item.name}
-                    to={item.link || '/'}
-                    className="navbar-link"
-                  >
+                  <Link key={item.name} to={item.link || '/'} className="navbar-link">
                     {item.name}
                   </Link>
                 )
@@ -110,44 +108,17 @@ export default function Navbar() {
           </div>
           {/* 右侧功能区 */}
           <div className="navbar-actions">
-            {/* 语言切换 */}
-            <div className="language-selector">
-              <button className="language-btn">
-                <svg className="language-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
-                </svg>
-                <span className="language-text">{languages.find(l => l.value === lang)?.label}</span>
-                <svg className="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="language-dropdown">
-                {languages.map(l => (
-                  <button
-                    key={l.value}
-                    onClick={() => setLang(l.value)}
-                    className="language-option"
-                  >
-                    {l.label}
-                  </button>
-                ))}
-              </div>
-            </div>
             {/* 联系我们按钮 */}
-            <a
-              href="/contact-us"
-              className="contact-btn"
-            >
-              联系我们
+            <a href="/investor-relations" className="contact-btn">
+              投资关系
+            </a>
+            <a href="/global-industry-business" className="contact-btn">
+              全球行业业务
             </a>
           </div>
           {/* Mobile menu button */}
           <div className="mobile-menu-toggle">
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="mobile-toggle-btn"
-            >
+            <button onClick={() => setMobileOpen(!mobileOpen)} className="mobile-toggle-btn">
               <span className="mobile-menu-icon"></span>
             </button>
           </div>
@@ -169,7 +140,12 @@ export default function Navbar() {
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </button>
                   {openDropdown === item.name && (
@@ -198,24 +174,20 @@ export default function Navbar() {
                 </Link>
               )
             )}
-            {/* Language Switch */}
-            <div className="mobile-language">
-              <div className="mobile-language-selector">
-                <span className="mobile-language-label">语言：</span>
-                <select
-                  value={lang}
-                  onChange={e => setLang(e.target.value)}
-                  className="mobile-language-select"
-                >
-                  {languages.map(l => (
-                    <option key={l.value} value={l.value}>{l.label}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            {/* 联系我们按钮 */}
-            <Link to="/contact-us" className="mobile-contact-btn" onClick={() => setMobileOpen(false)}>
-              联系我们
+            {/* Replace 联系我们 button with 投资关系 and 全球行业业务 buttons */}
+            <Link
+              to="/investor-relations"
+              className="mobile-contact-btn"
+              onClick={() => setMobileOpen(false)}
+            >
+              投资关系
+            </Link>
+            <Link
+              to="/global-industry-business"
+              className="mobile-contact-btn"
+              onClick={() => setMobileOpen(false)}
+            >
+              全球行业业务
             </Link>
           </div>
         )}

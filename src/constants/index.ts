@@ -38,7 +38,5 @@ export const menu = [
       { name: '视频', link: '/pages/video', title: 'Videos' },
     ],
   },
-  { name: '投资关系', link: '/investor-relations', title: 'Investor Relations' },
-  { name: '全球行业业务', link: '/global-industry-business', title: 'Global Industry Business' },
   { name: '联系我们', link: '/contact-us', title: 'Contact Us ' },
 ];
