@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
-import ODM from './Cooperation';
-import Cooperation from './ODM';
+import ODM from './ODM';
+import Cooperation from './Cooperation';
 import SolutionBanner from './images/cooperation.jpg';
 import './index.less';
 
