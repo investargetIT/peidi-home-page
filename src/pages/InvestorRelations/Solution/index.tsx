@@ -40,7 +40,7 @@ export default function Solution() {
       year: '2017年7月11日',
       content: '公司股票在深交所创业板上市，股票简称：佩蒂股份，股票代码：300673， 成为国内宠物行业第一家上市公司。'
     }
-  ];
+  ].reverse();
 
   return (
     <div className="market-solution">
