@@ -159,6 +159,62 @@
   display: block;
 }
 
+.founder-story-section {
+  margin: 60px auto;
+  max-width: 1000px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.founder-story-title {
+  font-size: 38px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.founder-story-content {
+  padding: 0;
+}
+
+.founder-story-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0a3c7d;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.founder-story-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.founder-story-text:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-image-full {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.philosophy-image-full img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .banner-container {
@@ -185,6 +241,12 @@
     margin: 30px auto 0;
   }
 
+  .philosophy-image-full {
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
   .philosophy-container {
     flex-direction: column;
     max-width: 100%;
@@ -208,5 +270,24 @@
 
   .philosophy-image img {
     height: 100%;
+  }
+
+  .founder-story-section {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  .founder-story-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .founder-story-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .founder-story-text {
+    font-size: 15px;
   }
 }
