@@ -1,0 +1,172 @@
+.market-solution {
+  padding-bottom: 60px;
+}
+
+/* 股票信息区域 */
+.stock-info {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e5e5e5;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-info-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 5px;
+}
+
+.stock-code {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.stock-currency {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Section title styles */
+.section-title-area {
+  width: 100%;
+  padding: 40px 24px 20px;
+}
+
+.section-title-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title-box {
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 4px;
+  background-color: #ff7a22;
+}
+
+/* Company introduction styles */
+.company-intro {
+  width: 100%;
+  padding: 20px 24px 0;
+}
+
+.company-intro-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.company-intro-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 1px solid #e5e5e5;
+  margin-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0a358b;
+  left: -36px;
+  top: 6px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #0a358b;
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.timeline-year {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.timeline-event {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-title-underline {
+    width: 40px;
+    height: 3px;
+  }
+
+  .company-intro {
+    padding: 15px 24px 0;
+  }
+
+  .company-intro-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .timeline {
+    margin-left: 10px;
+  }
+
+  .timeline-year {
+    font-size: 16px;
+  }
+
+  .timeline-event {
+    font-size: 15px;
+  }
+}

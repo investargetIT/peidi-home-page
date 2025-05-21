@@ -9,6 +9,8 @@ import Finance from './Finance';
 import Report from './Report';
 import Investor from './Investor';
 import SolutionBanner from './images/solution-banner.jpg';
+import './index.less';
+
 export default function InvestorRelations() {
   const [activeTab, setActiveTab] = useState('solution');
 
@@ -43,19 +45,24 @@ export default function InvestorRelations() {
       label: '定期报告',
       children: <Report />,
     },
-
     {
       key: 'investor',
       label: '投资者服务',
       children: <Investor />,
     },
-
-
   ];
-  return <div>
-    <div className="solution-banner">
-      <img src={SolutionBanner} alt="solution-banner" />
+
+  return (
+    <div className="investor-relations">
+      <div className="solution-banner">
+        <img src={SolutionBanner} alt="solution-banner" />
+      </div>
+      <Tabs
+        items={items}
+        defaultActiveKey={activeTab}
+        onChange={(key) => setActiveTab(key)}
+        centered
+      />
     </div>
-    <Tabs items={items} defaultActiveKey={activeTab} onChange={(key) => setActiveTab(key)} />
-  </div>;
+  );
 }
