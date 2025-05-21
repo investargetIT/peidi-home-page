@@ -52,7 +52,7 @@ export default function Finance() {
           <h3 className="image-title">{imgArr[activeIndex].title}</h3>
         </div>
 
-        {/* Thumbnails */}
+        {/* Thumbnails - directly in gallery container */}
         <div className="thumbnails-container">
           {imgArr.map((item, index) => (
             <div
