@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import peidiLogo from '@/assets/peidi.webp';
 import { Link } from 'react-router-dom';
 import { menu } from '../../constants';
@@ -27,6 +27,32 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [lang, setLang] = useState('zh');
+  const dropdownTimerRef = useRef<number | null>(null);
+
+  // Function to handle dropdown hover
+  const handleDropdownEnter = (itemName: string) => {
+    if (dropdownTimerRef.current) {
+      clearTimeout(dropdownTimerRef.current);
+      dropdownTimerRef.current = null;
+    }
+    setOpenDropdown(itemName);
+  };
+
+  // Function to handle dropdown leave with delay
+  const handleDropdownLeave = () => {
+    dropdownTimerRef.current = window.setTimeout(() => {
+      setOpenDropdown(null);
+    }, 300); // 300ms delay before closing the dropdown
+  };
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimerRef.current) {
+        clearTimeout(dropdownTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -41,11 +67,14 @@ export default function Navbar() {
             <div className="navbar-menu-items">
               {menu.map((item: MenuItem) =>
                 item.children ? (
-                  <div key={item.name} className="navbar-dropdown">
+                  <div
+                    key={item.name}
+                    className="navbar-dropdown"
+                    onMouseEnter={() => handleDropdownEnter(item.name)}
+                    onMouseLeave={handleDropdownLeave}
+                  >
                     <button
                       className="navbar-dropdown-btn"
-                      onMouseEnter={() => setOpenDropdown(item.name)}
-                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       <span>{item.name}</span>
                       <svg className="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,8 +83,6 @@ export default function Navbar() {
                     </button>
                     <div
                       className={`navbar-dropdown-menu ${openDropdown === item.name ? 'active' : ''}`}
-                      onMouseEnter={() => setOpenDropdown(item.name)}
-                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       {item.children.map((sub: SubMenuItem) => (
                         <Link
