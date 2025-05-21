@@ -1,0 +1,244 @@
+.pet-industry-fund {
+  padding-bottom: 60px;
+}
+
+/* 股票信息区域 */
+.stock-info {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e5e5e5;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-info-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.stock-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 5px;
+}
+
+.stock-code {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.stock-currency {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Section title styles */
+.section-title-area {
+  width: 100%;
+  padding: 40px 24px 20px;
+}
+
+.section-title-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title-box {
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 4px;
+  background-color: #ff7a22;
+}
+
+/* 股票走势图 */
+.stock-chart-container {
+  width: 100%;
+  padding: 20px 24px 40px;
+}
+
+.stock-chart-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stock-chart {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 证券信息 */
+.stock-details {
+  width: 100%;
+  padding: 0 24px 20px;
+}
+
+.stock-details-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stock-detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.detail-label {
+  font-size: 16px;
+  color: #666;
+  margin-right: 8px;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-title-underline {
+    width: 40px;
+    height: 3px;
+  }
+
+  .stock-chart-wrapper {
+    padding: 10px;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 14px;
+  }
+}
+
+/* 公告内容样式 */
+.announcement-content {
+  width: 100%;
+  padding: 0 24px 60px;
+}
+
+.announcement-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px 30px 40px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.announcement-header {
+  margin-bottom: 30px;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.announcement-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.announcement-text {
+  color: #333;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.text-paragraph {
+  margin-bottom: 24px;
+  text-indent: 2em;
+  line-height: 1.8;
+}
+
+.text-subtitle {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.announcement-list {
+  padding-left: 2.5em;
+  margin-bottom: 24px;
+
+  li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .announcement-container {
+    padding: 15px 20px 30px;
+  }
+
+  .company-name,
+  .announcement-title {
+    font-size: 16px;
+  }
+
+  .announcement-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .text-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .text-subtitle {
+    margin-bottom: 12px;
+  }
+
+  .announcement-list li {
+    margin-bottom: 10px;
+  }
+}
