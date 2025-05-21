@@ -1,5 +1,6 @@
 import './index.less';
 import SolutionBanner from './images/history.jpg';
+import StockInfo from '../components/StockInfo';
 
 export default function Solution() {
   // 公司历史事件
@@ -45,13 +46,7 @@ export default function Solution() {
   return (
     <div className="market-solution">
       {/* 股票信息区域 */}
-      <div className="stock-info">
-        <div className="stock-info-container">
-          <span className="stock-name">佩蒂股份</span>
-          <span className="stock-code">[300673]</span>
-          <span className="stock-currency">元</span>
-        </div>
-      </div>
+      <StockInfo stockName="佩蒂股份" stockCode="300673" />
 
       {/* 内容标题区域 */}
       <div className="section-title-area">

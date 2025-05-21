@@ -1,17 +1,12 @@
 import React from 'react';
 import './index.less';
+import StockInfo from '../components/StockInfo';
 
 export default function Pets() {
   return (
     <div className="pet-industry-fund">
       {/* 股票信息区域 */}
-      <div className="stock-info">
-        <div className="stock-info-container">
-          <span className="stock-name">佩蒂股份</span>
-          <span className="stock-code">[300673]</span>
-          <span className="stock-currency">元</span>
-        </div>
-      </div>
+      <StockInfo stockName="佩蒂股份" stockCode="300673" />
 
       {/* 内容标题区域 */}
       <div className="section-title-area">
