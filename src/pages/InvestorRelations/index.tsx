@@ -1,48 +1,61 @@
 import { useState } from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
-
+import Solution from './Solution';
+import Stock from './Stock';
+import Pets from './Pets';
+import Market from './Market';
+import Finance from './Finance';
+import Report from './Report';
+import Investor from './Investor';
+import SolutionBanner from './images/solution-banner.jpg';
 export default function InvestorRelations() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('solution');
+
   const items: TabsProps['items'] = [
     {
       key: 'solution',
       label: '资本市场综述',
-      children: 'Content of Tab Pane 1',
+      children: <Solution />,
     },
     {
       key: 'stock',
       label: '股价实时显示',
-      children: 'Content of Tab Pane 2',
+      children: <Stock />,
     },
     {
       key: 'pets',
       label: '宠物产业基金',
-      children: 'Content of Tab Pane 3',
+      children: <Pets />,
     },
     {
       key: 'market',
       label: '公司公告',
-      children: 'Content of Tab Pane 3',
+      children: <Market />,
     },
     {
       key: 'finance',
       label: '财经类评论及新闻',
-      children: 'Content of Tab Pane 3',
+      children: <Finance />,
     },
     {
       key: 'report',
       label: '定期报告',
-      children: 'Content of Tab Pane 3',
+      children: <Report />,
     },
 
     {
       key: 'investor',
       label: '投资者服务',
-      children: 'Content of Tab Pane 3',
+      children: <Investor />,
     },
 
 
   ];
-  return <div>投资关系内容</div>;
+  return <div>
+    <div className="solution-banner">
+      <img src={SolutionBanner} alt="solution-banner" />
+    </div>
+    <Tabs items={items} defaultActiveKey={activeTab} onChange={(key) => setActiveTab(key)} />
+  </div>;
 }
