@@ -44,6 +44,32 @@ export default function CorporatePhilosopy() {
           </div>
         </div>
 
+        <div className="philosophy-values-section">
+          <p className="philosophy-values-text">作为拥有30年多历史的国内领先宠物食品供应商，佩蒂一直遵循"诚信、创新、发展"的经营理念，坚持以"孜求不断满足并超越客户期望"作为企业质量管理方针，严格按照国际食品法规加工生产高品质的专业宠物零食产品，增进人与宠物的彼此关爱，领跑中国的宠物爱心事业。</p>
+
+          <p className="philosophy-slogan">我们相信：心存高远，未来从来不远。</p>
+        </div>
+
+        <div className="corporate-mission-section">
+          <h2 className="mission-title">企业文化</h2>
+          <div className="mission-overlay">
+            <div className="mission-content">
+              <div className="mission-item">
+                <p className="mission-text">用全球好产品推动宠物健康标准升级的企业使命；</p>
+              </div>
+              <div className="mission-item">
+                <p className="mission-text">成为人宠和谐健康生态卓越建设者的愿景；</p>
+              </div>
+              <div className="mission-item">
+                <p className="mission-text">"阳光、智慧、担当、真诚"的核心价值观；</p>
+              </div>
+              <div className="mission-item">
+                <p className="mission-text">"诚信、创新、发展"的经营理念以及"以诚取信，以信立业"的社会责任。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="founder-story-section">
           <h2 className="founder-story-title">创始人故事</h2>
           <div className="founder-story-content">
