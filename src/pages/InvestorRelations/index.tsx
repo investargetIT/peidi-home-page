@@ -20,11 +20,11 @@ export default function InvestorRelations() {
       label: '资本市场综述',
       children: <Solution />,
     },
-    // {
-    //   key: 'stock',
-    //   label: '股价实时显示',
-    //   children: <Stock />,
-    // },
+    {
+      key: 'stock',
+      label: '股价实时显示',
+      children: <Stock />,
+    },
     {
       key: 'pets',
       label: '宠物产业基金',
