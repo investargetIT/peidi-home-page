@@ -17,8 +17,12 @@ export default function Market() {
 
       <div className="market-content">
         {/* Market content will go here */}
-        <iframe src="https://q.stock.sohu.com/cn/300673/index.shtml" width="100%" height="1000px"></iframe>
+        <iframe
+          src="https://m.10jqka.com.cn/stockpage/hs_300673/#&atab=geguNews"
+          width="100%"
+          height="1000px"
+        ></iframe>
       </div>
     </div>
   );
-} 
+}
