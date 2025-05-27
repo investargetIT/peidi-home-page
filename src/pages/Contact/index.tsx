@@ -3,6 +3,7 @@ import Banner from './images/banner.webp';
 import './index.less';
 import FooterNav from '@/components/FooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+import BannerContainer from '@/components/BannerContainer';
 import Email from './images/email.svg';
 import Addr from './images/addr.svg';
 import Phone from './images/phone.webp';
@@ -10,12 +11,7 @@ import Phone from './images/phone.webp';
 export default function GroupStructure() {
   return (
     <div className="philosophy-page">
-      <div className="banner-container">
-        <img src={Banner} alt="banner" className="banner-image" />
-        <div className="banner-overlay">
-          <h1 className="banner-title">联系我们</h1>
-        </div>
-      </div>
+      <BannerContainer bannerImage={Banner} title="联系我们" />
 
       {/* 联系信息区域 */}
       <div className="contact-info-container">

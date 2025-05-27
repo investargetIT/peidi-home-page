@@ -3,17 +3,13 @@ import Banner from './images/banner.webp';
 import './index.less';
 import FooterNav from '@/components/FooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+import BannerContainer from '@/components/BannerContainer';
 import Structure from './images/structure.webp';
 
 export default function GroupStructure() {
   return (
     <div className="philosophy-page">
-      <div className="banner-container">
-        <img src={Banner} alt="banner" className="banner-image" />
-        <div className="banner-overlay">
-          <h1 className="banner-title">关于佩蒂——集团架构</h1>
-        </div>
-      </div>
+      <BannerContainer bannerImage={Banner} title="关于佩蒂——集团架构" />
 
       <div className="philosophy-content">
         <div className="philosophy-header">
