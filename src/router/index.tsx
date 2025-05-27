@@ -15,7 +15,7 @@ import OrderProcess from '../pages/OEM/OrderProcess';
 import ProductCenter from '../pages/OEM/ProductCenter';
 // 品牌产品
 import AllProducts from '../pages/Collection/AllProducts';
-import Meatyway from '../pages/Collection/Meatyway';
+import Meatyway from '../pages/Collection/MeatyWay';
 import Health from '../pages/Collection/Health';
 import Chewnergy from '../pages/Collection/Chewnergy';
 import SmartBones from '../pages/Collection/SmartBones';
@@ -62,4 +62,4 @@ export default function AppRouter() {
       <Route path="/global-industry-business" element={<GlobalBusiness />} />
     </Routes>
   );
-} 
+}

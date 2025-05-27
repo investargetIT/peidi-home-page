@@ -23,8 +23,6 @@ export default function Meatyway() {
     };
   }, []);
 
-  const backgroundPosition = `center ${50 + scrollPosition * 0.05}%`;
-
   return (
     <div className="philosophy-page">
       <BannerContainer bannerImage={Banner} title="天然成就美味" />
@@ -36,9 +34,9 @@ export default function Meatyway() {
           </div>
           <div className="philosophy-text-content">
             <div className="philosophy-values">
+              <h2>爵宴</h2>
               <p>
-                正如孔子先圣所言："人而无信，不知其可也。"
-                事业从无坦途，成功须靠拼搏。企业的道德首先是和诚信相连，生产经营与道德的有机结合才能使一个企业真正成为社会所需要的力量。我们相信更多的企业，都会悟到这个发展的真谛，运用自如得法，时时存乎于心。佩蒂企业一路走过的昨天、今天以及明天，正是基于所倡导的"服务社会、实现自我"的企业价值观，坚持"以诚取信，以信立业"，严格履行一个企业对社会、客户和员工应尽的义务，谋求公司与客户、公司与社会、公司与个人的和谐发展。
+                爵宴秉持着“只选用天然食材，天然成就美味”的理念，依托全球原料供应链体系和生产基地的优势，十年遍访北美、澳洲、东南亚等地，始终坚持以百里挑一的匠心严选狗狗的美味佳肴。未来，爵宴将持续网罗全球高品质天然食材，致力于让狗狗「吃好」。
               </p>
             </div>
           </div>
