@@ -67,22 +67,41 @@ export default function Navbar() {
                     onMouseEnter={() => handleDropdownEnter(item.name)}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <button className="navbar-dropdown-btn">
-                      <span>{item.name}</span>
-                      <svg
-                        className="dropdown-icon"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
+                    {item.link ? (
+                      <Link to={item.link} className="navbar-dropdown-btn">
+                        <span>{item.name}</span>
+                        <svg
+                          className="dropdown-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </Link>
+                    ) : (
+                      <button className="navbar-dropdown-btn">
+                        <span>{item.name}</span>
+                        <svg
+                          className="dropdown-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                    )}
                     <div
                       className={`navbar-dropdown-menu ${openDropdown === item.name ? 'active' : ''}`}
                     >
@@ -129,25 +148,52 @@ export default function Navbar() {
             {menu.map((item: MenuItem) =>
               item.children ? (
                 <div key={item.name} className="mobile-dropdown">
-                  <button
-                    className="mobile-dropdown-btn"
-                    onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                  >
-                    {item.name}
-                    <svg
-                      className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {item.link ? (
+                    <Link
+                      to={item.link}
+                      className="mobile-dropdown-btn"
+                      style={{ display: 'flex', justifyContent: 'space-between' }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
+                      {item.name}
+                      <svg
+                        className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        onClick={e => {
+                          e.preventDefault();
+                          setOpenDropdown(openDropdown === item.name ? null : item.name);
+                        }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </Link>
+                  ) : (
+                    <button
+                      className="mobile-dropdown-btn"
+                      onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                    >
+                      {item.name}
+                      <svg
+                        className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  )}
                   {openDropdown === item.name && (
                     <div className="mobile-submenu">
                       {item.children.map((sub: SubMenuItem) => (
