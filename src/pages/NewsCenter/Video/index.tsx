@@ -6,6 +6,8 @@ import Bg1 from './images/1-bg.webp';
 import Bg2 from './images/2-bg.webp';
 import Bg3 from './images/3-bg.webp';
 import Bg4 from './images/4-bg.webp';
+import FooterNav from '@/components/FooterNav';
+import CopyrightFooter from '@/components/CopyrightFooter';
 
 export default function Video() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
@@ -80,6 +82,11 @@ export default function Video() {
           </div>
         ))}
       </div>
+      {/* 页脚导航区域 */}
+      <FooterNav />
+
+      {/* 版权信息区域 */}
+      <CopyrightFooter />
     </div>
   );
 }
