@@ -1,6 +1,8 @@
 import './index.less';
 import BannerContainer from '@/components/BannerContainer';
 import Banner from './images/banner.webp';
+import CopyrightFooter from '@/components/CopyrightFooter';
+import FooterNav from '@/components/FooterNav';
 export default function Video() {
   const videoList = [
     {
@@ -32,6 +34,11 @@ export default function Video() {
           </div>
         ))}
       </div>
+      {/* 页脚导航区域 */}
+      <FooterNav />
+
+      {/* 版权信息区域 */}
+      <CopyrightFooter />
     </div>
   );
 }
