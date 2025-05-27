@@ -9,7 +9,7 @@ import Image2 from './images/2.webp';
 import Image3 from './images/3.webp';
 import Image4 from './images/4.webp';
 import { Link } from 'react-router-dom';
-export default function CorporatePhilosopy() {
+export default function AllProducts() {
   const imageArr = [
     {
       url: Image1,
