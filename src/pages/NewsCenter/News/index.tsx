@@ -1,4 +1,10 @@
 import React from 'react';
 export default function News() {
-  return <div>企业新闻内容</div>;
-} 
+  return (
+    <div className="news-page">
+      <div className="news-content">
+        <div className="news-title">消息</div>
+      </div>
+    </div>
+  );
+}
