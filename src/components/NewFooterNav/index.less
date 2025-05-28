@@ -66,7 +66,7 @@
 }
 
 /* Copyright Footer Styles */
-.copyright-footer {
+.bottom-copyright-section {
   background-color: #001440;
   padding: 40px 0;
   color: #ffffff;
@@ -76,16 +76,7 @@
   align-items: center;
   text-align: center;
 
-  .copyright-logo {
-    margin-bottom: 30px;
-
-    img {
-      width: 120px;
-      height: auto;
-    }
-  }
-
-  .copyright-divider {
+  .bottom-divider {
     width: 90%;
     max-width: 1200px;
     height: 1px;
@@ -93,7 +84,7 @@
     margin-bottom: 30px;
   }
 
-  .copyright-content {
+  .bottom-content-container {
     width: 90%;
     max-width: 1200px;
     display: flex;
@@ -101,22 +92,7 @@
     align-items: center;
   }
 
-  .copyright-links {
-    margin-bottom: 20px;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 14px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .copyright-info {
+  .bottom-legal-info {
     margin-bottom: 20px;
 
     p {
@@ -125,37 +101,37 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
-    .license-info {
+    .bottom-license-text {
       span {
         margin-right: 10px;
       }
     }
   }
 
-  .copyright-contact {
+  .bottom-contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .social-qrcode {
+    .bottom-social-media {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
 
-      .qrcode {
+      .bottom-qrcode {
         width: 80px;
         height: 80px;
         margin-right: 10px;
       }
 
-      .weibo-icon {
+      .bottom-weibo {
         width: 80px;
         height: 80px;
         border-radius: 4px;
       }
     }
 
-    .contact-phone {
+    .bottom-phone-number {
       font-size: 20px;
       font-weight: 600;
       color: #fff;
@@ -228,19 +204,15 @@
 }
 
 @media (min-width: 768px) {
-  .copyright-footer {
-    .copyright-content {
+  .bottom-copyright-section {
+    .bottom-content-container {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       text-align: left;
     }
 
-    .copyright-links {
-      display: flex;
-    }
-
-    .copyright-info {
+    .bottom-legal-info {
       flex: 1;
       padding: 0 20px;
     }
