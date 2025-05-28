@@ -88,18 +88,16 @@ export default function RenderNews() {
         </div>
 
         <div className="news-navigation">
-          <div
-            className={`prev-news ${newsId === 1 ? 'disabled' : ''}`}
-            onClick={() => newsId > 1 && navigate(`/blogs/news/${newsId - 1}`)}
-          >
-            上一篇
-          </div>
-          <div
-            className={`next-news ${newsId === coverList.length ? 'disabled' : ''}`}
-            onClick={() => newsId < coverList.length && navigate(`/blogs/news/${newsId + 1}`)}
-          >
-            下一篇
-          </div>
+          {newsId > 1 && (
+            <div className="prev-news" onClick={() => navigate(`/blogs/news/${newsId - 1}`)}>
+              上一篇
+            </div>
+          )}
+          {newsId < coverList.length && (
+            <div className="next-news" onClick={() => navigate(`/blogs/news/${newsId + 1}`)}>
+              下一篇
+            </div>
+          )}
         </div>
       </div>
 
