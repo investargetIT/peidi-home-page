@@ -6,6 +6,7 @@ import './index.less';
 import BrandLogo from './images/banner.png';
 import QRCode from './images/we-chat.jpg';
 import WeiboIcon from './images/weibo.jpg';
+import PoliceIcon from './images/police-icon.png';
 
 export default function FooterNav() {
   return (
@@ -22,8 +23,8 @@ export default function FooterNav() {
 
         <div className="bottom-content-container">
           <div className="bottom-legal-info">
-            <p>Copyright © 2018 佩蒂动物营养科技股份有限公司 All Rights Reserved.</p>
             <p className="bottom-license-text">
+              <img src={PoliceIcon} alt="Police" className="bottom-police-icon" />
               <span className="bottom-security-license">浙公网安备 33032602100082号</span>
               <span className="bottom-icp-license">浙ICP备13035411号</span>
               <span>佩蒂动物营养科技股份有限公司 保留所有权利</span>
