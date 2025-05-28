@@ -24,6 +24,7 @@ import Contact from '../pages/Contact';
 // 新闻中心
 import News from '../pages/NewsCenter/News';
 import Video from '../pages/NewsCenter/Video';
+import RenderNews from '../pages/NewsCenter/News/RenderNews';
 // 投资关系
 import InvestorRelations from '../pages/InvestorRelations';
 // 全球行业业务
@@ -54,6 +55,7 @@ export default function AppRouter() {
       {/* 新闻中心 */}
       <Route path="/blogs/news" element={<News />} />
       <Route path="/blogs/video" element={<Video />} />
+      <Route path="/blogs/news/:id" element={<RenderNews />} />
       {/* 联系我们 */}
       <Route path="/contact-us" element={<Contact />} />
       {/* 投资关系 */}
