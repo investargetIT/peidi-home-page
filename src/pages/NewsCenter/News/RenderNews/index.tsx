@@ -28,21 +28,23 @@ const NewsComponents = {
 export default function RenderNews() {
   // Get the id parameter from the URL
   const { id } = useParams<{ id: string }>();
+  console.log('id', id);
   const navigate = useNavigate();
 
   // Convert id to number and ensure it's valid
-  const newsIndex = useMemo(() => {
-    const index = parseInt(id || '0', 10);
-    return isNaN(index) || index < 0 || index >= coverList.length ? 0 : index;
+  const newsId = useMemo(() => {
+    const idNum = parseInt(id || '1', 10);
+    return isNaN(idNum) || idNum < 1 || idNum > coverList.length ? 1 : idNum;
   }, [id]);
 
-  // Get the news item based on the index
+  // Get the news item based on the ID (adjusting index for array access)
+  const newsIndex = newsId - 1;
   const newsItem = useMemo(() => coverList[newsIndex], [newsIndex]);
 
   // If the news item doesn't exist, redirect to the first news
   useEffect(() => {
     if (!newsItem) {
-      navigate('/blogs/news/0');
+      navigate('/blogs/news/1');
     }
   }, [newsItem, navigate]);
 
@@ -51,11 +53,7 @@ export default function RenderNews() {
   }
 
   // Determine which component to render based on the id
-  // If newsIndex+1 is between 1-15, render the corresponding component, otherwise render default content
-  const DynamicNewsComponent =
-    newsIndex + 1 >= 1 && newsIndex + 1 <= 15
-      ? NewsComponents[(newsIndex + 1) as keyof typeof NewsComponents]
-      : null;
+  const DynamicNewsComponent = NewsComponents[newsId as keyof typeof NewsComponents] || null;
 
   return (
     <div className="news-detail-page">
@@ -63,9 +61,9 @@ export default function RenderNews() {
         <h1 className="news-detail-title">{newsItem.title}</h1>
         <div className="news-detail-time">{newsItem.time}</div>
 
-        <div className="news-detail-image">
+        {/* <div className="news-detail-image">
           <img src={newsItem.cover} alt={newsItem.title} />
-        </div>
+        </div> */}
 
         <div className="news-detail-body">
           {DynamicNewsComponent ? (
@@ -89,16 +87,14 @@ export default function RenderNews() {
 
         <div className="news-navigation">
           <div
-            className={`prev-news ${newsIndex === 0 ? 'disabled' : ''}`}
-            onClick={() => newsIndex > 0 && navigate(`/blogs/news/${newsIndex - 1}`)}
+            className={`prev-news ${newsId === 1 ? 'disabled' : ''}`}
+            onClick={() => newsId > 1 && navigate(`/blogs/news/${newsId - 1}`)}
           >
             上一篇
           </div>
           <div
-            className={`next-news ${newsIndex === coverList.length - 1 ? 'disabled' : ''}`}
-            onClick={() =>
-              newsIndex < coverList.length - 1 && navigate(`/blogs/news/${newsIndex + 1}`)
-            }
+            className={`next-news ${newsId === coverList.length ? 'disabled' : ''}`}
+            onClick={() => newsId < coverList.length && navigate(`/blogs/news/${newsId + 1}`)}
           >
             下一篇
           </div>
