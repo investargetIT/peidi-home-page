@@ -58,11 +58,13 @@ export default function News() {
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="pagination">
-            {currentPage > 1 && (
-              <button className="pagination-arrow" onClick={() => goToPage(currentPage - 1)}>
-                &lt;
-              </button>
-            )}
+            <button
+              className={`pagination-arrow ${currentPage === 1 ? 'disabled' : ''}`}
+              onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              &lt;
+            </button>
 
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
               <button
@@ -74,11 +76,13 @@ export default function News() {
               </button>
             ))}
 
-            {currentPage < totalPages && (
-              <button className="pagination-arrow" onClick={() => goToPage(currentPage + 1)}>
-                &gt;
-              </button>
-            )}
+            <button
+              className={`pagination-arrow ${currentPage === totalPages ? 'disabled' : ''}`}
+              onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              &gt;
+            </button>
           </div>
         )}
       </div>
