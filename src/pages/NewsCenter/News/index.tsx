@@ -3,8 +3,10 @@ import { coverList } from './constant';
 import { Link } from 'react-router-dom';
 import FooterNav from '@/components/FooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+import { useNavigate } from 'react-router-dom';
 
 export default function News() {
+  const navigate = useNavigate();
   return (
     <div className="news-page">
       <div className="news-content">
@@ -12,7 +14,11 @@ export default function News() {
 
         <div className="news-list">
           {coverList.map((item, index) => (
-            <div className="news-item" key={index}>
+            <div
+              className="news-item"
+              key={index}
+              onClick={() => navigate(`/blogs/news/${index + 1}`)}
+            >
               <div className="news-image">
                 <img src={item.cover} alt={item.title} />
               </div>
