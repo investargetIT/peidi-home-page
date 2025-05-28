@@ -4,16 +4,16 @@ import Image1 from './images/image1.webp';
 import Image2 from './images/image2.webp';
 export default function News1() {
   return (
-    <div className="news-1">
-      <div className="news-1-image">
-        <img src={Image1} alt="image1" />
+    <div className="news-container">
+      <div className="news-image-wrapper">
+        <img src={Image1} alt="佩蒂公司总部" />
       </div>
 
-      <div className="news-1-content">
-        <h2 className="news-1-subtitle">佩蒂股份2024年三季报：利润爆增630%，毛利连续7季度提升</h2>
-        <div className="news-1-date">2024-10-30</div>
+      <div className="news-content">
+        <h2 className="news-title">佩蒂股份2024年三季报：利润爆增630%，毛利连续7季度提升</h2>
+        <div className="news-date">2024-10-30</div>
 
-        <div className="news-1-paragraph">
+        <div className="news-text">
           <p>
             10月23日，佩蒂股份披露2024年三季报。前三季度，公司累计实现营业收入为13.23亿元，同比增长44.34%；归母净利润1.56亿元，同比增长630.85%。
           </p>
@@ -27,11 +27,11 @@ export default function News1() {
           </p>
         </div>
 
-        <h3 className="news-1-highlight">毛利连续7个季度提升</h3>
+        <h3 className="news-subtitle">毛利连续7个季度提升</h3>
       </div>
 
-      <div className="news-1-image">
-        <img src={Image2} alt="image2" />
+      <div className="news-image-wrapper">
+        <img src={Image2} alt="财务数据图表" />
       </div>
     </div>
   );
