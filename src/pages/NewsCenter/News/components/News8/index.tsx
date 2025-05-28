@@ -5,7 +5,7 @@ import Image2 from './images/image2.webp';
 import Image3 from './images/image3.webp';
 import Image4 from './images/image4.webp';
 import Image5 from './images/image5.webp';
-export default function News1() {
+export default function News8() {
   return (
     <div className="news-container">
       <div className="news-image-wrapper">

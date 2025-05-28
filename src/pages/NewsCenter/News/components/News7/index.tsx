@@ -2,7 +2,7 @@ import './index.less';
 import Image1 from './images/image1.webp';
 import Image2 from './images/image2.webp';
 import Image3 from './images/image3.webp';
-export default function News6() {
+export default function News7() {
   return (
     <div className="news-container">
       <div className="news-image-wrapper">
