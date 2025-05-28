@@ -65,7 +65,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
     // 启动定时器，每5秒切换一次
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, 150000);
+    }, 3000);
 
     // 组件卸载时清除定时器
     return () => {
