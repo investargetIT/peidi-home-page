@@ -1,10 +1,29 @@
-import React, { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useMemo } from 'react';
 import { coverList } from '../constant';
 import { useParams, useNavigate } from 'react-router-dom';
 import './index.less';
 import FooterNav from '@/components/FooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+
+// Dynamically import news components
+const NewsComponents = {
+  1: lazy(() => import('../components/News1')),
+  2: lazy(() => import('../components/News2')),
+  3: lazy(() => import('../components/News3')),
+  4: lazy(() => import('../components/News4')),
+  5: lazy(() => import('../components/News5')),
+  6: lazy(() => import('../components/News6')),
+  7: lazy(() => import('../components/News7')),
+  8: lazy(() => import('../components/News8')),
+  9: lazy(() => import('../components/News9')),
+  10: lazy(() => import('../components/News10')),
+  11: lazy(() => import('../components/News11')),
+  12: lazy(() => import('../components/News12')),
+  13: lazy(() => import('../components/News13')),
+  14: lazy(() => import('../components/News14')),
+  15: lazy(() => import('../components/News15')),
+};
 
 export default function RenderNews() {
   // Get the id parameter from the URL
@@ -23,13 +42,20 @@ export default function RenderNews() {
   // If the news item doesn't exist, redirect to the first news
   useEffect(() => {
     if (!newsItem) {
-      navigate('/news-detail/0');
+      navigate('/blogs/news/0');
     }
   }, [newsItem, navigate]);
 
   if (!newsItem) {
     return <div>Loading...</div>;
   }
+
+  // Determine which component to render based on the id
+  // If newsIndex+1 is between 1-15, render the corresponding component, otherwise render default content
+  const DynamicNewsComponent =
+    newsIndex + 1 >= 1 && newsIndex + 1 <= 15
+      ? NewsComponents[(newsIndex + 1) as keyof typeof NewsComponents]
+      : null;
 
   return (
     <div className="news-detail-page">
@@ -42,28 +68,36 @@ export default function RenderNews() {
         </div>
 
         <div className="news-detail-body">
-          {/* Placeholder for actual news content */}
-          <p>
-            佩蒂宠物用品股份有限公司成立于1994年，是中国最大的宠物零食生产企业之一，也是
-            中国宠物食品行业的领军企业。公司产品远销全球，在宠物用品领域享有盛誉。
-          </p>
-          <p>
-            我们秉承"用爱呵护每一只宠物"的理念，不断创新研发，为全球宠物提供健康、
-            营养、美味的宠物零食及用品，让宠物和主人共享幸福生活。
-          </p>
+          {DynamicNewsComponent ? (
+            <Suspense fallback={<div>加载中...</div>}>
+              <DynamicNewsComponent />
+            </Suspense>
+          ) : (
+            <>
+              {/* Default content when no specific component exists */}
+              <p>
+                佩蒂宠物用品股份有限公司成立于1994年，是中国最大的宠物零食生产企业之一，也是
+                中国宠物食品行业的领军企业。公司产品远销全球，在宠物用品领域享有盛誉。
+              </p>
+              <p>
+                我们秉承"用爱呵护每一只宠物"的理念，不断创新研发，为全球宠物提供健康、
+                营养、美味的宠物零食及用品，让宠物和主人共享幸福生活。
+              </p>
+            </>
+          )}
         </div>
 
         <div className="news-navigation">
           <div
             className={`prev-news ${newsIndex === 0 ? 'disabled' : ''}`}
-            onClick={() => newsIndex > 0 && navigate(`/news-detail/${newsIndex - 1}`)}
+            onClick={() => newsIndex > 0 && navigate(`/blogs/news/${newsIndex - 1}`)}
           >
             上一篇
           </div>
           <div
             className={`next-news ${newsIndex === coverList.length - 1 ? 'disabled' : ''}`}
             onClick={() =>
-              newsIndex < coverList.length - 1 && navigate(`/news-detail/${newsIndex + 1}`)
+              newsIndex < coverList.length - 1 && navigate(`/blogs/news/${newsIndex + 1}`)
             }
           >
             下一篇

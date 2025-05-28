@@ -18,7 +18,7 @@ export default function News() {
               </div>
               <h3 className="news-item-title">{item.title}</h3>
               <div className="news-item-time">{item.time}</div>
-              <Link to={`/news-detail/${index}`} className="news-item-link">
+              <Link to={`/blogs/news/${index + 1}`} className="news-item-link">
                 阅读更多
               </Link>
             </div>
