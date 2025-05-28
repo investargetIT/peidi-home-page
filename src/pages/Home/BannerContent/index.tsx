@@ -42,19 +42,19 @@ export default function BannerContent() {
 
   return (
     <div className="banner-content-wrapper">
-      <div className="banner-content-container">
+      <div className="slider-main-container">
         {banners.map((banner, index) => (
-          <div key={index} className={`banner-slide ${index === currentIndex ? 'active' : ''}`}>
-            <img src={banner.src} alt={banner.alt} className="banner-image" />
+          <div key={index} className={`slider-item ${index === currentIndex ? 'active' : ''}`}>
+            <img src={banner.src} alt={banner.alt} className="slider-image" />
           </div>
         ))}
 
         {/* Navigation indicators */}
-        <div className="banner-indicators">
+        <div className="slider-dots">
           {banners.map((_, index) => (
             <span
               key={index}
-              className={`indicator ${index === currentIndex ? 'active' : ''}`}
+              className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
               onClick={() => goToSlide(index)}
             />
           ))}
