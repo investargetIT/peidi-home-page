@@ -51,7 +51,10 @@ export default function BrandTip() {
           </div>
 
           {/* 购买渠道卡片 */}
-          <div className="brand-tip-card">
+          <div
+            className="brand-tip-card"
+            onClick={() => window.open('https://peidicwyp.tmall.com/shop/view_shop.htm')}
+          >
             <img src={ChannelIcon} alt="购买渠道" className="brand-tip-card-image" />
           </div>
 
