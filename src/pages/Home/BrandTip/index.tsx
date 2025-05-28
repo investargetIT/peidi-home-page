@@ -7,22 +7,32 @@ import HealthIcon from './images/health.webp';
 import ChewIcon from './images/chew.webp';
 import SmartIcon from './images/smart.webp';
 import './index.less';
+import { Button } from 'antd';
 
 export default function BrandTip() {
+  const onLearnMoreClick = () => {
+    console.log('Learn more clicked');
+  };
+
   return (
     <>
       {/* 品牌信息描述区域 */}
       <div className="brand-tip-wrapper">
         <div className="brand-tip-container">
           {/* 品牌小标题 */}
-          <div className="brand-tip-title">宠食品牌</div>
+          <div className="brand-tip-title">ABOUT US</div>
 
           {/* 品牌主标题 */}
-          <div className="brand-tip-subtitle">主要品牌</div>
+          <div className="brand-tip-subtitle">关于佩蒂</div>
 
           {/* 品牌详细介绍 */}
           <div className="brand-tip-content">
-            佩蒂旗下拥有爵宴、好适嘉、齿能等主要品牌，其中，爵宴品牌坚持天然成就美味的理念，面向中高端市场，满足毛孩子们的肉食需求；好适嘉秉持精准营养主义，构建健康主食新标准；齿能品牌致力于维护宠物口腔健康，是全球首个宠物分龄定制专业咀嚼品牌。
+            待宠如己，每一次宠物把自己的一生都交给主人，它们配得上最好的款待。佩蒂从创办之初，就把对宠物的爱融入了自己的基因，对每一只宠物像爱自己孩子般不计回报。
+          </div>
+          <div className="brand-about-us-btn-container">
+            <Button className="brand-about-us-btn" type="primary" onClick={onLearnMoreClick}>
+              了解更多
+            </Button>
           </div>
         </div>
       </div>
@@ -53,4 +63,4 @@ export default function BrandTip() {
       </div>
     </>
   );
-} 
+}
