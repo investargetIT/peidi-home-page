@@ -12,6 +12,7 @@ import FactoryShowcase from './FactoryShowcase';
 import ProductInnovation from './ProductInnovation';
 import ResearchDevelopment from './ResearchDevelopment';
 import FooterNav from '@/components/FooterNav';
+import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContent from './BannerContent';
 import './index.less';
@@ -41,7 +42,7 @@ export default function Home() {
       {/* <FactoryIntro onLearnMoreClick={() => console.log('Factory intro learn more clicked')} /> */}
 
       {/* 工厂展示轮播区域 */}
-      <FactoryShowcase />
+      {/* <FactoryShowcase /> */}
 
       {/* 产品创新区域 */}
       {/* <ProductInnovation
@@ -52,7 +53,7 @@ export default function Home() {
       {/* <ResearchDevelopment /> */}
 
       {/* 页脚导航区域 */}
-      <FooterNav />
+      <NewFooterNav />
 
       {/* 版权信息区域 */}
       <CopyrightFooter />

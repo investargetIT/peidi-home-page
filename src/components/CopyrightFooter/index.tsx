@@ -8,9 +8,7 @@ export default function CopyrightFooter() {
   return (
     <div className="copyright-footer">
       {/* 版权文本信息 */}
-      <div className="copyright-text">
-        Copyright © 2024 佩蒂 保留所有权利.
-      </div>
+      <div className="copyright-text">Copyright © 2025 佩蒂 保留所有权利.</div>
     </div>
   );
-} 
+}
