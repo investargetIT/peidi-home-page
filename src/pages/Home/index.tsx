@@ -13,6 +13,7 @@ import ProductInnovation from './ProductInnovation';
 import ResearchDevelopment from './ResearchDevelopment';
 import FooterNav from '@/components/FooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+import BannerContent from './BannerContent';
 import './index.less';
 
 export default function Home() {
@@ -23,6 +24,9 @@ export default function Home() {
 
       {/* 品牌提示与图标展示区域 */}
       <BrandTip />
+
+      {/* 轮播图区域 */}
+      <BannerContent />
 
       {/* 关于我们介绍区域 */}
       {/* <AboutUs onLearnMoreClick={() => console.log('About us learn more clicked')} /> */}
