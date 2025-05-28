@@ -46,6 +46,37 @@
           max-width: 90%;
         }
 
+        /* Default layout (vertical with logo on top) */
+        &.default-layout {
+          flex-direction: column;
+        }
+
+        /* Alternate layout (horizontal with logo on left) */
+        &.alternate-layout {
+          flex-direction: row;
+          align-items: center;
+          gap: 30px;
+
+          .brand-logo {
+            margin-bottom: 0;
+            height: 70px;
+          }
+
+          .banner-text {
+            flex: 1;
+          }
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 15px;
+
+            .brand-logo {
+              height: 35px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
         .brand-logo {
           height: 50px;
           width: auto;

@@ -65,7 +65,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
     // 启动定时器，每5秒切换一次
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 150000);
 
     // 组件卸载时清除定时器
     return () => {
@@ -85,7 +85,9 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
             className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
             style={{ backgroundImage: `url(${banner.image})` }}
           >
-            <div className="banner-content">
+            <div
+              className={`banner-content ${index === 2 ? 'default-layout' : 'alternate-layout'}`}
+            >
               <img src={banner.logo} alt={`${banner.title} Logo`} className="brand-logo" />
               <div className="banner-text">
                 <h2>{banner.title}</h2>
