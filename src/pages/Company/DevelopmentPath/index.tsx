@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Banner from './images/banner.webp';
 import './index.less';
-import FooterNav from '@/components/FooterNav';
+import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
 
@@ -265,7 +265,7 @@ export default function DevelopmentPath() {
         </div>
       </div>
       {/* 页脚导航区域 */}
-      <FooterNav />
+      <NewFooterNav />
 
       {/* 版权信息区域 */}
       <CopyrightFooter />

@@ -9,7 +9,7 @@ export default function CopyrightFooter() {
     <div className="copyright-footer">
       {/* 版权文本信息 */}
       <div className="copyright-text">
-        Copyright © 2018 佩蒂动物营养科技股份有限公司 All Rights Reserved.
+        Copyright © 2025 佩蒂动物营养科技股份有限公司 All Rights Reserved.
       </div>
     </div>
   );

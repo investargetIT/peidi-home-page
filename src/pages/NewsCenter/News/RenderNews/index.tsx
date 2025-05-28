@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { coverList } from '../constant';
 import { useParams, useNavigate } from 'react-router-dom';
 import './index.less';
-import FooterNav from '@/components/FooterNav';
+import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 
 // Dynamically import news components
@@ -102,7 +102,7 @@ export default function RenderNews() {
       </div>
 
       {/* 页脚导航区域 */}
-      <FooterNav />
+      <NewFooterNav />
 
       {/* 版权信息区域 */}
       <CopyrightFooter />

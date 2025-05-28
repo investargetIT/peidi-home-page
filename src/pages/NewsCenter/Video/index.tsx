@@ -6,7 +6,7 @@ import Bg1 from './images/1-bg.webp';
 import Bg2 from './images/2-bg.webp';
 import Bg3 from './images/3-bg.webp';
 import Bg4 from './images/4-bg.webp';
-import FooterNav from '@/components/FooterNav';
+import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 
 export default function Video() {
@@ -83,7 +83,7 @@ export default function Video() {
         ))}
       </div>
       {/* 页脚导航区域 */}
-      <FooterNav />
+      <NewFooterNav />
 
       {/* 版权信息区域 */}
       <CopyrightFooter />

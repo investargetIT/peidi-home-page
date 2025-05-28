@@ -1,7 +1,7 @@
 import './index.less';
 import { coverList } from './constant';
 import { Link } from 'react-router-dom';
-import FooterNav from '@/components/FooterNav';
+import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import { useNavigate } from 'react-router-dom';
 import { useState, useMemo } from 'react';
@@ -88,7 +88,7 @@ export default function News() {
       </div>
 
       {/* 页脚导航区域 */}
-      <FooterNav />
+      <NewFooterNav />
 
       {/* 版权信息区域 */}
       <CopyrightFooter />

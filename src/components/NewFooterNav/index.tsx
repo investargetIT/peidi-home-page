@@ -27,7 +27,6 @@ export default function FooterNav() {
               <img src={PoliceIcon} alt="Police" className="bottom-police-icon" />
               <span className="bottom-security-license">浙公网安备 33032602100082号</span>
               <span className="bottom-icp-license">浙ICP备13035411号</span>
-              <span>佩蒂动物营养科技股份有限公司 保留所有权利</span>
             </p>
           </div>
 
