@@ -10,9 +10,6 @@ export default function News1() {
       </div>
 
       <div className="news-content">
-        <h2 className="news-title">佩蒂股份2024年三季报：利润爆增630%，毛利连续7季度提升</h2>
-        <div className="news-date">2024-10-30</div>
-
         <div className="news-text">
           <p>
             10月23日，佩蒂股份披露2024年三季报。前三季度，公司累计实现营业收入为13.23亿元，同比增长44.34%；归母净利润1.56亿元，同比增长630.85%。
