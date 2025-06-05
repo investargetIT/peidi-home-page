@@ -20,12 +20,12 @@ export default function FooterNav() {
       alt: '佩蒂股份公众号',
     },
     {
-      src: WeiboIcon,
-      alt: '佩蒂星球微博',
+      src: WeChatPet,
+      alt: '佩蒂星球公众号',
     },
     {
-      src: WeChatPet,
-      alt: '佩蒂宠物公众号',
+      src: WeiboIcon,
+      alt: '佩蒂星球微博',
     },
     {
       src: JueYanRed,
@@ -41,11 +41,11 @@ export default function FooterNav() {
     },
     {
       src: JingdongPet,
-      alt: '京东爵宴旗舰店',
+      alt: '京东爵宴官方旗舰店',
     },
     {
       src: DouyinPet,
-      alt: '抖音爵宴旗舰店',
+      alt: '抖音爵宴官方旗舰店',
     },
   ];
 
@@ -58,17 +58,20 @@ export default function FooterNav() {
       </div>
 
       {/* Copyright Footer Section */}
+      <div className="bottom-copyright-title">更多精彩请关注佩蒂官方账号矩阵</div>
       <div className="bottom-copyright-section">
         <div className="bottom-content-container">
-          <div className="bottom-contact-container">
-            <div className="bottom-social-media">
-              <img src={QRCode} alt="QR Code" className="bottom-qrcode" />
-              <img src={WeiboIcon} alt="Weibo" className="bottom-weibo" />
-            </div>
-            <div className="bottom-phone-number">400-836-1508</div>
+          <div className="qr-grid-container">
+            {qrList.map((qr, index) => (
+              <div key={index} className="qr-item">
+                <img src={qr.src} alt={qr.alt} className="qr-image" />
+                <div className="qr-label">{qr.alt}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+      <div className="bottom-phone-number">官方电话：400-836-1508</div>
     </>
   );
 }
