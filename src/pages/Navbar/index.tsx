@@ -131,7 +131,12 @@ export default function Navbar() {
             <a href="/investor-relations" className="contact-btn">
               投资关系
             </a>
-            <a href="/global-industry-business" className="contact-btn">
+            <a
+              href="https://peidigroup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-btn"
+            >
               全球行业业务
             </a>
           </div>
@@ -224,13 +229,15 @@ export default function Navbar() {
             >
               投资关系
             </Link>
-            <Link
-              to="/global-industry-business"
+            <a
+              href="https://peidigroup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mobile-contact-btn"
               onClick={() => setMobileOpen(false)}
             >
               全球行业业务
-            </Link>
+            </a>
           </div>
         )}
       </nav>

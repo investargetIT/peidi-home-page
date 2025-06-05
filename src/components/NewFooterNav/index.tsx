@@ -18,8 +18,6 @@ export default function FooterNav() {
 
       {/* Copyright Footer Section */}
       <div className="bottom-copyright-section">
-        <div className="bottom-divider"></div>
-
         <div className="bottom-content-container">
           <div className="bottom-contact-container">
             <div className="bottom-social-media">
