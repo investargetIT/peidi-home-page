@@ -20,6 +20,14 @@ export default function FloatingButtons() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // 按钮高度和间距
+  const btnSize = 50;
+  const btnGap = 10;
+  // 计算按钮在页面中的top百分比
+  // 悬浮按钮整体top: 50%（居中），微信按钮是第二个
+  // 所以微信按钮的中心大致在 50% - btnSize/2 - btnGap/2
+  // 微博按钮再往下 btnSize + btnGap
+
   return (
     <>
       {/* 悬浮按钮本体 */}
@@ -32,7 +40,7 @@ export default function FloatingButtons() {
           zIndex: 100000,
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px',
+          gap: `${btnGap}px`,
         }}
       >
         {/* TOP按钮 */}
@@ -40,8 +48,8 @@ export default function FloatingButtons() {
           <div
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={{
-              width: '50px',
-              height: '50px',
+              width: `${btnSize}px`,
+              height: `${btnSize}px`,
               background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
               borderRadius: '8px',
               display: 'flex',
@@ -60,8 +68,8 @@ export default function FloatingButtons() {
           onMouseEnter={() => setHoveredQR('wechat')}
           onMouseLeave={() => setHoveredQR(null)}
           style={{
-            width: '50px',
-            height: '50px',
+            width: `${btnSize}px`,
+            height: `${btnSize}px`,
             background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
             borderRadius: '8px',
             display: 'flex',
@@ -80,8 +88,8 @@ export default function FloatingButtons() {
           onMouseEnter={() => setHoveredQR('weibo')}
           onMouseLeave={() => setHoveredQR(null)}
           style={{
-            width: '50px',
-            height: '50px',
+            width: `${btnSize}px`,
+            height: `${btnSize}px`,
             background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
             borderRadius: '8px',
             display: 'flex',
@@ -96,13 +104,13 @@ export default function FloatingButtons() {
         </div>
       </div>
 
-      {/* 微信二维码弹窗 */}
+      {/* 微信二维码弹窗，fixed定位，right:90px，top:50%偏移-30px */}
       {hoveredQR === 'wechat' && (
         <div
           style={{
             position: 'fixed',
-            right: '100px',
-            top: '200px',
+            right: '90px',
+            top: 'calc(50% - 30px)', // 微调让弹窗与按钮垂直居中
             background: 'white',
             border: '3px solid #ff6b35',
             zIndex: 100002,
@@ -113,6 +121,7 @@ export default function FloatingButtons() {
             boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
             textAlign: 'center',
             minWidth: 150,
+            whiteSpace: 'nowrap',
           }}
         >
           <img
@@ -130,13 +139,13 @@ export default function FloatingButtons() {
         </div>
       )}
 
-      {/* 微博二维码弹窗 */}
+      {/* 微博二维码弹窗，fixed定位，right:90px，top:calc(50% + 60px) */}
       {hoveredQR === 'weibo' && (
         <div
           style={{
             position: 'fixed',
-            right: '100px',
-            top: '380px',
+            right: '90px',
+            top: 'calc(50% + 60px)', // 微调让弹窗与微博按钮垂直居中
             background: 'white',
             border: '3px solid #f7931e',
             zIndex: 100002,
@@ -147,6 +156,7 @@ export default function FloatingButtons() {
             boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
             textAlign: 'center',
             minWidth: 150,
+            whiteSpace: 'nowrap',
           }}
         >
           <img
