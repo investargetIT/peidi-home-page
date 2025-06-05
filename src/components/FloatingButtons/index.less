@@ -6,7 +6,19 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-50%) translateX(-5px);
+
+    .qr-popup {
+      right: 65px;
+    }
+  }
 }
 
 .floating-btn {
@@ -18,14 +30,20 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  background: transparent;
+  border: none;
+  z-index: 1;
 }
 
 /* TOP按钮样式 */
 .top-btn {
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
   color: white;
-  border-radius: 25px 0 0 25px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
 
   .btn-text {
     font-size: 12px;
@@ -34,14 +52,17 @@
   }
 
   &:hover {
-    background: linear-gradient(135deg, #ff5722, #f57c00);
-    transform: translateX(-5px);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 /* 社交媒体按钮基础样式 */
 .social-btn {
-  border-radius: 25px 0 0 25px;
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
 
   .btn-icon {
     width: 24px;
@@ -50,26 +71,33 @@
   }
 
   &:hover {
-    transform: translateX(-5px);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 /* 微信按钮 */
 .wechat-btn {
-  background: linear-gradient(135deg, #07c160, #00d4aa);
-
   &:hover {
-    background: linear-gradient(135deg, #06ad56, #00c399);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 /* 微博按钮 */
 .weibo-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ffa726);
-
   &:hover {
-    background: linear-gradient(135deg, #ff5252, #ff9800);
+    background: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* 按钮分隔线 */
+.floating-btn:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* 二维码悬浮层 */
@@ -84,8 +112,10 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   min-width: 140px;
   text-align: center;
-  opacity: 0;
-  animation: fadeInLeft 0.3s ease forwards;
+  opacity: 1;
+  z-index: 1001;
+  pointer-events: none;
+  display: block;
 
   &::after {
     content: '';
@@ -130,6 +160,14 @@
 @media (max-width: 768px) {
   .floating-buttons {
     right: 10px;
+
+    &:hover {
+      transform: translateY(-50%) translateX(-3px);
+
+      .qr-popup {
+        right: 58px;
+      }
+    }
   }
 
   .floating-btn {
@@ -137,13 +175,27 @@
     height: 45px;
   }
 
-  .top-btn .btn-text {
-    font-size: 11px;
+  .top-btn {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-text {
+      font-size: 11px;
+    }
   }
 
-  .social-btn .btn-icon {
-    width: 20px;
-    height: 20px;
+  .social-btn {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .qr-popup {
@@ -165,6 +217,14 @@
 @media (max-width: 480px) {
   .floating-buttons {
     right: 5px;
+
+    &:hover {
+      transform: translateY(-50%) translateX(-2px);
+
+      .qr-popup {
+        right: 52px;
+      }
+    }
   }
 
   .floating-btn {
@@ -172,13 +232,27 @@
     height: 40px;
   }
 
-  .top-btn .btn-text {
-    font-size: 10px;
+  .top-btn {
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-text {
+      font-size: 10px;
+    }
   }
 
-  .social-btn .btn-icon {
-    width: 18px;
-    height: 18px;
+  .social-btn {
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   .qr-popup {
