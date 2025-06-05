@@ -72,6 +72,15 @@ export default function FooterNav() {
         </div>
       </div>
       <div className="bottom-phone-number">官方电话：400-836-1508</div>
+      <div className="bottom-link-container">
+        友情链接：
+        <a href="https://meatyway.net" target="_blank" rel="noopener noreferrer">
+          https://meatyway.net
+        </a>
+        <a href="https://peidigroup.com/" target="_blank" rel="noopener noreferrer">
+          https://peidigroup.com
+        </a>
+      </div>
     </>
   );
 }
