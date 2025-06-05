@@ -563,20 +563,29 @@
 
 .quality-control-item {
   text-align: center;
+  position: relative;
 }
 
 .quality-control-item .productionbase-nz-image {
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  position: relative;
 }
 
 .quality-control-label {
-  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 0;
+  background: none;
   color: white;
-  border-radius: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* 响应式设计 */
@@ -587,8 +596,7 @@
   }
 
   .quality-control-label {
-    font-size: 16px;
-    padding: 6px;
+    font-size: 20px;
   }
 }
 
@@ -599,7 +607,6 @@
   }
 
   .quality-control-label {
-    font-size: 14px;
-    padding: 6px;
+    font-size: 18px;
   }
 }
