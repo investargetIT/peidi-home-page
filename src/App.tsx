@@ -1,8 +1,9 @@
-import Navbar from './pages/Navbar'
-import { BrowserRouter, useLocation } from 'react-router-dom'
+import Navbar from './pages/Navbar';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import AppRouter from './router';
 import { useEffect } from 'react';
 import { menu } from '@/constants';
+import FloatingButtons from './components/FloatingButtons';
 
 interface MenuItem {
   name: string;
@@ -40,7 +41,8 @@ export default function App() {
         <main className="w-full py-8">
           <AppRouter />
         </main>
+        <FloatingButtons />
       </div>
     </BrowserRouter>
-  )
+  );
 }
