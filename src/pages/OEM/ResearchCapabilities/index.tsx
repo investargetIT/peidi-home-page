@@ -9,10 +9,16 @@ import Image3 from './images/3.webp';
 import Image4 from './images/4.webp';
 import Image5 from './images/5.webp';
 import { useState, useEffect } from 'react';
+import { Modal } from 'antd';
 
 export default function ProductionCapacity() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [Image1, Image2, Image3, Image4]; // 使用Image1到Image4
+
+  // 图片预览相关状态
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [previewImage, setPreviewImage] = useState('');
+  const [previewTitle, setPreviewTitle] = useState('');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,6 +27,18 @@ export default function ProductionCapacity() {
 
     return () => clearInterval(interval);
   }, [images.length]);
+
+  // 处理图片预览
+  const handlePreview = (imageSrc: string, title: string) => {
+    setPreviewImage(imageSrc);
+    setPreviewTitle(title);
+    setPreviewVisible(true);
+  };
+
+  // 关闭预览
+  const handlePreviewCancel = () => {
+    setPreviewVisible(false);
+  };
 
   return (
     <div className="philosophy-page">
@@ -41,30 +59,77 @@ export default function ProductionCapacity() {
               >
                 <div className="slide-group">
                   <div className="productionbase-nz-image">
-                    <img src={Image1} alt="研发团队展示" />
+                    <img
+                      src={Image1}
+                      alt="研发团队展示"
+                      onClick={() => handlePreview(Image1, '研发团队展示 - 图片1')}
+                      style={{ cursor: 'pointer' }}
+                    />
                   </div>
                   <div className="productionbase-nz-image">
-                    <img src={Image2} alt="研发团队展示" />
+                    <img
+                      src={Image2}
+                      alt="研发团队展示"
+                      onClick={() => handlePreview(Image2, '研发团队展示 - 图片2')}
+                      style={{ cursor: 'pointer' }}
+                    />
                   </div>
                 </div>
                 <div className="slide-group">
                   <div className="productionbase-nz-image">
-                    <img src={Image3} alt="研发团队展示" />
+                    <img
+                      src={Image3}
+                      alt="研发团队展示"
+                      onClick={() => handlePreview(Image3, '研发团队展示 - 图片3')}
+                      style={{ cursor: 'pointer' }}
+                    />
                   </div>
                   <div className="productionbase-nz-image">
-                    <img src={Image4} alt="研发团队展示" />
+                    <img
+                      src={Image4}
+                      alt="研发团队展示"
+                      onClick={() => handlePreview(Image4, '研发团队展示 - 图片4')}
+                      style={{ cursor: 'pointer' }}
+                    />
                   </div>
                 </div>
               </div>
-              <div className="slide-indicators">
-                {Array.from({ length: Math.ceil(images.length / 2) }, (_, index) => (
-                  <button
-                    key={index}
-                    className={`indicator ${currentSlide === index ? 'active' : ''}`}
-                    onClick={() => setCurrentSlide(index)}
+
+              {/* 左箭头 */}
+              <button
+                className={`arrow-btn arrow-left ${currentSlide === 0 ? 'disabled' : ''}`}
+                onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
+                disabled={currentSlide === 0}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                ))}
-              </div>
+                </svg>
+              </button>
+
+              {/* 右箭头 */}
+              <button
+                className={`arrow-btn arrow-right ${currentSlide === Math.ceil(images.length / 2) - 1 ? 'disabled' : ''}`}
+                onClick={() =>
+                  setCurrentSlide(prev => Math.min(Math.ceil(images.length / 2) - 1, prev + 1))
+                }
+                disabled={currentSlide === Math.ceil(images.length / 2) - 1}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -92,6 +157,31 @@ export default function ProductionCapacity() {
           </p>
         </div>
       </div>
+
+      {/* 图片预览Modal */}
+      <Modal
+        open={previewVisible}
+        title={previewTitle}
+        footer={null}
+        onCancel={handlePreviewCancel}
+        width="90vw"
+        style={{ top: 20 }}
+        centered
+        className="image-preview-modal"
+      >
+        <div className="preview-image-container">
+          <img
+            src={previewImage}
+            alt={previewTitle}
+            style={{
+              width: '100%',
+              height: 'auto',
+              maxHeight: '80vh',
+              objectFit: 'contain',
+            }}
+          />
+        </div>
+      </Modal>
 
       {/* 页脚导航区域 */}
       <NewFooterNav />
