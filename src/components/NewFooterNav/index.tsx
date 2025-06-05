@@ -6,7 +6,6 @@ import './index.less';
 import BrandLogo from './images/banner.png';
 import QRCode from './images/we-chat.jpg';
 import WeiboIcon from './images/weibo.jpg';
-import PoliceIcon from './images/police-icon.png';
 
 export default function FooterNav() {
   return (
