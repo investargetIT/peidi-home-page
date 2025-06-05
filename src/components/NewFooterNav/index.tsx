@@ -22,14 +22,6 @@ export default function FooterNav() {
         <div className="bottom-divider"></div>
 
         <div className="bottom-content-container">
-          <div className="bottom-legal-info">
-            <p className="bottom-license-text">
-              <img src={PoliceIcon} alt="Police" className="bottom-police-icon" />
-              <span className="bottom-security-license">浙公网安备 33032602100082号</span>
-              <span className="bottom-icp-license">浙ICP备13035411号</span>
-            </p>
-          </div>
-
           <div className="bottom-contact-container">
             <div className="bottom-social-media">
               <img src={QRCode} alt="QR Code" className="bottom-qrcode" />
