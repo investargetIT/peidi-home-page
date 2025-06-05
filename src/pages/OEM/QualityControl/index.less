@@ -622,12 +622,16 @@
 
 .certification-item {
   text-align: center;
-  padding: 20px;
+  padding: 15px 10px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background: #fff;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .certification-item:hover {
@@ -636,10 +640,12 @@
 }
 
 .certification-item img {
-  width: 100%;
+  width: auto;
   height: auto;
-  max-width: 150px;
-  max-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 140px;
+  min-height: 90px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -660,7 +666,8 @@
   }
 
   .certification-item {
-    padding: 15px;
+    padding: 12px 8px;
+    min-height: 90px;
   }
 }
 
@@ -671,11 +678,12 @@
   }
 
   .certification-item {
-    padding: 15px;
+    padding: 10px 8px;
+    min-height: 80px;
   }
 
   .certification-item img {
-    max-width: 120px;
-    max-height: 80px;
+    min-width: 120px;
+    min-height: 70px;
   }
 }
