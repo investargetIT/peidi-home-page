@@ -5,7 +5,6 @@ import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
 import Image1 from './images/1.webp';
 import Image2 from './images/2.webp';
-import Image3 from './images/3.webp';
 
 export default function ProductionCapacity() {
   return (
@@ -27,6 +26,85 @@ export default function ProductionCapacity() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">全球制造</h2>
+          <div className="production-capacity-table">
+            <table className="capacity-table">
+              <thead>
+                <tr>
+                  <th>宠物类别</th>
+                  <th>类别</th>
+                  <th>首席运营官</th>
+                  <th>月产能（吨）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowSpan={3} className="pet-category">
+                    小狗
+                  </td>
+                  <td>干粮</td>
+                  <td>新西兰、中国</td>
+                  <td>3,350</td>
+                </tr>
+                <tr>
+                  <td>湿粮</td>
+                  <td>中国</td>
+                  <td>300</td>
+                </tr>
+                <tr>
+                  <td>咀嚼物和零食</td>
+                  <td>新西兰、柬埔寨、越南、中国</td>
+                  <td>5,000</td>
+                </tr>
+                <tr>
+                  <td rowSpan={3} className="pet-category">
+                    猫
+                  </td>
+                  <td>干粮</td>
+                  <td>新西兰、中国</td>
+                  <td>3,350</td>
+                </tr>
+                <tr>
+                  <td>湿粮</td>
+                  <td>中国</td>
+                  <td>300</td>
+                </tr>
+                <tr>
+                  <td>零食</td>
+                  <td>新西兰、柬埔寨、越南、中国</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td rowSpan={2} className="pet-category">
+                    鸟类
+                  </td>
+                  <td>可食用的玩具</td>
+                  <td>中国</td>
+                  <td>三十</td>
+                </tr>
+                <tr>
+                  <td>零食</td>
+                  <td>柬埔寨、越南、中国</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td rowSpan={2} className="pet-category">
+                    小动物
+                  </td>
+                  <td>可食用的玩具</td>
+                  <td>中国</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>零食</td>
+                  <td>柬埔寨、越南、中国</td>
+                  <td>三十</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">全球营销</h2>
         </div>
         <div className="philosophy-container">
           <div className="philosophy-image">
@@ -35,8 +113,7 @@ export default function ProductionCapacity() {
           <div className="philosophy-text-content">
             <div className="philosophy-values">
               <p>
-                正如孔子先圣所言："人而无信，不知其可也。"
-                事业从无坦途，成功须靠拼搏。企业的道德首先是和诚信相连，生产经营与道德的有机结合才能使一个企业真正成为社会所需要的力量。我们相信更多的企业，都会悟到这个发展的真谛，运用自如得法，时时存乎于心。佩蒂企业一路走过的昨天、今天以及明天，正是基于所倡导的"服务社会、实现自我"的企业价值观，坚持"以诚取信，以信立业"，严格履行一个企业对社会、客户和员工应尽的义务，谋求公司与客户、公司与社会、公司与个人的和谐发展。
+                我们的客户遍布全球多个国家和地区，佩蒂在为宠物连锁店、超市、批发店、在线供应商、进口商和经销商等不同渠道的客户提供产品和服务方面拥有丰富的经验，与全球领先的宠物产品供应商建立了长期的合作关系，我们可靠的产品质量、专业的服务和行业领先的新产品开发能力确保了我们业务的共同繁荣。
               </p>
             </div>
           </div>
