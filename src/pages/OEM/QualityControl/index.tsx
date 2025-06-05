@@ -7,8 +7,21 @@ import Image1 from './images/1.webp';
 import Image2 from './images/2.webp';
 import Image3 from './images/3.webp';
 import Image4 from './images/4.webp';
-import Image5 from './images/5.webp';
+
 import InnerRoom from './images/inner_room.webp';
+import Image11 from './images/1-1.webp';
+import Image12 from './images/1-2.webp';
+import Image13 from './images/1-3.webp';
+import Image14 from './images/1-4.webp';
+import Image21 from './images/2-1.webp';
+import Image22 from './images/2-2.webp';
+import Image23 from './images/2-3.webp';
+import Image24 from './images/2-4.webp';
+import Image31 from './images/3-1.webp';
+import Image32 from './images/3-2.webp';
+import Image33 from './images/3-3.webp';
+import Image34 from './images/3-4.webp';
+
 export default function QualityControl() {
   return (
     <div className="philosophy-page">
@@ -63,21 +76,51 @@ export default function QualityControl() {
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">越南德信</h2>
+          <h2 className="productionbase-nz-title">质量认证</h2>
           <p className="productionbase-nz-desc">
-            好嚼、德信生产基地2015年投入使用，总投资1400万美元，占地面积约4万平方米拥有1万吨宠物零食产能，工厂配备了行业领先的污水生物处理系统和辐照灭菌生产线。
+            佩蒂严格按照国际标准进行生产管理，获得了多项权威认证，确保产品质量和安全性。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image4} alt="新西兰KCPF工厂全景" />
-          </div>
-        </div>
-        <div className="container">
-          <h2 className="productionbase-nz-title">越南巴啦啦</h2>
-          <p className="productionbase-nz-desc">
-            巴啦啦生产基地建立于2017年总投资200万美元，占地面积约11000平方米，拥有5000吨宠物零食产能。
-          </p>
-          <div className="productionbase-nz-image">
-            <img src={Image5} alt="新西兰KCPF工厂全景" />
+
+          {/* 认证图片网格展示 */}
+          <div className="certification-grid">
+            <div className="certification-item">
+              <img src={Image11} alt="ISO9001认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image12} alt="FDA认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image13} alt="BRC认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image14} alt="CFIA认证" />
+            </div>
+
+            <div className="certification-item">
+              <img src={Image21} alt="ISO45001认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image22} alt="FSMA认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image23} alt="欧盟认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image24} alt="GMP认证" />
+            </div>
+
+            <div className="certification-item">
+              <img src={Image31} alt="ISO14001认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image32} alt="HACCP认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image33} alt="APPA认证" />
+            </div>
+            <div className="certification-item">
+              <img src={Image34} alt="ISO22000认证" />
+            </div>
           </div>
         </div>
       </div>
