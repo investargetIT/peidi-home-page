@@ -149,11 +149,7 @@ export default function Navbar() {
               item.children ? (
                 <div key={item.name} className="mobile-dropdown">
                   {item.link ? (
-                    <Link
-                      to={item.link}
-                      className="mobile-dropdown-btn"
-                      style={{ display: 'flex', justifyContent: 'space-between' }}
-                    >
+                    <Link to={item.link} className="mobile-dropdown-btn">
                       {item.name}
                       <svg
                         className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
