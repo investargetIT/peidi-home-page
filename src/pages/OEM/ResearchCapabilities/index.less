@@ -187,6 +187,62 @@
   }
 }
 
+// 幻灯片样式
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+
+  .slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; // 2个slide组，每个占100%
+
+    .slide-group {
+      display: flex;
+      gap: 20px;
+      width: 50%; // 每个slide组占50%（即原来的100%）
+      flex-shrink: 0;
+
+      .productionbase-nz-image {
+        flex: 1;
+      }
+    }
+  }
+
+  .slide-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8);
+        transform: scale(1.1);
+      }
+
+      &.active {
+        background: #fff;
+        transform: scale(1.2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
 // 生产能力表格样式
 .production-capacity-table {
   margin-top: 40px;
@@ -318,6 +374,28 @@
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
+  }
+
+  .slideshow-container {
+    .slides-wrapper {
+      .slide-group {
+        flex-direction: column;
+        gap: 15px;
+
+        .productionbase-nz-image {
+          flex: none;
+        }
+      }
+    }
+
+    .slide-indicators {
+      bottom: 15px;
+
+      .indicator {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 
   .production-capacity-table {

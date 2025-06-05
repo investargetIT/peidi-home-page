@@ -17,10 +17,10 @@ export default function ProductionCapacity() {
           <h2 className="productionbase-nz-title">全球资源</h2>
           <div className="productionbase-nz-image-container">
             <div className="productionbase-nz-image">
-              <img src={Image1} alt="新西兰KCPF工厂全景" />
+              <img src={Image1} alt="全球资源展示" />
             </div>
             <div className="productionbase-nz-image">
-              <img src={Image2} alt="新西兰KCPF工厂全景" />
+              <img src={Image2} alt="全球资源展示" />
             </div>
           </div>
         </div>
