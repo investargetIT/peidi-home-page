@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import peidiLogo from '@/assets/peidi.webp';
+// import peidiLogo from '@/assets/newlogo.png';
 import { Link } from 'react-router-dom';
 import { menu } from '@/constants';
 import './index.less';
