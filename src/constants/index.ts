@@ -14,7 +14,7 @@ export const menu = [
     children: [
       { name: '生产基地', link: '/pages/production-base', title: 'Production Base' },
       { name: '生产能力', link: '/pages/production-capacity', title: 'Production Capacity' },
-      { name: '研发能力', link: '/pages/r-d-capabilities', title: 'R&D Capabilities' },
+      { name: '研发能力', link: '/pages/research-capabilities', title: 'R&D Capabilities' },
       { name: '质量管理', link: '/pages/quality-control', title: 'Quality Control' },
       { name: '订单流程', link: '/pages/order-process', title: 'Order Process' },
       { name: '产品中心', link: '/pages/product-center', title: 'Product Center' },
