@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.less';
 import DogBg from '@/assets/dog/bg.webp';
 import DogDry1 from '@/assets/dog/dry/1.webp';
@@ -11,12 +11,17 @@ import DogSnack4 from '@/assets/dog/snacks/4.webp';
 import DogSnack5 from '@/assets/dog/snacks/5.webp';
 import DogSnack6 from '@/assets/dog/snacks/6.webp';
 import DogSnack7 from '@/assets/dog/snacks/7.webp';
+import CatBg from '@/assets/cat/banner.webp';
+import CatDry1 from '@/assets/cat/dry/1.webp';
+import CatWet1 from '@/assets/cat/wet/1.webp';
 
 export default function ProductCenter() {
+  const [currentBg, setCurrentBg] = useState(DogBg);
+
   return (
     <div className="product-center-page">
       {/* 背景容器 */}
-      <div className="product-bg-container" style={{ backgroundImage: `url(${DogBg})` }}>
+      <div className="product-bg-container" style={{ backgroundImage: `url(${currentBg})` }}>
         {/* 页面标题 */}
         <div className="product-title">
           <h1>狗</h1>
@@ -69,6 +74,35 @@ export default function ProductCenter() {
               </div>
               <div className="product-item snack">
                 <img src={DogSnack7} alt="零食5" />
+              </div>
+            </div>
+          </div>
+
+          {/* 猫产品展示区域 */}
+          <div
+            className="cat-product-area"
+            onMouseEnter={() => setCurrentBg(CatBg)}
+            onMouseLeave={() => setCurrentBg(DogBg)}
+          >
+            <div className="product-title cat-title">
+              <h1>猫</h1>
+            </div>
+
+            <div className="cat-product-display">
+              {/* 干粮区域 - 上方一个 */}
+              <div className="cat-dry-food-section">
+                <div className="product-item cat-product">
+                  <img src={CatDry1} alt="猫干粮" />
+                  <div className="product-label">干粮</div>
+                </div>
+              </div>
+
+              {/* 湿粮区域 - 下方一个大图 */}
+              <div className="cat-wet-food-section">
+                <div className="product-item cat-product cat-large">
+                  <img src={CatWet1} alt="猫湿粮" />
+                  <div className="product-label">湿粮</div>
+                </div>
               </div>
             </div>
           </div>
