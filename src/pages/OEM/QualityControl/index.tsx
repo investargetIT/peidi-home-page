@@ -7,6 +7,7 @@ import Image1 from './images/1.webp';
 import Image2 from './images/2.webp';
 import Image3 from './images/3.webp';
 import Image4 from './images/4.webp';
+import Image5 from './images/5.webp';
 
 import InnerRoom from './images/inner_room.webp';
 import Image11 from './images/1-1.webp';
@@ -132,9 +133,6 @@ export default function QualityControl() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">社会责任</h2>
-          <p className="productionbase-nz-desc">
-            佩蒂积极履行企业社会责任，关注员工福利、环境保护和社区发展。
-          </p>
 
           {/* 社会责任图片网格展示 - 5列布局 */}
           <div className="social-responsibility-grid">
@@ -165,6 +163,27 @@ export default function QualityControl() {
             </div>
             <div className="social-responsibility-item">
               <img src={R19} alt="社会责任9" />
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <h2 className="productionbase-nz-title">内部实验室</h2>
+          <div className="philosophy-container">
+            <div className="philosophy-image">
+              <img src={Image5} alt="人与宠物的温馨互动" />
+            </div>
+            <div className="philosophy-text-content">
+              <div className="philosophy-values">
+                <p>
+                  佩蒂致力于通过优化生产过程和供应链管理来减少能源消耗和二氧化碳排放。这些举措不仅有助于降低环境影响，还促进整体资源效率的提升。
+                </p>
+                <p>此外，佩蒂在环保领域积极引领创新，推出多款环保型产品和解决方案。</p>
+                <p>
+                  为了确保在环保方面持续改进，佩蒂积极寻求并获得了ISO
+                  14001环境管理体系认证。这一认证确保在运营过程中严格遵守最严格的环保法规和最佳实践标准，以确保公司的环保行动符合全球环保标准。
+                </p>
+              </div>
             </div>
           </div>
         </div>
