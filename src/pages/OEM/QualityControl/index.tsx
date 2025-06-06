@@ -33,6 +33,21 @@ import R17 from './images/r-1-7.webp';
 import R18 from './images/r-1-8.webp';
 import R19 from './images/r-1-9.webp';
 
+import H1 from './images/h-1.webp';
+import H2 from './images/h-2.webp';
+import H3 from './images/h-3.webp';
+import H4 from './images/h-4.webp';
+import H5 from './images/h-5.webp';
+import H6 from './images/h-6.webp';
+import H7 from './images/h-7.webp';
+import H8 from './images/h-8.webp';
+import H9 from './images/h-9.webp';
+import H10 from './images/h-10.webp';
+import H11 from './images/h-11.webp';
+import H12 from './images/h-12.webp';
+import H13 from './images/h-13.webp';
+import H14 from './images/h-14.webp';
+
 export default function QualityControl() {
   return (
     <div className="philosophy-page">
@@ -184,6 +199,61 @@ export default function QualityControl() {
                   14001环境管理体系认证。这一认证确保在运营过程中严格遵守最严格的环保法规和最佳实践标准，以确保公司的环保行动符合全球环保标准。
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">公司荣誉</h2>
+          <p className="productionbase-nz-desc">
+            佩蒂凭借优秀的产品质量和管理水平，获得了众多权威机构的认可和荣誉。
+          </p>
+
+          {/* 公司荣誉图片网格展示 - 4列布局 */}
+          <div className="company-honor-grid">
+            <div className="company-honor-item">
+              <img src={H1} alt="公司荣誉1" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H2} alt="公司荣誉2" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H3} alt="公司荣誉3" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H4} alt="公司荣誉4" />
+            </div>
+
+            <div className="company-honor-item">
+              <img src={H5} alt="公司荣誉5" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H6} alt="公司荣誉6" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H7} alt="公司荣誉7" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H8} alt="公司荣誉8" />
+            </div>
+
+            <div className="company-honor-item">
+              <img src={H9} alt="公司荣誉9" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H10} alt="公司荣誉10" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H11} alt="公司荣誉11" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H12} alt="公司荣誉12" />
+            </div>
+
+            <div className="company-honor-item">
+              <img src={H13} alt="公司荣誉13" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H14} alt="公司荣誉14" />
             </div>
           </div>
         </div>

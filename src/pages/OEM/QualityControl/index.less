@@ -768,3 +768,80 @@
     min-height: 60px;
   }
 }
+
+/* 公司荣誉图片网格样式 - 4列布局 */
+.company-honor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.company-honor-item {
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-honor-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.company-honor-item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 140px;
+  min-height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 公司荣誉响应式设计 */
+@media (max-width: 1024px) {
+  .company-honor-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-honor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .company-honor-item {
+    padding: 12px 8px;
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-honor-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .company-honor-item {
+    padding: 10px 8px;
+    min-height: 80px;
+  }
+
+  .company-honor-item img {
+    min-width: 120px;
+    min-height: 70px;
+  }
+}
