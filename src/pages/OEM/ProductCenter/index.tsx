@@ -14,6 +14,9 @@ import DogSnack7 from '@/assets/dog/snacks/7.webp';
 import CatBg from '@/assets/cat/banner.webp';
 import CatDry1 from '@/assets/cat/dry/1.webp';
 import CatWet1 from '@/assets/cat/wet/1.webp';
+import BirdBg from '@/assets/bird/banner.webp';
+import BirdSnack1 from '@/assets/bird/snacks/1.webp';
+import BirdToy1 from '@/assets/bird/toy/1.webp';
 
 export default function ProductCenter() {
   const [currentBg, setCurrentBg] = useState(DogBg);
@@ -102,6 +105,40 @@ export default function ProductCenter() {
                 <div className="product-item cat-product cat-large">
                   <img src={CatWet1} alt="猫湿粮" />
                   <div className="product-label">湿粮</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 鸟类产品展示区域 */}
+          <div
+            className="bird-product-area"
+            onMouseEnter={() => setCurrentBg(BirdBg)}
+            onMouseLeave={() => setCurrentBg(DogBg)}
+          >
+            <div className="product-title bird-title">
+              <h1>鸟类</h1>
+            </div>
+
+            <div className="bird-product-display">
+              {/* 零食区域 */}
+              <div className="bird-snack-section">
+                <div className="product-item bird-product">
+                  <img src={BirdSnack1} alt="鸟类零食" />
+                  <div className="product-label">零食</div>
+                </div>
+              </div>
+
+              {/* 可食用玩具区域 */}
+              <div className="bird-toy-section">
+                <div className="section-title">
+                  <h2>可食用玩具</h2>
+                </div>
+                <div className="bird-toy-grid">
+                  <div className="product-item bird-product">
+                    <img src={BirdToy1} alt="可食用玩具" />
+                    <div className="product-label">玩具</div>
+                  </div>
                 </div>
               </div>
             </div>
