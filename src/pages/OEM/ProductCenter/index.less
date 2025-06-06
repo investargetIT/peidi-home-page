@@ -274,6 +274,101 @@
   }
 }
 
+/* 小动物产品区域样式 */
+.animal-product-area {
+  margin-top: 60px;
+  max-width: 900px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.animal-title {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-bottom: 20px;
+  text-align: left !important;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #333;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animal-product-display {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.animal-top-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.animal-edible-toy {
+  flex: 1.2;
+}
+
+.animal-houses {
+  display: flex;
+  gap: 15px;
+  flex: 1.5;
+  justify-content: center;
+}
+
+.animal-snacks-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-item.animal-product {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &.large-toy {
+    width: 350px;
+    height: 200px;
+  }
+
+  &.house {
+    width: 220px;
+    height: 200px;
+  }
+
+  &.snacks-complete {
+    width: 600px;
+    height: 300px;
+  }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .product-bg-container {
@@ -396,6 +491,43 @@
     width: 100%;
     height: 180px;
   }
+
+  .animal-product-area {
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .animal-title {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .animal-top-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .animal-houses {
+    justify-content: center;
+  }
+
+  .product-item.animal-product {
+    &.large-toy {
+      width: 100%;
+      height: 180px;
+    }
+
+    &.house {
+      width: 150px;
+      height: 140px;
+    }
+
+    &.snacks-complete {
+      width: 100%;
+      height: 200px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -472,5 +604,36 @@
 
   .product-item.bird-product {
     height: 150px;
+  }
+
+  .animal-title {
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .animal-product-area {
+    padding: 15px;
+  }
+
+  .animal-houses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-item.animal-product {
+    &.large-toy {
+      height: 150px;
+    }
+
+    &.house {
+      width: 120px;
+      height: 100px;
+    }
+
+    &.snacks-complete {
+      width: 100%;
+      height: 150px;
+    }
   }
 }

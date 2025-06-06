@@ -17,6 +17,11 @@ import CatWet1 from '@/assets/cat/wet/1.webp';
 import BirdBg from '@/assets/bird/banner.webp';
 import BirdSnack1 from '@/assets/bird/snacks/1.webp';
 import BirdToy1 from '@/assets/bird/toy/1.webp';
+import AnimalBg from '@/assets/animal/banner.webp';
+import AnimalSnack1 from '@/assets/animal/snacks/1.webp';
+import AnimalToy1 from '@/assets/animal/toy/1.webp';
+import AnimalToy2 from '@/assets/animal/toy/2.webp';
+import AnimalToy3 from '@/assets/animal/toy/3.webp';
 
 export default function ProductCenter() {
   const [currentBg, setCurrentBg] = useState(DogBg);
@@ -139,6 +144,48 @@ export default function ProductCenter() {
                     <img src={BirdToy1} alt="可食用玩具" />
                     <div className="product-label">玩具</div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 小动物产品展示区域 */}
+          <div
+            className="animal-product-area"
+            onMouseEnter={() => setCurrentBg(AnimalBg)}
+            onMouseLeave={() => setCurrentBg(DogBg)}
+          >
+            <div className="product-title animal-title">
+              <h1>小动物</h1>
+            </div>
+
+            <div className="animal-product-display">
+              {/* 顶部布局 - 可食用玩具和草编小屋 */}
+              <div className="animal-top-section">
+                {/* 左侧可食用玩具 */}
+                <div className="animal-edible-toy">
+                  <div className="product-item animal-product large-toy">
+                    <img src={AnimalToy1} alt="可食用玩具" />
+                    <div className="product-label">可食用的玩具</div>
+                  </div>
+                </div>
+
+                {/* 中间草编小屋 */}
+                <div className="animal-houses">
+                  <div className="product-item animal-product house">
+                    <img src={AnimalToy2} alt="草编小屋1" />
+                  </div>
+                  <div className="product-item animal-product house">
+                    <img src={AnimalToy3} alt="草编小屋2" />
+                  </div>
+                </div>
+              </div>
+
+              {/* 零食展示区域 */}
+              <div className="animal-snacks-section">
+                <div className="product-item animal-product snacks-complete">
+                  <img src={AnimalSnack1} alt="小动物零食" />
+                  <div className="product-label">零食</div>
                 </div>
               </div>
             </div>
