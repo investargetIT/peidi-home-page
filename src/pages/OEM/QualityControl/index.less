@@ -687,3 +687,80 @@
     min-height: 70px;
   }
 }
+
+/* 社会责任图片网格样式 - 5列布局 */
+.social-responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.social-responsibility-item {
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-responsibility-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-responsibility-item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 120px;
+  min-height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 社会责任响应式设计 */
+@media (max-width: 1200px) {
+  .social-responsibility-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-responsibility-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .social-responsibility-item {
+    padding: 12px 8px;
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-responsibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .social-responsibility-item {
+    padding: 10px 8px;
+    min-height: 80px;
+  }
+
+  .social-responsibility-item img {
+    min-width: 100px;
+    min-height: 60px;
+  }
+}

@@ -22,6 +22,16 @@ import Image32 from './images/3-2.webp';
 import Image33 from './images/3-3.webp';
 import Image34 from './images/3-4.webp';
 
+import R11 from './images/r-1-1.webp';
+import R12 from './images/r-1-2.webp';
+import R13 from './images/r-1-3.webp';
+import R14 from './images/r-1-4.webp';
+import R15 from './images/r-1-5.webp';
+import R16 from './images/r-1-6.webp';
+import R17 from './images/r-1-7.webp';
+import R18 from './images/r-1-8.webp';
+import R19 from './images/r-1-9.webp';
+
 export default function QualityControl() {
   return (
     <div className="philosophy-page">
@@ -77,9 +87,6 @@ export default function QualityControl() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">质量认证</h2>
-          <p className="productionbase-nz-desc">
-            佩蒂严格按照国际标准进行生产管理，获得了多项权威认证，确保产品质量和安全性。
-          </p>
 
           {/* 认证图片网格展示 */}
           <div className="certification-grid">
@@ -120,6 +127,44 @@ export default function QualityControl() {
             </div>
             <div className="certification-item">
               <img src={Image34} alt="ISO22000认证" />
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">社会责任</h2>
+          <p className="productionbase-nz-desc">
+            佩蒂积极履行企业社会责任，关注员工福利、环境保护和社区发展。
+          </p>
+
+          {/* 社会责任图片网格展示 - 5列布局 */}
+          <div className="social-responsibility-grid">
+            <div className="social-responsibility-item">
+              <img src={R11} alt="社会责任1" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R12} alt="社会责任2" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R13} alt="社会责任3" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R14} alt="社会责任4" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R15} alt="社会责任5" />
+            </div>
+
+            <div className="social-responsibility-item">
+              <img src={R16} alt="社会责任6" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R17} alt="社会责任7" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R18} alt="社会责任8" />
+            </div>
+            <div className="social-responsibility-item">
+              <img src={R19} alt="社会责任9" />
             </div>
           </div>
         </div>
