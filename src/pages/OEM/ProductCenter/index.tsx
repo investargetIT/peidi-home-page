@@ -4,6 +4,13 @@ import DogBg from '@/assets/dog/bg.webp';
 import DogDry1 from '@/assets/dog/dry/1.webp';
 import DogDry2 from '@/assets/dog/dry/2.webp';
 import DogWet1 from '@/assets/dog/wet/3.webp';
+import DogSnack1 from '@/assets/dog/snacks/1.webp';
+import DogSnack2 from '@/assets/dog/snacks/2.webp';
+import DogSnack3 from '@/assets/dog/snacks/3.webp';
+import DogSnack4 from '@/assets/dog/snacks/4.webp';
+import DogSnack5 from '@/assets/dog/snacks/5.webp';
+import DogSnack6 from '@/assets/dog/snacks/6.webp';
+import DogSnack7 from '@/assets/dog/snacks/7.webp';
 
 export default function ProductCenter() {
   return (
@@ -33,6 +40,36 @@ export default function ProductCenter() {
             <div className="product-item large">
               <img src={DogWet1} alt="湿粮" />
               <div className="product-label">湿粮</div>
+            </div>
+          </div>
+
+          {/* 咀嚼物和零食区域 */}
+          <div className="snacks-section">
+            <div className="section-title">
+              <h2>咀嚼物和零食</h2>
+            </div>
+            <div className="snacks-grid">
+              <div className="product-item snack">
+                <img src={DogSnack1} alt="咀嚼物1" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack2} alt="咀嚼物2" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack3} alt="零食1" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack4} alt="零食2" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack5} alt="零食3" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack6} alt="零食4" />
+              </div>
+              <div className="product-item snack">
+                <img src={DogSnack7} alt="零食5" />
+              </div>
             </div>
           </div>
         </div>
