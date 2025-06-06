@@ -103,6 +103,9 @@ export default function QualityControl() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">质量认证</h2>
+          <p className="productionbase-nz-desc">
+            佩蒂严格按照国际标准进行生产管理，获得了多项权威认证，确保产品质量和安全性。这些认证涵盖了质量管理、食品安全、环境保护等多个方面，体现了佩蒂对品质的不懈追求和对消费者负责的态度。
+          </p>
 
           {/* 认证图片网格展示 */}
           <div className="certification-grid">
@@ -148,6 +151,9 @@ export default function QualityControl() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">社会责任</h2>
+          <p className="productionbase-nz-desc">
+            佩蒂积极履行企业社会责任，关注员工福利、环境保护和社区发展。我们致力于可持续发展，通过各种公益活动和环保措施，为社会创造更多价值，与社区共同成长，推动行业的健康发展。
+          </p>
 
           {/* 社会责任图片网格展示 - 5列布局 */}
           <div className="social-responsibility-grid">
