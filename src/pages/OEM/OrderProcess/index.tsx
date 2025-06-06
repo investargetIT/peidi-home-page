@@ -12,27 +12,7 @@ import Image6 from './images/6.webp';
 import Image7 from './images/7.webp';
 import Image8 from './images/8.webp';
 import Image9 from './images/9.webp';
-import { useState } from 'react';
-import { Modal } from 'antd';
-
 export default function OrderProcess() {
-  // 图片预览相关状态
-  const [previewVisible, setPreviewVisible] = useState(false);
-  const [previewImage, setPreviewImage] = useState('');
-  const [previewTitle, setPreviewTitle] = useState('');
-
-  // 处理图片预览
-  const handlePreview = (imageSrc: string, title: string) => {
-    setPreviewImage(imageSrc);
-    setPreviewTitle(title);
-    setPreviewVisible(true);
-  };
-
-  // 关闭预览
-  const handlePreviewCancel = () => {
-    setPreviewVisible(false);
-  };
-
   return (
     <div className="philosophy-page">
       <BannerContainer bannerImage={Banner} title="订单流程" />
@@ -47,28 +27,13 @@ export default function OrderProcess() {
           {/* 三张图片一行展示 */}
           <div className="order-process-grid">
             <div className="order-process-item">
-              <img
-                src={Image1}
-                alt="订单流程图片1"
-                onClick={() => handlePreview(Image1, '订单流程图片1')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image1} alt="订单流程图片1" />
             </div>
             <div className="order-process-item">
-              <img
-                src={Image2}
-                alt="订单流程图片2"
-                onClick={() => handlePreview(Image2, '订单流程图片2')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image2} alt="订单流程图片2" />
             </div>
             <div className="order-process-item">
-              <img
-                src={Image3}
-                alt="订单流程图片3"
-                onClick={() => handlePreview(Image3, '订单流程图片3')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image3} alt="订单流程图片3" />
             </div>
           </div>
         </div>
@@ -81,28 +46,13 @@ export default function OrderProcess() {
           {/* 三张图片一行展示 */}
           <div className="order-process-grid">
             <div className="order-process-item">
-              <img
-                src={Image4}
-                alt="普通定制产品图片1"
-                onClick={() => handlePreview(Image4, '普通定制产品图片1')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image4} alt="普通定制产品图片1" />
             </div>
             <div className="order-process-item">
-              <img
-                src={Image5}
-                alt="普通定制产品图片2"
-                onClick={() => handlePreview(Image5, '普通定制产品图片2')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image5} alt="普通定制产品图片2" />
             </div>
             <div className="order-process-item">
-              <img
-                src={Image6}
-                alt="普通定制产品图片3"
-                onClick={() => handlePreview(Image6, '普通定制产品图片3')}
-                style={{ cursor: 'pointer' }}
-              />
+              <img src={Image6} alt="普通定制产品图片3" />
             </div>
           </div>
         </div>
@@ -114,14 +64,14 @@ export default function OrderProcess() {
           </p>
           {/* 三张图片一行展示 */}
           <div className="order-process-grid">
-            <div className="order-process-item">
-              <img src={Image7} alt="高级定制产品图片1" style={{ cursor: 'pointer' }} />
+            <div className="order-process-item" style={{ height: 300 }}>
+              <img src={Image7} alt="高级定制产品图片1" />
             </div>
-            <div className="order-process-item">
-              <img src={Image8} alt="高级定制产品图片2" style={{ cursor: 'pointer' }} />
+            <div className="order-process-item" style={{ height: 300 }}>
+              <img src={Image8} alt="高级定制产品图片2" />
             </div>
-            <div className="order-process-item">
-              <img src={Image9} alt="高级定制产品图片3" style={{ cursor: 'pointer' }} />
+            <div className="order-process-item" style={{ height: 300 }}>
+              <img src={Image9} alt="高级定制产品图片3" />
             </div>
           </div>
         </div>
