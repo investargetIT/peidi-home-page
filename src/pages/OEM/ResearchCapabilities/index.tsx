@@ -180,7 +180,7 @@ export default function ProductionCapacity() {
             marginBottom: 40,
           }}
         >
-          <div className="productionbase-nz-image" style={{ maxWidth: 600 }}>
+          <div className="productionbase-nz-image" style={{ maxWidth: '80vw' }}>
             <img
               src={imagesInvest[investIndex]}
               alt="重视研发投入图片"
