@@ -687,12 +687,34 @@
   margin-bottom: 40px;
 }
 
+/* 高级定制产品特殊布局 - 一行4列，最后一张图片占两列 */
+.container:nth-child(3) .order-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container:nth-child(3) .order-process-item:nth-child(1) {
+  grid-column: 1;
+}
+
+.container:nth-child(3) .order-process-item:nth-child(2) {
+  grid-column: 2;
+}
+
+.container:nth-child(3) .order-process-item:nth-child(3) {
+  grid-column: 3;
+}
+
 .order-process-item {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  aspect-ratio: 4/3;
+  background: #fff;
+  height: 300px;
   position: relative;
 }
 
@@ -706,9 +728,14 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  object-position: center top;
+}
+
+// 针对高级定制产品第三张图片的特殊处理
+.container:nth-child(3) .order-process-item:nth-child(3) img {
+  object-fit: cover;
+  object-position: center;
+  background: #fff;
 }
 
 /* 响应式设计 */
@@ -717,10 +744,29 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  /* 移动端高级定制产品恢复普通布局 */
+  .container:nth-child(3) .order-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container:nth-child(3) .order-process-item:nth-child(1),
+  .container:nth-child(3) .order-process-item:nth-child(2),
+  .container:nth-child(3) .order-process-item:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .order-process-item {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
   .order-process-grid {
     gap: 15px;
+  }
+
+  .order-process-item {
+    height: 260px;
   }
 }
