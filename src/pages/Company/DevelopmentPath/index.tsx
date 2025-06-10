@@ -41,19 +41,78 @@ const timelineData = [
     position: 'bottom',
     animationBase: 1.3,
   },
+  {
+    year: '2017',
+    subtitle: '开启资本 扩张之路',
+    text: '2015年股份制改革后，佩蒂在新三板挂牌，后于2017年在创业板上市，成为中国宠物行业第一家上市公司，股票代码:300673。',
+    position: 'bottom',
+    animationBase: 0.1,
+  },
+  {
+    year: '2018年',
+    subtitle: '开启品牌运营 实施双轮驱动',
+    text: '2018年，佩蒂成立杭州管理中心，正式开启品牌运营事业，进入国内外"双轮驱动"时代。',
+    position: 'top',
+    animationBase: 0.2,
+  },
+  {
+    year: '2019',
+    subtitle: '生态赋能让中国企业借船出海',
+    text: '佩蒂柬埔寨东埔寨工业园区开工建设，全能赋服务投入个性模块式帮更多中国企业出海',
+    position: 'bottom',
+    animationBase: 0.7,
+  },
+  {
+    year: '2023',
+    subtitle: '"一体两翼"护航发展',
+    text: '佩蒂发布战略2.0，即"一体两翼"战略:稳固ODM业务、发展品牌运营业务、培育创新业务。',
+    position: 'top',
+    animationBase: 0.8,
+  },
+  {
+    year: '2024',
+    subtitle: '发力全球高端主粮赛道',
+    text: '佩蒂新西兰工厂主粮产线正式投产积极抢占高端宠物主粮市场。',
+    position: 'bottom',
+    animationBase: 1.3,
+  },
+  {
+    year: '待续...',
+    subtitle: '',
+    // text: '待续...',
+    position: 'bottom',
+    animationBase: 1.5,
+  },
 ];
 
 export default function DevelopmentPath() {
   const [isVisible, setIsVisible] = useState(false);
+  const [page, setPage] = useState(0);
+  const pageSize = 5;
+  const pageCount = Math.ceil(timelineData.length / pageSize);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [page]);
 
-  const getLeftPercent = (idx: number) => `${(idx / (timelineData.length - 1)) * 100}%`;
+  const pagedData = timelineData.slice(page * pageSize, (page + 1) * pageSize);
+  const getLeftPercent = (idx: number, len: number = pageSize) => `${(idx / (len - 1)) * 100}%`;
+
+  const handlePrev = () => {
+    if (page > 0) {
+      setIsVisible(false);
+      setTimeout(() => setPage(page - 1), 300);
+    }
+  };
+  const handleNext = () => {
+    if (page < pageCount - 1) {
+      setIsVisible(false);
+      setTimeout(() => setPage(page + 1), 300);
+    }
+  };
 
   return (
     <div className="philosophy-page">
@@ -67,7 +126,10 @@ export default function DevelopmentPath() {
             {/* 主轴线 */}
             <div className="timeline-main-line"></div>
             {/* 左右箭头 */}
-            <div className="timeline-arrow left">
+            <div
+              className={`timeline-arrow left${page === 0 ? ' disabled' : ''}`}
+              onClick={handlePrev}
+            >
               <svg
                 width="20"
                 height="20"
@@ -84,7 +146,10 @@ export default function DevelopmentPath() {
                 />
               </svg>
             </div>
-            <div className="timeline-arrow right">
+            <div
+              className={`timeline-arrow right${page === pageCount - 1 ? ' disabled' : ''}`}
+              onClick={handleNext}
+            >
               <svg
                 width="20"
                 height="20"
@@ -102,19 +167,19 @@ export default function DevelopmentPath() {
               </svg>
             </div>
             {/* 主轴点 */}
-            {timelineData.map((item, idx) => (
+            {pagedData.map((item, idx) => (
               <div
                 className="timeline-point"
-                style={{ left: getLeftPercent(idx) }}
+                style={{ left: getLeftPercent(idx, pagedData.length) }}
                 key={item.year}
               ></div>
             ))}
             {/* 上方卡片 */}
-            {timelineData.map((item, idx) =>
+            {pagedData.map((item, idx) =>
               item.position === 'top' ? (
                 <div
                   className="timeline-card-abs-wrapper top"
-                  style={{ left: getLeftPercent(idx) }}
+                  style={{ left: getLeftPercent(idx, pagedData.length) }}
                   key={item.year}
                 >
                   <div className="timeline-card">
@@ -142,11 +207,11 @@ export default function DevelopmentPath() {
               ) : null
             )}
             {/* 下方卡片 */}
-            {timelineData.map((item, idx) =>
+            {pagedData.map((item, idx) =>
               item.position === 'bottom' ? (
                 <div
                   className="timeline-card-abs-wrapper bottom"
-                  style={{ left: getLeftPercent(idx) }}
+                  style={{ left: getLeftPercent(idx, pagedData.length) }}
                   key={item.year}
                 >
                   <div className="card-connector-line card-connector-line-bottom"></div>
