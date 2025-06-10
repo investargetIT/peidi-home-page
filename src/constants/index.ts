@@ -22,7 +22,7 @@ export const menu = [
   },
   {
     name: '品牌产品',
-    link: '/products',
+    // link: '/products',
     title: 'All Products丨Peidi',
     children: [
       { name: '爵宴', link: '/collection/meatyway', title: 'MeatyWay, Leading Pet Food Producers | Peidi' },
