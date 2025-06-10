@@ -199,8 +199,12 @@
 /* 卡片连接线 */
 .card-connector-line {
   width: 2px;
-  height: 60px;
-  background-color: #E5E5E5;
+  height: 54px;
+  background: #E5E5E5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 /* 卡片样式 */
@@ -460,12 +464,12 @@
 
 .card-connector-line {
   width: 2px;
-  height: 60px;
+  height: 54px;
   background: #E5E5E5;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 0;
+  z-index: 2;
 }
 
 .card-connector-line-top {
@@ -524,11 +528,11 @@
 }
 
 .timeline-card-abs-wrapper.top {
-  bottom: calc(50% + 12px);
+  bottom: calc(60% + 12px);
 }
 
 .timeline-card-abs-wrapper.bottom {
-  top: calc(50% + 12px);
+  top: calc(60% + 12px);
 }
 
 .timeline-card {
@@ -572,7 +576,7 @@
 
 .card-connector-line {
   width: 2px;
-  height: 60px;
+  height: 54px;
   background: #E5E5E5;
   position: absolute;
   left: 50%;
