@@ -183,6 +183,12 @@
 
   .productionbase-nz-image {
     flex: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 
@@ -197,6 +203,7 @@
     height: auto;
     display: block;
     object-fit: cover;
+    transition: all 0.3s ease;
   }
 }
 
@@ -501,6 +508,14 @@
     gap: 15px;
     margin-bottom: 25px;
     margin: 0 -10px 25px -10px;
+
+    .productionbase-nz-image {
+      max-width: 100%;
+
+      &:hover {
+        transform: none;
+      }
+    }
   }
 
   .slideshow-container {
@@ -623,6 +638,10 @@
     line-height: 1.5;
     margin-bottom: 20px;
     padding-right: 8px;
+  }
+
+  .productionbase-nz-image-container {
+    margin: 0 -8px 20px -8px;
   }
 
   .slideshow-container {
