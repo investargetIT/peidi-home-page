@@ -66,6 +66,41 @@ export default function DevelopmentPath() {
           <div className="timeline-abs-container">
             {/* 主轴线 */}
             <div className="timeline-main-line"></div>
+            {/* 左右箭头 */}
+            <div className="timeline-arrow left">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 16L7 10L13 4"
+                  stroke="#999"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <div className="timeline-arrow right">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 4L13 10L7 16"
+                  stroke="#999"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
             {/* 主轴点 */}
             {timelineData.map((item, idx) => (
               <div
