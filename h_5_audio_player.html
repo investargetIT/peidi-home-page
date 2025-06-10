@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音频播放</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+      background: #f4f4f4;
+    }
+    .player {
+      margin-top: 2em;
+    }
+    audio {
+      width: 100%;
+      max-width: 300px;
+    }
+    .cover {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 1em;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s linear;
+    }
+    .rotating {
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">欢迎收听</h1>
+  <p id="desc">音频加载中...</p>
+
+  <div class="player">
+    <div class="cover" id="cover-container">
+      <img id="cover" src="" alt="音频封面" />
+    </div>
+    <audio id="audio" controls></audio>
+  </div>
+
+  <script>
+    // 模拟 ID -> 音频映射
+    const audioMap = {
+      "001": {
+        title: "音频标题 001",
+        desc: "这是第一个音频的描述。",
+        src: "https://www.cambridgeenglish.org/images/153149-movers-sample-listening-test-vol2.mp3",
+        cover: "https://image.cdn.ishopastro.com/eyJidWNrZXQiOiJwcm9kLW1lZGlhLW15c2hvcGFzdHJvLWNvbSIsImtleSI6Ijc2NDIyMjAwMzE3MTA0MC9tZWRpYS9pbWFnZS8yZWEwZjQ2MDk1MTkyOTAwMjkyNTU0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY0MH0sInJvdGF0ZSI6bnVsbH19"
+      },
+      "002": {
+        title: "音频标题 002",
+        desc: "这是第二个音频的描述。",
+        src: "http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3",
+        cover: "https://image.cdn.ishopastro.com/eyJidWNrZXQiOiJwcm9kLW1lZGlhLW15c2hvcGFzdHJvLWNvbSIsImtleSI6Ijc2NDIyMjAwMzE3MTA0MC9tZWRpYS9pbWFnZS83ZTA5MzUxYzk1MTkyOTAwMjkyNTUzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY0MH0sInJvdGF0ZSI6bnVsbH19"
+      },
+      // 更多 ID 可继续添加
+    };
+
+    // 获取 URL 参数
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const audioId = getQueryParam("id") || "001";
+    const info = audioMap[audioId];
+    const title = document.getElementById("title");
+    const desc = document.getElementById("desc");
+    const audio = document.getElementById("audio");
+    const cover = document.getElementById("cover");
+    const coverContainer = document.getElementById("cover-container");
+
+    if (info) {
+      title.textContent = info.title;
+      desc.textContent = info.desc;
+      audio.src = info.src;
+      cover.src = info.cover;
+    } else {
+      title.textContent = "找不到音频";
+      desc.textContent = "请检查 NFC 或二维码是否有效。";
+      coverContainer.style.display = "none";
+    }
+
+    // 播放时旋转封面，暂停时停止旋转
+    audio.addEventListener('play', () => {
+      cover.classList.add('rotating');
+    });
+    audio.addEventListener('pause', () => {
+      cover.classList.remove('rotating');
+    });
+    audio.addEventListener('ended', () => {
+      cover.classList.remove('rotating');
+    });
+  </script>
+</body>
+</html>

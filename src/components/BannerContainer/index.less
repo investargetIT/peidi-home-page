@@ -20,12 +20,52 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .banner-title {
   color: white;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 900;
   text-align: center;
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.banner-sub-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 0 0 0;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .banner-sub-title {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.02em;
+  }
+
+  .banner-sub-title {
+    font-size: 1rem;
+    margin-top: 6px;
+  }
 }
