@@ -47,6 +47,8 @@ import H11 from './images/h-11.webp';
 import H12 from './images/h-12.webp';
 import H13 from './images/h-13.webp';
 import H14 from './images/h-14.webp';
+import H15 from './images/h-15.jpg';
+import H16 from './images/h-16.jpg';
 
 export default function QualityControl() {
   return (
@@ -260,6 +262,12 @@ export default function QualityControl() {
             </div>
             <div className="company-honor-item">
               <img src={H14} alt="公司荣誉14" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H15} alt="公司荣誉15" />
+            </div>
+            <div className="company-honor-item">
+              <img src={H16} alt="公司荣誉16" />
             </div>
           </div>
         </div>
