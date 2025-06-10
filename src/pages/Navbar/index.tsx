@@ -22,6 +22,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownTimerRef = useRef<number | null>(null);
+  const navbarRef = useRef<HTMLElement>(null);
 
   // Function to handle dropdown hover
   const handleDropdownEnter = (itemName: string) => {
@@ -39,6 +40,21 @@ export default function Navbar() {
     }, 300); // 300ms delay before closing the dropdown
   };
 
+  // Handle click outside to close mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileOpen && navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+        setMobileOpen(false);
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileOpen]);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -50,7 +66,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" ref={navbarRef}>
         <div className="navbar-container">
           {/* Logo */}
           <div className="navbar-logo">
