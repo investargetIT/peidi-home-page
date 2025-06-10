@@ -7,7 +7,7 @@ interface StockInfoProps {
   stockCurrency?: string;
 }
 
-export default function StockInfo({ stockName, stockCode, stockCurrency = '元' }: StockInfoProps) {
+export default function StockInfo({ stockName, stockCode, stockCurrency = '' }: StockInfoProps) {
   return (
     <div className="stock-info">
       <div className="stock-info-container">
@@ -17,4 +17,4 @@ export default function StockInfo({ stockName, stockCode, stockCurrency = '元' 
       </div>
     </div>
   );
-} 
+}
