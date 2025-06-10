@@ -33,8 +33,8 @@ import R17 from './images/r-1-7.webp';
 import R18 from './images/r-1-8.webp';
 import R19 from './images/r-1-9.webp';
 
-import H1 from './images/h-1.webp';
-import H2 from './images/h-2.webp';
+import H1 from './images/h-1.jpg';
+import H2 from './images/h-2.jpg';
 import H3 from './images/h-3.webp';
 import H4 from './images/h-4.webp';
 import H5 from './images/h-5.webp';
@@ -47,8 +47,8 @@ import H11 from './images/h-11.webp';
 import H12 from './images/h-12.webp';
 import H13 from './images/h-13.webp';
 import H14 from './images/h-14.webp';
-import H15 from './images/h-15.jpg';
-import H16 from './images/h-16.jpg';
+import H15 from './images/h-15.webp';
+import H16 from './images/h-16.webp';
 
 export default function QualityControl() {
   return (
