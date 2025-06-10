@@ -5,6 +5,44 @@ import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
 
+const timelineData = [
+  {
+    year: '1992年',
+    subtitle: '佩蒂成立',
+    text: '3万元创业，平阳县佩蒂皮件制品厂注册成立。',
+    position: 'bottom',
+    animationBase: 0.1,
+  },
+  {
+    year: '2002',
+    subtitle: '行业一大步',
+    text: '"宠物"进目录，温州佩蒂宠物公司注册成立。',
+    position: 'top',
+    animationBase: 0.2,
+  },
+  {
+    year: '2008',
+    subtitle: '创立标准',
+    text: '制定《宠物食品-狗咬胶》国家标准。',
+    position: 'bottom',
+    animationBase: 0.7,
+  },
+  {
+    year: '2010',
+    subtitle: '蓬勃发展',
+    text: '江苏佩蒂更名为江苏康贝，荣获"省级农业化龙头企业"称号。',
+    position: 'top',
+    animationBase: 0.8,
+  },
+  {
+    year: '2013',
+    subtitle: '全球化第一站',
+    text: '响应国家"一带一路"顶层合作倡议，佩蒂成功走出去，建立越南工厂。',
+    position: 'bottom',
+    animationBase: 1.3,
+  },
+];
+
 export default function DevelopmentPath() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,111 +50,96 @@ export default function DevelopmentPath() {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
-
     return () => clearTimeout(timer);
   }, []);
+
+  const getLeftPercent = (idx: number) => `${(idx / (timelineData.length - 1)) * 100}%`;
+
   return (
     <div className="philosophy-page">
       <BannerContainer bannerImage={Banner} title="关于佩蒂——发展历程" />
-
       <div className="philosophy-content">
         <div className="philosophy-header">
           <h2 className="philosophy-title">佩蒂30余年发展历程</h2>
         </div>
         <div className="company-history-section">
-          <div className={`timeline-container ${isVisible ? 'animate' : ''}`}>
-            {/* 连续的时间轴线 */}
-            <div className="timeline-main-line">
-              <div className="timeline-point" data-year="1992"></div>
-              <div className="timeline-point" data-year="2002"></div>
-              <div className="timeline-point" data-year="2008"></div>
-              <div className="timeline-point" data-year="2010"></div>
-              <div className="timeline-point" data-year="2013"></div>
-            </div>
-
+          <div className="timeline-abs-container">
+            {/* 主轴线 */}
+            <div className="timeline-main-line"></div>
+            {/* 主轴点 */}
+            {timelineData.map((item, idx) => (
+              <div
+                className="timeline-point"
+                style={{ left: getLeftPercent(idx) }}
+                key={item.year}
+              ></div>
+            ))}
             {/* 上方卡片 */}
-            <div className="timeline-cards-top">
-              <div className="timeline-card-wrapper" style={{ left: '20%' }}>
-                <div className="timeline-card">
-                  <div className="card-year animate-text" style={{ animationDelay: '0.2s' }}>
-                    2002
+            {timelineData.map((item, idx) =>
+              item.position === 'top' ? (
+                <div
+                  className="timeline-card-abs-wrapper top"
+                  style={{ left: getLeftPercent(idx) }}
+                  key={item.year}
+                >
+                  <div className="timeline-card">
+                    <div
+                      className={`card-year animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase}s` }}
+                    >
+                      {item.year}
+                    </div>
+                    <div
+                      className={`card-subtitle animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase + 0.2}s` }}
+                    >
+                      {item.subtitle}
+                    </div>
+                    <div
+                      className={`card-text animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase + 0.4}s` }}
+                    >
+                      {item.text}
+                    </div>
                   </div>
-                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.4s' }}>
-                    行业一大步
-                  </div>
-                  <div className="card-text animate-text" style={{ animationDelay: '0.6s' }}>
-                    "宠物"进目录，温州佩蒂宠物公司注册成立。
-                  </div>
+                  <div className="card-connector-line card-connector-line-top"></div>
                 </div>
-                <div className="card-connector-line"></div>
-              </div>
-
-              <div className="timeline-card-wrapper" style={{ left: '60%' }}>
-                <div className="timeline-card">
-                  <div className="card-year animate-text" style={{ animationDelay: '0.8s' }}>
-                    2010
-                  </div>
-                  <div className="card-subtitle animate-text" style={{ animationDelay: '1.0s' }}>
-                    蓬勃发展
-                  </div>
-                  <div className="card-text animate-text" style={{ animationDelay: '1.2s' }}>
-                    江苏佩蒂更名为江苏康贝，荣获"省级农业化龙头企业"称号。
-                  </div>
-                </div>
-                <div className="card-connector-line"></div>
-              </div>
-            </div>
-
+              ) : null
+            )}
             {/* 下方卡片 */}
-            <div className="timeline-cards-bottom">
-              <div className="timeline-card-wrapper" style={{ left: '0%' }}>
-                <div className="card-connector-line"></div>
-                <div className="timeline-card">
-                  <div className="card-year animate-text" style={{ animationDelay: '0.1s' }}>
-                    1992年
-                  </div>
-                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.3s' }}>
-                    佩蒂成立
-                  </div>
-                  <div className="card-text animate-text" style={{ animationDelay: '0.5s' }}>
-                    3万元创业，平阳县佩蒂皮件制品厂注册成立。
-                  </div>
-                </div>
-              </div>
-
-              <div className="timeline-card-wrapper" style={{ left: '40%' }}>
-                <div className="card-connector-line"></div>
-                <div className="timeline-card">
-                  <div className="card-year animate-text" style={{ animationDelay: '0.7s' }}>
-                    2008
-                  </div>
-                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.9s' }}>
-                    创立标准
-                  </div>
-                  <div className="card-text animate-text" style={{ animationDelay: '1.1s' }}>
-                    制定《宠物食品-狗咬胶》国家标准。
-                  </div>
-                </div>
-              </div>
-
-              <div className="timeline-card-wrapper" style={{ left: '80%' }}>
-                <div className="card-connector-line"></div>
-                <div className="timeline-card">
-                  <div className="card-year animate-text" style={{ animationDelay: '1.3s' }}>
-                    2013
-                  </div>
-                  <div className="card-subtitle animate-text" style={{ animationDelay: '1.5s' }}>
-                    全球化第一站
-                  </div>
-                  <div className="card-text animate-text" style={{ animationDelay: '1.7s' }}>
-                    响应国家"一带一路"顶层合作倡议，佩蒂成功走出去，建立越南工厂。
+            {timelineData.map((item, idx) =>
+              item.position === 'bottom' ? (
+                <div
+                  className="timeline-card-abs-wrapper bottom"
+                  style={{ left: getLeftPercent(idx) }}
+                  key={item.year}
+                >
+                  <div className="card-connector-line card-connector-line-bottom"></div>
+                  <div className="timeline-card">
+                    <div
+                      className={`card-year animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase}s` }}
+                    >
+                      {item.year}
+                    </div>
+                    <div
+                      className={`card-subtitle animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase + 0.2}s` }}
+                    >
+                      {item.subtitle}
+                    </div>
+                    <div
+                      className={`card-text animate-text${isVisible ? ' visible' : ''}`}
+                      style={{ animationDelay: `${item.animationBase + 0.4}s` }}
+                    >
+                      {item.text}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              ) : null
+            )}
           </div>
         </div>
-
         <div className="detailed-history-section">
           <div className="history-milestone">
             <div className="milestone-date">1992.09</div>

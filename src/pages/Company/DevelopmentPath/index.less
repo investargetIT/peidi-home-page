@@ -117,7 +117,7 @@
 
 .timeline-container {
   position: relative;
-  padding: 120px 40px;
+  padding: 120px 160px;
   overflow-x: auto;
   min-height: 400px;
 }
@@ -126,8 +126,8 @@
 .timeline-main-line {
   position: absolute;
   top: 50%;
-  left: 40px;
-  right: 40px;
+  left: 160px;
+  right: 160px;
   height: 2px;
   background-color: #E5E5E5;
   transform: translateY(-50%);
@@ -152,7 +152,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 45%;
+  height: 50%;
 }
 
 /* 下方卡片容器 */
@@ -161,13 +161,22 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 45%;
+  height: 50%;
 }
 
 /* 卡片包装器 */
 .timeline-card-wrapper {
   position: absolute;
   width: 200px;
+  transform: translateX(-50%);
+}
+
+/* 精确对齐时间轴圆点 */
+.timeline-card-wrapper[style*="160px"]:not([style*="calc"]) {
+  transform: translateX(-100px);
+}
+
+.timeline-card-wrapper[style*="calc"] {
   transform: translateX(-50%);
 }
 
@@ -190,7 +199,7 @@
 /* 卡片连接线 */
 .card-connector-line {
   width: 2px;
-  height: 30px;
+  height: 60px;
   background-color: #E5E5E5;
 }
 
@@ -355,7 +364,7 @@
   }
 
   .card-connector-line {
-    height: 20px;
+    height: 40px;
   }
 
   /* 移动端动画调整 */
@@ -392,4 +401,200 @@
   .milestone-content {
     font-size: 16px;
   }
+}
+
+.timeline-flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+  min-width: 900px;
+}
+
+.timeline-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.timeline-main-line-flex {
+  align-items: center;
+  height: 2px;
+  background: #E5E5E5;
+  margin: 0 0 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-main-line-flex .timeline-point {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #E5E5E5;
+  margin: 0 auto;
+}
+
+.timeline-card-flex-wrapper {
+  width: 200px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-cards-top {
+  height: 180px;
+  margin-bottom: 0;
+}
+
+.timeline-cards-bottom {
+  height: 180px;
+  margin-top: 0;
+}
+
+.card-connector-line {
+  width: 2px;
+  height: 60px;
+  background: #E5E5E5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.card-connector-line-top {
+  top: 100%;
+}
+
+.card-connector-line-bottom {
+  bottom: 100%;
+}
+
+.timeline-card-flex-wrapper.empty {
+  background: none;
+  box-shadow: none;
+  pointer-events: none;
+  min-height: 0;
+  height: 0;
+}
+
+.timeline-abs-container {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+}
+
+.timeline-main-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E5E5E5;
+  z-index: 1;
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #E5E5E5;
+  background: #fff;
+  z-index: 2;
+}
+
+.timeline-card-abs-wrapper {
+  position: absolute;
+  width: 220px;
+  left: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.timeline-card-abs-wrapper.top {
+  bottom: calc(50% + 12px);
+}
+
+.timeline-card-abs-wrapper.bottom {
+  top: calc(50% + 12px);
+}
+
+.timeline-card {
+  background: #F4E9D7;
+  color: #222;
+  width: 100%;
+  min-height: 120px;
+  border-radius: 0;
+  text-align: center;
+  box-shadow: none;
+  padding: 24px 16px;
+  z-index: 3;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-year {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #646464;
+  margin: 0;
+}
+
+.card-connector-line {
+  width: 2px;
+  height: 60px;
+  background: #E5E5E5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.card-connector-line-top {
+  top: 100%;
+}
+
+.card-connector-line-bottom {
+  bottom: 100%;
+}
+
+/* 动画可见性修正 */
+.animate-text {
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.timeline-abs-container .animate-text.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
