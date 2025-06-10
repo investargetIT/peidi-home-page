@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from './images/banner.webp';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
@@ -6,20 +6,15 @@ import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
 
 export default function DevelopmentPath() {
-  const timelineRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handlePrevClick = () => {
-    if (timelineRef.current) {
-      timelineRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
 
-  const handleNextClick = () => {
-    if (timelineRef.current) {
-      timelineRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
-
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="philosophy-page">
       <BannerContainer bannerImage={Banner} title="关于佩蒂——发展历程" />
@@ -28,68 +23,94 @@ export default function DevelopmentPath() {
         <div className="philosophy-header">
           <h2 className="philosophy-title">佩蒂30余年发展历程</h2>
         </div>
-        {/* todo ,此处展示及动画效果，后续投入优化 */}
         <div className="company-history-section">
-          <div className="timeline-container" ref={timelineRef}>
-            <div className="timeline-track">
-              <div className="timeline-point"></div>
-              <div className="timeline-point"></div>
-              <div className="timeline-point"></div>
-              <div className="timeline-point"></div>
-              <div className="timeline-point"></div>
+          <div className={`timeline-container ${isVisible ? 'animate' : ''}`}>
+            {/* 连续的时间轴线 */}
+            <div className="timeline-main-line">
+              <div className="timeline-point" data-year="1992"></div>
+              <div className="timeline-point" data-year="2002"></div>
+              <div className="timeline-point" data-year="2008"></div>
+              <div className="timeline-point" data-year="2010"></div>
+              <div className="timeline-point" data-year="2013"></div>
             </div>
 
-            <div className="timeline-navigation">
-              <button className="timeline-nav-btn prev-btn" onClick={handlePrevClick}>
-                ←
-              </button>
-              <button className="timeline-nav-btn next-btn" onClick={handleNextClick}>
-                →
-              </button>
-            </div>
-
-            <div className="timeline-cards">
-              <div className="timeline-card top-card card-2002">
-                <div className="card-content">
-                  <h3 className="card-year">2002</h3>
-                  <h4 className="card-subtitle">行业一大步</h4>
-                  <p className="card-text">"宠物"进目录，温州佩蒂宠物公司注册成立。</p>
+            {/* 上方卡片 */}
+            <div className="timeline-cards-top">
+              <div className="timeline-card-wrapper" style={{ left: '20%' }}>
+                <div className="timeline-card">
+                  <div className="card-year animate-text" style={{ animationDelay: '0.2s' }}>
+                    2002
+                  </div>
+                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.4s' }}>
+                    行业一大步
+                  </div>
+                  <div className="card-text animate-text" style={{ animationDelay: '0.6s' }}>
+                    "宠物"进目录，温州佩蒂宠物公司注册成立。
+                  </div>
                 </div>
+                <div className="card-connector-line"></div>
               </div>
 
-              <div className="timeline-card bottom-card card-1992">
-                <div className="card-content">
-                  <h3 className="card-year">1992年</h3>
-                  <h4 className="card-subtitle">佩蒂成立</h4>
-                  <p className="card-text">3万元创业，平阳县佩蒂皮件制品厂注册成立。</p>
-                </div>
-              </div>
-
-              <div className="timeline-card top-card card-2010">
-                <div className="card-content">
-                  <h3 className="card-year">2010</h3>
-                  <h4 className="card-subtitle">蓬勃发展</h4>
-                  <p className="card-text">
+              <div className="timeline-card-wrapper" style={{ left: '60%' }}>
+                <div className="timeline-card">
+                  <div className="card-year animate-text" style={{ animationDelay: '0.8s' }}>
+                    2010
+                  </div>
+                  <div className="card-subtitle animate-text" style={{ animationDelay: '1.0s' }}>
+                    蓬勃发展
+                  </div>
+                  <div className="card-text animate-text" style={{ animationDelay: '1.2s' }}>
                     江苏佩蒂更名为江苏康贝，荣获"省级农业化龙头企业"称号。
-                  </p>
+                  </div>
+                </div>
+                <div className="card-connector-line"></div>
+              </div>
+            </div>
+
+            {/* 下方卡片 */}
+            <div className="timeline-cards-bottom">
+              <div className="timeline-card-wrapper" style={{ left: '0%' }}>
+                <div className="card-connector-line"></div>
+                <div className="timeline-card">
+                  <div className="card-year animate-text" style={{ animationDelay: '0.1s' }}>
+                    1992年
+                  </div>
+                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.3s' }}>
+                    佩蒂成立
+                  </div>
+                  <div className="card-text animate-text" style={{ animationDelay: '0.5s' }}>
+                    3万元创业，平阳县佩蒂皮件制品厂注册成立。
+                  </div>
                 </div>
               </div>
 
-              <div className="timeline-card bottom-card card-2008">
-                <div className="card-content">
-                  <h3 className="card-year">2008</h3>
-                  <h4 className="card-subtitle">创立标准</h4>
-                  <p className="card-text">制定《宠物食品-狗咬胶》国家标准。</p>
+              <div className="timeline-card-wrapper" style={{ left: '40%' }}>
+                <div className="card-connector-line"></div>
+                <div className="timeline-card">
+                  <div className="card-year animate-text" style={{ animationDelay: '0.7s' }}>
+                    2008
+                  </div>
+                  <div className="card-subtitle animate-text" style={{ animationDelay: '0.9s' }}>
+                    创立标准
+                  </div>
+                  <div className="card-text animate-text" style={{ animationDelay: '1.1s' }}>
+                    制定《宠物食品-狗咬胶》国家标准。
+                  </div>
                 </div>
               </div>
 
-              <div className="timeline-card bottom-card card-2013">
-                <div className="card-content">
-                  <h3 className="card-year">2013</h3>
-                  <h4 className="card-subtitle">全球化第一站</h4>
-                  <p className="card-text">
+              <div className="timeline-card-wrapper" style={{ left: '80%' }}>
+                <div className="card-connector-line"></div>
+                <div className="timeline-card">
+                  <div className="card-year animate-text" style={{ animationDelay: '1.3s' }}>
+                    2013
+                  </div>
+                  <div className="card-subtitle animate-text" style={{ animationDelay: '1.5s' }}>
+                    全球化第一站
+                  </div>
+                  <div className="card-text animate-text" style={{ animationDelay: '1.7s' }}>
                     响应国家"一带一路"顶层合作倡议，佩蒂成功走出去，建立越南工厂。
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

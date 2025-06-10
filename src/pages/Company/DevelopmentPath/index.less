@@ -112,163 +112,152 @@
 .company-history-section {
   margin: 80px auto;
   padding: 0 20px;
-}
-
-.history-title {
-  font-size: 38px;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.history-title:after {
-  content: "";
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  width: 60px;
-  height: 3px;
-  background-color: #0a3c7d;
-  transform: translateX(-50%);
+  max-width: 1200px;
 }
 
 .timeline-container {
   position: relative;
-  padding: 60px 0;
+  padding: 120px 40px;
+  overflow-x: auto;
+  min-height: 400px;
 }
 
-.timeline-track {
-  position: relative;
+/* 主时间轴线 */
+.timeline-main-line {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
   height: 2px;
-  background-color: #e0e0e0;
-  margin: 140px 0;
+  background-color: #E5E5E5;
+  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .timeline-point {
-  width: 14px;
-  height: 14px;
-  background-color: #0a3c7d;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 0 4px rgba(10, 60, 125, 0.2);
 }
 
-.timeline-navigation {
+/* 上方卡片容器 */
+.timeline-cards-top {
   position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  padding: 0 -20px;
-}
-
-.timeline-nav-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  border: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  color: #333;
-  transition: all 0.2s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-nav-btn:hover {
-  background-color: #0a3c7d;
-  color: white;
-  border-color: #0a3c7d;
-}
-
-.prev-btn {
-  margin-left: -20px;
-}
-
-.next-btn {
-  margin-right: -20px;
-}
-
-.timeline-cards {
-  position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  right: 0;
+  height: 45%;
 }
 
-.timeline-card {
+/* 下方卡片容器 */
+.timeline-cards-bottom {
   position: absolute;
-  width: 280px;
-  background-color: #f9f1e2;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
 }
 
-.top-card {
-  bottom: 170px;
+/* 卡片包装器 */
+.timeline-card-wrapper {
+  position: absolute;
+  width: 200px;
+  transform: translateX(-50%);
 }
 
-.bottom-card {
-  top: 170px;
+/* 上方卡片样式 */
+.timeline-cards-top .timeline-card-wrapper {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-content {
+/* 下方卡片样式 */
+.timeline-cards-bottom .timeline-card-wrapper {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 卡片连接线 */
+.card-connector-line {
+  width: 2px;
+  height: 30px;
+  background-color: #E5E5E5;
+}
+
+/* 卡片样式 */
+.timeline-card {
+  background-color: #F4E9D7;
+  border-radius: 0;
   padding: 24px;
+  text-align: center;
+  box-shadow: none;
+  width: 200px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-year {
   font-size: 32px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 10px 0;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .card-subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: #666;
-  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .card-text {
   font-size: 14px;
-  line-height: 1.6;
-  color: #444;
+  line-height: 1.4;
+  color: #646464;
   margin: 0;
 }
 
-/* Position the cards */
-.card-1992 {
-  left: 0%;
+/* 文字动画样式 */
+.animate-text {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
 }
 
-.card-2002 {
-  left: 22%;
+.timeline-container.animate .animate-text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.card-2008 {
-  left: 48%;
+/* 动画关键帧 */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.card-2010 {
-  left: 70%;
-}
-
-.card-2013 {
-  left: 85%;
+.timeline-container.animate .animate-text {
+  animation: slideInFromLeft 0.6s ease-out forwards;
 }
 
 /* Detailed History Section */
@@ -325,55 +314,70 @@
   /* Mobile timeline styles */
   .company-history-section {
     margin: 50px auto;
-  }
-
-  .history-title {
-    font-size: 30px;
-    margin-bottom: 40px;
+    padding: 0 15px;
   }
 
   .timeline-container {
-    padding: 40px 0;
+    padding: 80px 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    min-height: 300px;
   }
 
-  .timeline-track {
-    width: 800px;
-    margin: 100px 0;
+  .timeline-main-line {
+    left: 20px;
+    right: 20px;
   }
 
-  .timeline-cards {
-    width: 800px;
+  .timeline-point {
+    width: 8px;
+    height: 8px;
+  }
+
+  .timeline-card-wrapper {
+    width: 150px;
   }
 
   .timeline-card {
-    width: 200px;
+    width: 150px;
+    padding: 16px;
+    min-height: 100px;
   }
 
   .card-year {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 6px;
   }
 
   .card-subtitle {
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .card-text {
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.3;
   }
 
-  .top-card {
-    bottom: 130px;
+  .card-connector-line {
+    height: 20px;
   }
 
-  .bottom-card {
-    top: 130px;
+  /* 移动端动画调整 */
+  .animate-text {
+    transform: translateX(-30px);
   }
 
-  .timeline-navigation {
-    display: none;
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   /* Mobile detailed history styles */
