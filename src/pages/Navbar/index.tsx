@@ -155,7 +155,7 @@ export default function Navbar() {
                 <div key={item.name} className="mobile-dropdown">
                   {item.link ? (
                     <Link to={item.link} className="mobile-dropdown-btn">
-                      {item.name}
+                      <span>{item.name}</span>
                       <svg
                         className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
                         fill="none"
@@ -179,7 +179,7 @@ export default function Navbar() {
                       className="mobile-dropdown-btn"
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                     >
-                      {item.name}
+                      <span>{item.name}</span>
                       <svg
                         className={`mobile-dropdown-icon ${openDropdown === item.name ? 'active' : ''}`}
                         fill="none"

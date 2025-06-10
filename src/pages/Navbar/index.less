@@ -333,13 +333,24 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  .mobile-dropdown-btn>span {
+    flex: 1;
+    text-align: left;
   }
 
   .mobile-dropdown-icon {
     width: 16px;
     height: 16px;
-    margin-left: 8px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    flex-shrink: 0;
     transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-dropdown-icon.active {
