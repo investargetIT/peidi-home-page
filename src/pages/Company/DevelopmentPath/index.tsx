@@ -406,6 +406,12 @@ export default function DevelopmentPath() {
               佩蒂股份与亮牌中国共同宣布，佩蒂温州生产基地已完成SGS认证，正式取得碳中和核证，成为中国宠物行业首家零碳数字化智能工厂。
             </div>
           </div>
+          <div className="history-milestone">
+            <div className="milestone-date">2024.03</div>
+            <div className="milestone-content">
+              佩蒂新西兰工厂主粮产线正式投产积极抢占高端宠物主粮市场。
+            </div>
+          </div>
         </div>
       </div>
       {/* 页脚导航区域 */}
