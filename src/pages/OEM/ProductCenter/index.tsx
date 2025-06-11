@@ -34,11 +34,11 @@ export default function ProductCenter() {
 
         {/* 产品展示区域 */}
         <div className="product-display-area">
-          <div className="product-title">
+          <div className="product-title" onMouseEnter={() => setCurrentBg(DogBg)}>
             <h1>狗</h1>
           </div>
           {/* 干粮区域 - 上方两个并排 */}
-          <div className="dry-food-section">
+          <div className="dry-food-section" onMouseEnter={() => setCurrentBg(DogBg)}>
             <div className="product-item">
               <img src={DogDry1} alt="干粮1" />
               <div className="product-label">干粮</div>
@@ -49,7 +49,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 湿粮区域 - 下方一个大图 */}
-          <div className="wet-food-section">
+          <div className="wet-food-section" onMouseEnter={() => setCurrentBg(DogBg)}>
             <div className="product-item large">
               <img src={DogWet1} alt="湿粮" />
               <div className="product-label">湿粮</div>
@@ -57,7 +57,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 咀嚼物和零食区域 */}
-          <div className="snacks-section">
+          <div className="snacks-section" onMouseEnter={() => setCurrentBg(DogBg)}>
             <div className="section-title">
               <h2>咀嚼物和零食</h2>
             </div>
@@ -87,11 +87,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 猫产品展示区域 */}
-          <div
-            className="cat-product-area"
-            onMouseEnter={() => setCurrentBg(CatBg)}
-            onMouseLeave={() => setCurrentBg(DogBg)}
-          >
+          <div className="cat-product-area" onMouseEnter={() => setCurrentBg(CatBg)}>
             <div className="product-title cat-title">
               <h1>猫</h1>
             </div>
@@ -116,11 +112,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 鸟类产品展示区域 */}
-          <div
-            className="bird-product-area"
-            onMouseEnter={() => setCurrentBg(BirdBg)}
-            onMouseLeave={() => setCurrentBg(DogBg)}
-          >
+          <div className="bird-product-area" onMouseEnter={() => setCurrentBg(BirdBg)}>
             <div className="product-title bird-title">
               <h1>鸟类</h1>
             </div>
@@ -150,11 +142,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 小动物产品展示区域 */}
-          <div
-            className="animal-product-area"
-            onMouseEnter={() => setCurrentBg(AnimalBg)}
-            onMouseLeave={() => setCurrentBg(DogBg)}
-          >
+          <div className="animal-product-area" onMouseEnter={() => setCurrentBg(AnimalBg)}>
             <div className="product-title animal-title">
               <h1>小动物</h1>
             </div>
