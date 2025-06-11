@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './index.less';
 import DogBg from '@/assets/dog/bg.webp';
 import DogDry1 from '@/assets/dog/dry/1.webp';
@@ -25,6 +25,46 @@ import AnimalToy3 from '@/assets/animal/toy/3.webp';
 
 export default function ProductCenter() {
   const [currentBg, setCurrentBg] = useState(DogBg);
+  const dogSectionRef = useRef<HTMLDivElement>(null);
+  const catSectionRef = useRef<HTMLDivElement>(null);
+  const birdSectionRef = useRef<HTMLDivElement>(null);
+  const animalSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const centerY = scrollY + windowHeight / 2;
+
+      // 获取各个区域的位置
+      const dogSection = dogSectionRef.current;
+      const catSection = catSectionRef.current;
+      const birdSection = birdSectionRef.current;
+      const animalSection = animalSectionRef.current;
+
+      if (animalSection && centerY >= animalSection.offsetTop) {
+        setCurrentBg(AnimalBg);
+      } else if (birdSection && centerY >= birdSection.offsetTop) {
+        setCurrentBg(BirdBg);
+      } else if (catSection && centerY >= catSection.offsetTop) {
+        setCurrentBg(CatBg);
+      } else if (dogSection && centerY >= dogSection.offsetTop) {
+        setCurrentBg(DogBg);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 初始调用
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleMouseEnterDog = () => setCurrentBg(DogBg);
+  const handleMouseEnterCat = () => setCurrentBg(CatBg);
+  const handleMouseEnterBird = () => setCurrentBg(BirdBg);
+  const handleMouseEnterAnimal = () => setCurrentBg(AnimalBg);
 
   return (
     <div className="product-center-page">
@@ -33,12 +73,12 @@ export default function ProductCenter() {
         {/* 页面标题 */}
 
         {/* 产品展示区域 */}
-        <div className="product-display-area">
-          <div className="product-title" onMouseEnter={() => setCurrentBg(DogBg)}>
+        <div className="product-display-area" ref={dogSectionRef}>
+          <div className="product-title" onMouseEnter={handleMouseEnterDog}>
             <h1>狗</h1>
           </div>
           {/* 干粮区域 - 上方两个并排 */}
-          <div className="dry-food-section" onMouseEnter={() => setCurrentBg(DogBg)}>
+          <div className="dry-food-section" onMouseEnter={handleMouseEnterDog}>
             <div className="product-item">
               <img src={DogDry1} alt="干粮1" />
               <div className="product-label">干粮</div>
@@ -49,7 +89,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 湿粮区域 - 下方一个大图 */}
-          <div className="wet-food-section" onMouseEnter={() => setCurrentBg(DogBg)}>
+          <div className="wet-food-section" onMouseEnter={handleMouseEnterDog}>
             <div className="product-item large">
               <img src={DogWet1} alt="湿粮" />
               <div className="product-label">湿粮</div>
@@ -57,7 +97,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 咀嚼物和零食区域 */}
-          <div className="snacks-section" onMouseEnter={() => setCurrentBg(DogBg)}>
+          <div className="snacks-section" onMouseEnter={handleMouseEnterDog}>
             <div className="section-title">
               <h2>咀嚼物和零食</h2>
             </div>
@@ -87,7 +127,7 @@ export default function ProductCenter() {
           </div>
 
           {/* 猫产品展示区域 */}
-          <div className="cat-product-area" onMouseEnter={() => setCurrentBg(CatBg)}>
+          <div className="cat-product-area" ref={catSectionRef} onMouseEnter={handleMouseEnterCat}>
             <div className="product-title cat-title">
               <h1>猫</h1>
             </div>
@@ -112,7 +152,11 @@ export default function ProductCenter() {
           </div>
 
           {/* 鸟类产品展示区域 */}
-          <div className="bird-product-area" onMouseEnter={() => setCurrentBg(BirdBg)}>
+          <div
+            className="bird-product-area"
+            ref={birdSectionRef}
+            onMouseEnter={handleMouseEnterBird}
+          >
             <div className="product-title bird-title">
               <h1>鸟类</h1>
             </div>
@@ -142,7 +186,11 @@ export default function ProductCenter() {
           </div>
 
           {/* 小动物产品展示区域 */}
-          <div className="animal-product-area" onMouseEnter={() => setCurrentBg(AnimalBg)}>
+          <div
+            className="animal-product-area"
+            ref={animalSectionRef}
+            onMouseEnter={handleMouseEnterAnimal}
+          >
             <div className="product-title animal-title">
               <h1>小动物</h1>
             </div>
