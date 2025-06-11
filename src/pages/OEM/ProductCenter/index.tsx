@@ -31,12 +31,12 @@ export default function ProductCenter() {
       {/* 背景容器 */}
       <div className="product-bg-container" style={{ backgroundImage: `url(${currentBg})` }}>
         {/* 页面标题 */}
-        <div className="product-title">
-          <h1>狗</h1>
-        </div>
 
         {/* 产品展示区域 */}
         <div className="product-display-area">
+          <div className="product-title">
+            <h1>狗</h1>
+          </div>
           {/* 干粮区域 - 上方两个并排 */}
           <div className="dry-food-section">
             <div className="product-item">
