@@ -15,7 +15,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
   transition: background-image 0.5s ease;
   background-attachment: fixed;
   align-items: center;
@@ -317,14 +317,15 @@
 /* 小动物产品区域样式 */
 .animal-product-area {
   margin-top: 60px;
+  margin-bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 40px 40px 60px 40px;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.15);
@@ -666,9 +667,9 @@
 /* 联系我们区域样式 */
 .contact-us-section {
   width: 100%;
-  min-height: 60vh;
+  // min-height: 60vh;
   position: relative;
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .contact-background {
@@ -682,7 +683,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 80px 60px;
+  padding: 80px 60px 60px 60px;
+  padding-top: 40px;
+  margin: 0;
 }
 
 .contact-content {
@@ -752,8 +755,18 @@
 /* 响应式设计 */
 @media (max-width: 768px) {
   .contact-background {
-    padding: 60px 30px;
+    padding: 60px 30px 40px 30px;
     background-attachment: scroll;
+    margin: 0;
+  }
+
+  .product-bg-container {
+    padding: 20px 20px 0 20px;
+  }
+
+  .animal-product-area {
+    padding: 30px 20px 40px 20px;
+    border-radius: 20px 20px 0 0;
   }
 
   .contact-header {
@@ -780,7 +793,13 @@
 
 @media (max-width: 480px) {
   .contact-background {
-    padding: 40px 20px;
+    padding: 40px 20px 30px 20px;
+    margin: 0;
+  }
+
+  .animal-product-area {
+    padding: 20px 15px 30px 15px;
+    border-radius: 15px 15px 0 0;
   }
 
   .contact-header {
