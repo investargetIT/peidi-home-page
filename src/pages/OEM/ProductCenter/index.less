@@ -48,7 +48,7 @@
   gap: 40px;
   align-items: center;
   width: 900px;
-  max-width: 95vw;
+  max-width: calc(100vw - 80px);
   padding-top: 20px;
 }
 
@@ -442,29 +442,55 @@
 }
 
 @media (max-width: 768px) {
-  .product-title {
-    top: 20px;
 
-    h1 {
-      font-size: 50px;
-    }
-  }
-
-  .product-display-area {
-    margin-top: 60px;
-    gap: 40px;
+  .product-display-area,
+  .dry-food-section,
+  .wet-food-section,
+  .snacks-section,
+  .cat-product-display,
+  .bird-product-display,
+  .animal-product-display,
+  .snacks-grid,
+  .bird-toy-grid {
     width: 100%;
-    padding: 0 4vw;
-  }
-
-  .dry-food-section {
-    flex-direction: column;
-    gap: 24px;
+    padding: 0 16px;
+    box-sizing: border-box;
     align-items: center;
   }
 
-  .wet-food-section {
-    justify-content: center;
+  .product-item,
+  .product-item:not(.large),
+  .product-item.large,
+  .product-item.snack,
+  .product-item.cat-product,
+  .product-item.cat-product.cat-large,
+  .product-item.bird-product,
+  .product-item.animal-product,
+  .product-item.animal-product.large-toy,
+  .product-item.animal-product.house,
+  .product-item.animal-product.snacks-complete {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 24px 0;
+    box-sizing: border-box;
+  }
+
+  .product-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #f8f8f8;
+    display: block;
+  }
+
+  .product-title {
+    top: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+    }
   }
 
   .product-item:not(.large) {
@@ -498,30 +524,74 @@
   }
 
   .snacks-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    max-width: none;
   }
 
   .product-item.snack {
-    width: 85vw;
-    max-width: 300px;
+    width: calc(100vw - 80px);
+    max-width: 320px;
     height: 160px;
   }
 
-  .product-item.cat-product.cat-large {
-    width: 85vw;
-    max-width: 300px;
-    height: 160px;
+  .cat-product-area {
+    align-items: center;
+  }
+
+  .cat-product-display {
+    align-items: center;
+    width: 100%;
+  }
+
+  .cat-dry-food-section,
+  .cat-wet-food-section {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .product-item.cat-product {
+    &:not(.cat-large) {
+      width: calc(100vw - 80px);
+      max-width: 320px;
+    }
+
+    &.cat-large {
+      width: calc(100vw - 80px);
+      max-width: 320px;
+      height: 160px;
+    }
+  }
+
+  .bird-product-area {
+    align-items: center;
+  }
+
+  .bird-product-display {
+    align-items: center;
+    width: 100%;
+  }
+
+  .bird-snack-section {
+    justify-content: center;
+  }
+
+  .bird-toy-section {
+    align-items: center;
   }
 
   .bird-toy-grid {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+    width: 100%;
   }
 
   .product-item.bird-product {
-    width: 85vw;
+    width: calc(100vw - 80px);
     max-width: 400px;
     height: 180px;
   }
@@ -529,28 +599,42 @@
   .animal-top-section {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .animal-edible-toy {
+    justify-content: center;
+    width: 100%;
   }
 
   .animal-houses {
     gap: 16px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .animal-snacks-section {
+    justify-content: center;
+    width: 100%;
   }
 
   .product-item.animal-product {
     &.large-toy {
-      width: 85vw;
-      max-width: 300px;
+      width: calc(100vw - 80px);
+      max-width: 320px;
       height: 160px;
     }
 
     &.house {
-      width: 40vw;
+      width: calc((100vw - 112px) / 2);
       max-width: 160px;
       height: 160px;
     }
 
     &.snacks-complete {
-      width: 85vw;
-      max-width: 500px;
+      width: calc(100vw - 80px);
+      max-width: 400px;
       height: 220px;
     }
   }
@@ -755,17 +839,17 @@
 /* 响应式设计 */
 @media (max-width: 768px) {
   .contact-background {
-    padding: 60px 30px 40px 30px;
+    padding: 60px 20px 40px 20px;
     background-attachment: scroll;
     margin: 0;
   }
 
   .product-bg-container {
-    padding: 20px 20px 0 20px;
+    padding: 40px 20px 0 20px;
   }
 
   .animal-product-area {
-    padding: 30px 20px 40px 20px;
+    padding: 40px 20px 60px 20px;
     border-radius: 20px 20px 0 0;
   }
 
