@@ -135,17 +135,17 @@
 
 .snacks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
-  max-width: 900px;
-  justify-items: center;
+  max-width: 1200px;
+  justify-items: flex-start;
 }
 
 .product-item.snack {
-  width: 180px;
-  height: 140px;
-  border-radius: 20px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  height: 200px;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
   background: rgba(255, 255, 255, 0.98);
 }
 
@@ -493,14 +493,15 @@
   }
 
   .snacks-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
     max-width: 100%;
   }
 
   .product-item.snack {
-    width: 140px;
-    height: 110px;
+    width: 85vw;
+    max-width: 300px;
+    height: 160px;
   }
 
   .bird-toy-grid {
