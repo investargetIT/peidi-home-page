@@ -16,6 +16,7 @@ import Cover15 from './images/cover15.webp';
 import Cover16 from './images/cover16.webp';
 import Cover17 from './images/cover17.webp';
 import Cover18 from './images/cover18.webp';
+import Cover19 from './images/cover19.webp';
 
 
 
@@ -109,5 +110,10 @@ export const coverList = [
     cover: Cover18,
     time: '2024-01-10',
     title: '佩蒂股份取得海关AEO 认证，出海业务信用获得进一步加码'
+  },
+  {
+    cover: Cover19,
+    time: '2024-03-14',
+    title: '佩蒂新西兰工厂高品质主粮产线正式投产，积极抢占高端宠物主粮市场'
   }
 ];
