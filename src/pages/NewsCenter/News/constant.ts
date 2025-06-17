@@ -23,6 +23,8 @@ import Cover22 from './images/cover22.webp';
 import Cover23 from './images/cover23.webp';
 import Cover24 from './images/cover24.png';
 import Cover25 from './images/cover25.webp';
+import Cover26 from './images/cover26.webp';
+
 
 export const coverList = [
   {
@@ -150,4 +152,10 @@ export const coverList = [
     time: '2025-03-02',
     title: '加冕时刻！爵宴、好适嘉京宠展荣获「主粮类」「零食类」双金荣耀'
   },
+  {
+    cover: Cover26,
+    time: '2025-04-21',
+    title: '佩蒂股份2024净利润同比大增1742%，综合毛利提升至29.36%'
+  }
+
 ];
