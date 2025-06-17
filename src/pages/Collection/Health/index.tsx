@@ -152,21 +152,19 @@ export default function Health() {
 
       {/* 产品展示区域 */}
       <div className="product-grid-section">
-        <div className="container">
-          <div className="product-grid">
-            {imageList.map((item, index) => (
-              <div key={index} className="product-item">
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  <div className="product-image">
-                    <img src={item.src} alt={item.title} />
-                  </div>
-                  <div className="product-title">
-                    <h3>{item.title}</h3>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
+        <div className="product-grid">
+          {imageList.map((item, index) => (
+            <div key={index} className="product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 
