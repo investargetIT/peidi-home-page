@@ -20,6 +20,7 @@ import Cover19 from './images/cover19.webp';
 import Cover20 from './images/cover20.webp';
 import Cover21 from './images/cover21.webp';
 import Cover22 from './images/cover22.webp';
+import Cover23 from './images/cover23.webp';
 
 
 export const coverList = [
@@ -133,9 +134,9 @@ export const coverList = [
     time: '2024-08-24',
     title: '荣耀加冕！爵宴蝉联亚宠展年度实力品牌等两项大奖'
   },
-  // {
-  //   cover: Cover23,
-  //   time: '2024-09-07',
-  //   title: '佩蒂新店开张，新店将开启“宠物健康”的journey'
-  // },
+  {
+    cover: Cover23,
+    time: '2024-09-27',
+    title: '喜报！佩蒂股份荣获2024全球浙商ESG大会两项荣耀'
+  },
 ];
