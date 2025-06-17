@@ -15,6 +15,7 @@ import Cover14 from './images/cover14.webp';
 import Cover15 from './images/cover15.webp';
 import Cover16 from './images/cover16.webp';
 import Cover17 from './images/cover17.webp';
+import Cover18 from './images/cover18.webp';
 
 
 
@@ -103,5 +104,10 @@ export const coverList = [
     cover: Cover17,
     time: '2024-02-23',
     title: '佩蒂股份荣登“2020年浙江本土民营企业跨国经营50强”'
+  },
+  {
+    cover: Cover18,
+    time: '2024-01-10',
+    title: '佩蒂股份取得海关AEO 认证，出海业务信用获得进一步加码'
   }
 ];
