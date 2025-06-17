@@ -28,6 +28,7 @@ const NewsComponents = {
   18: lazy(() => import('../components/News18')),
   19: lazy(() => import('../components/News19')),
   20: lazy(() => import('../components/News20')),
+  21: lazy(() => import('../components/News21')),
 };
 
 export default function RenderNews() {
