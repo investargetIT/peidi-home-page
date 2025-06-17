@@ -94,7 +94,6 @@ export default function Health() {
               <div className="banner-text">
                 <h2>{bannerData.title}</h2>
                 <p>{bannerData.subTitle}</p>
-                <Button className="banner-btn">{bannerData.btnText}</Button>
               </div>
             </div>
           </div>
