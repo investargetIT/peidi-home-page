@@ -38,6 +38,11 @@
           max-width: 90%;
         }
 
+        /* Default layout (vertical with logo on top) */
+        &.default-layout {
+          flex-direction: column;
+        }
+
         /* Alternate layout (horizontal with logo on left) */
         &.alternate-layout {
           flex-direction: row;
@@ -608,5 +613,146 @@
 @media (max-width: 480px) {
   .philosophy-values h2 {
     font-size: 24px;
+  }
+}
+
+// OrderProcess样式 - container相关
+.productionbase-nz-section {
+  background: #fff;
+  padding: 80px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+  }
+
+  .container:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.productionbase-nz-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: left;
+  background: #f5f5f5;
+  padding: 20px 24px;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 48px;
+}
+
+.productionbase-nz-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* 产品展示三列网格样式 */
+.order-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.order-process-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  height: 400px;
+  position: relative;
+}
+
+.order-process-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.order-process-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .productionbase-nz-section {
+    padding: 40px 0;
+
+    .container {
+      padding: 0 15px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .productionbase-nz-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px 18px;
+    padding-left: 33px;
+  }
+
+  .productionbase-nz-desc {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .order-process-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .order-process-item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productionbase-nz-section {
+    padding: 20px 0;
+
+    .container {
+      padding: 0 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .productionbase-nz-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 14px 20px;
+    padding-left: 28px;
+  }
+
+  .productionbase-nz-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .order-process-grid {
+    gap: 15px;
+  }
+
+  .order-process-item {
+    height: 260px;
   }
 }

@@ -1,30 +1,19 @@
 import React from 'react';
-import { Button } from 'antd';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import MeatyBanner from '@/pages/Home/HomeBanner/images/meatyway.jpg';
 import LogoMeaty from '@/pages/Home/HomeBanner/images/meaty-logo.png';
-import Image1 from './images/1.webp';
-import Image1Hover from './images/1-hover.webp';
-import Image2 from './images/2.webp';
-import Image2Hover from './images/2-hover.webp';
-import Image3 from './images/3.webp';
-import Image3Hover from './images/3-hover.webp';
-import Image4 from './images/4.webp';
-import Image4Hover from './images/4-hover.webp';
-import Image5 from './images/5.webp';
-import Image5Hover from './images/5-hover.webp';
-import Image6 from './images/6.webp';
-import Image6Hover from './images/6-hover.webp';
-import Image7 from './images/7.webp';
-import Image7Hover from './images/7-hover.webp';
-import Image8 from './images/8.webp';
-import Image8Hover from './images/8-hover.webp';
-import Image9 from './images/9.webp';
-import Image9Hover from './images/9-hover.webp';
 
-import BannerImage from './images/banner-image.webp';
+import Dry from './images/dry.png';
+import TrueMeat from './images/trueMeat.png';
+import NZFood from './images/nz-food.png';
+import Fruit from './images/fruit.png';
+import NiceFood from './images/niceFood.png';
+import Cold from './images/cold.jpg';
+import Footer1 from './images/footer1.png';
+import Footer2 from './images/footer2.png';
+import BannerImage from './images/banner-image.jpg';
 
 export default function Meatyway() {
   const bannerData = {
@@ -34,54 +23,6 @@ export default function Meatyway() {
     logo: LogoMeaty,
     btnText: '立即查看',
   };
-
-  const imagesList = [
-    {
-      image: Image1,
-      hoverImage: Image1Hover,
-      title: 'Meatyway 鸭肉干零食',
-    },
-    {
-      image: Image2,
-      hoverImage: Image2Hover,
-      title: 'Meatyway 鸡肉干零食',
-    },
-    {
-      image: Image3,
-      hoverImage: Image3Hover,
-      title: 'Meatyway 鲭鱼干宠物零食',
-    },
-    {
-      image: Image4,
-      hoverImage: Image4Hover,
-      title: 'Meatyway 姜黄鸡肉干',
-    },
-    {
-      image: Image5,
-      hoverImage: Image5Hover,
-      title: 'Meatyway 新西牛草胃/牛肋骨/羊肝',
-    },
-    {
-      image: Image6,
-      hoverImage: Image6Hover,
-      title: 'Meatyway 鸭肉红薯卷/鸡肉苹果派/鸡肉胡萝卜卷/鸡肉香蕉卷/鸡肉紫薯卷/鸭肉雪梨卷',
-    },
-    {
-      image: Image7,
-      hoverImage: Image7Hover,
-      title: 'Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜',
-    },
-    {
-      image: Image8,
-      hoverImage: Image8Hover,
-      title: 'Meatyway 鸭肉原生风干犬粮',
-    },
-    {
-      image: Image9,
-      hoverImage: Image9Hover,
-      title: 'Meatyway 宠物零食冻干',
-    },
-  ];
 
   return (
     <div className="philosophy-page">
@@ -94,7 +35,6 @@ export default function Meatyway() {
               <div className="banner-text">
                 <h2>{bannerData.title}</h2>
                 <p>{bannerData.subTitle}</p>
-                <Button className="banner-btn">{bannerData.btnText}</Button>
               </div>
             </div>
           </div>
@@ -110,34 +50,136 @@ export default function Meatyway() {
             <div className="philosophy-values">
               <h2>爵宴</h2>
               <p>
-                爵宴秉持着"只选用天然食材，天然成就美味"的理念，依托全球原料供应链体系和生产基地的优势，十年遍访北美、澳洲、东南亚等地，始终坚持以百里挑一的匠心严选狗狗的美味佳肴。未来，爵宴将持续网罗全球高品质天然食材，致力于让狗狗「吃好」。
+                狗狗是我们爱的家人，美食和陪伴是我们爱它的方式。它们是天然美食家，简单纯净才是它们的心之所爱。所以我们严选优质的天然食材，更少程度地加工，保留营养和原始味蕾体验。
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 产品展示区域 */}
-      <div className="products-section">
-        <div className="products-grid">
-          {imagesList.map((item, index) => (
-            <div key={index} className="product-item">
-              <div className="product-image-wrapper">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="product-image"
-                  onMouseEnter={e => {
-                    e.currentTarget.src = item.hoverImage;
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.src = item.image;
-                  }}
-                />
-              </div>
-              <h3 className="product-title">{item.title}</h3>
-            </div>
-          ))}
+      {/* 产品分类展示区域 - 使用container样式 */}
+      <div className="productionbase-nz-section">
+        <div className="container">
+          <h2 className="productionbase-nz-title">风干粮系列</h2>
+          <p className="productionbase-nz-desc">
+            采用新西兰优质原料，通过低温风干工艺，最大程度保留食材的营养成分和天然风味，为宠物提供健康美味的主食选择。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://peidicwyp.tmall.com/category-1752872720.htm?spm=a1z10.3-b-s.w5001-25306308228.8.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+              );
+            }}
+          >
+            <img src={Dry} alt="Meatyway 鸭肉干零食" />
+          </div>
+        </div>
+
+        <div className="container">
+          <h2 className="productionbase-nz-title">甄肉系列</h2>
+          <p className="productionbase-nz-desc">
+            精选天然食材制作的宠物零食，无添加防腐剂，口感丰富，营养均衡，是宠物日常训练和奖励的最佳选择。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://peidicwyp.tmall.com/category-1752872716.htm?spm=a1z10.3-b-s.w5001-25306308228.4.34d7627cnPd84p&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+              );
+            }}
+          >
+            <img src={TrueMeat} alt="Meatyway 姜黄鸡肉干" />
+          </div>
+        </div>
+
+        <div className="container">
+          <h2 className="productionbase-nz-title">果蔬系列</h2>
+          <p className="productionbase-nz-desc">
+            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://peidicwyp.tmall.com/category-1752872717.htm?spm=a1z10.3-b-s.w5001-25306308228.5.77c0627c4S80Vm&search=y&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+              );
+            }}
+          >
+            <img src={NZFood} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">新西兰系列</h2>
+          <p className="productionbase-nz-desc">
+            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+              );
+            }}
+          >
+            <img src={Fruit} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">美食家罐头系列</h2>
+          <p className="productionbase-nz-desc">
+            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://detail.tmall.com/item.htm?abbucket=6&id=716545637060&pisk=g1RIJfmvikqCB718P90a1Ymd8MBvNVlVvz_JoUFUy6Cpy7teDeRUTJ8JCExs-_-yygtWbGAE-gu3V3TWR9QL9wBTWZQzvwFJyz_Jb6BkLgSFV_TkcVoqgj8H-_fK0mlqvSlgfsbL2aEPB5Q5Nwn2iH6y-_f-VPP-3jTHxBkU4JQRWV_PzgUp2TFO6Gb5JgKRvOEOrafRw3BRXOQAogUdvwQt5ZQ7eJIRJRIOkaeR23C-5lIGy_Qp2_h_mA_tdG8I80JpdTulyeI_w7dKZ9sX_8P7NeQddITGfRyw1w6C0O-I-nRpbUdetOD8F_Ywh39JDcyFvK_XftJIcWtXxaL5yHG0lGdBPC6HQrPv5FTJ3OOZkjfC9MpPtUzjYFOBYeA6zzeOO6J1hB1xikIyQEO5PQmo1nTJoLB6NksyuSSb662Si_N55ius582l720YeQzqrt6dSN4q5Vw4E9QG5Lus58chpNbGeVg_nwf..&rn=431bdf87c5f0d8373b4fb5d0b4568097&spm=a1z10.3-b-s.w4011-23129053535.43.6394627cZZjaK2'
+              );
+            }}
+          >
+            <img src={NiceFood} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">冻干系列</h2>
+          <p className="productionbase-nz-desc">
+            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
+          </p>
+          <div
+            className="order-process-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+              );
+            }}
+          >
+            <img src={Cold} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">爵宴——敬你的最佳拍档</h2>
+          <p className="productionbase-nz-desc">
+            爵宴认为宠物不仅是被呵护的家人，更是非凡的同行者，你们将一同解锁新体验甚至新成就，而TA将在这段旅程中成为与你相配的最佳拍档。
+          </p>
+          <div className="order-process-item">
+            <img src={Footer1} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
+        </div>
+        <div className="container">
+          <h2 className="productionbase-nz-title">天然有爱，天然宠爱。</h2>
+          <p className="productionbase-nz-desc">
+            宠物赋予人更积极、快乐的体验，而自然是给TA最好的款待，在每一个欢乐时刻，愿总有爵宴相伴。
+          </p>
+          <div className="order-process-item">
+            <img src={Footer2} alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜" />
+          </div>
         </div>
       </div>
 
