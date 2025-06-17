@@ -25,6 +25,8 @@ import Cover24 from './images/cover24.png';
 import Cover25 from './images/cover25.webp';
 import Cover26 from './images/cover26.webp';
 import Cover27 from './images/cover27.webp';
+import Cover28 from './images/cover28.png';
+import Cover29 from './images/cover29.webp';
 
 
 export const coverList = [
@@ -162,6 +164,16 @@ export const coverList = [
     cover: Cover27,
     time: '2025-05-11',
     title: '它博会首发！爵宴原生风干粮系列薄脆版等新品来袭'
+  },
+  {
+    cover: Cover28,
+    time: '2025-05-22',
+    title: '618抢先购超级战报：佩蒂全渠道GMV破1200万元，同比增长40%'
+  },
+  {
+    cover: Cover29,
+    time: '2025-06-02',
+    title: '与生命同行 | 佩蒂宠物疗愈空间在杭州Do都城正式开业'
   },
 
 ];
