@@ -21,6 +21,7 @@ import Cover20 from './images/cover20.webp';
 import Cover21 from './images/cover21.webp';
 import Cover22 from './images/cover22.webp';
 import Cover23 from './images/cover23.webp';
+import Cover24 from './images/cover24.png';
 
 
 export const coverList = [
@@ -138,5 +139,10 @@ export const coverList = [
     cover: Cover23,
     time: '2024-09-27',
     title: '喜报！佩蒂股份荣获2024全球浙商ESG大会两项荣耀'
+  },
+  {
+    cover: Cover24,
+    time: '2024-11-13',
+    title: '双11收官战报！爵宴实力霸榜，全网销售突破4250万+！'
   },
 ];
