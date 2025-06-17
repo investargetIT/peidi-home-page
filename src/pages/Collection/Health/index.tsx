@@ -46,11 +46,6 @@ export default function Health() {
       link: 'https://detail.tmall.com/item.htm?id=755154798716&pisk=gRftvrV7Vkqgebf9-NynmmTVd-lAWJbw9G7SinxihMIdlGtMmKG6R2TwyAMsGZTXMMs07hbbbiCvAC9VInxMDIQV2yquZ7bN7IR_quVlarHNwQu65AiDApTvMF9njJ517IRbq2cbE7QNb6kCjcTXRyLDkxM1cjGBRH8mCnsXfpiByURXGi9XdDTyWFGjCFtQJUT-CFT6cDNB7U8shiObJBT2WItfcdadRX1t6n364jBkSCCRSxZhkZ1pWdK5J8lmgAYEqH_1TjhvvRvvV3xKGj1p7ZIZnec8n36yjLx1AWc9MwTAvLXT2fIAlaWXpsn_SgsCHiTFLoHv2t_GU6vElzt5_w1yOpV7yw1FjN5doqNX-gxC71OYNzR91hOp8sqE1nBCh1vwgcZv06QC1tIyY_fRihik_3M_JyHq3dTeQoYSicG0bM8pqySE3xJp8eKuJfHq3d9yJ34U_xk2d05..&spm=a21xtw.29178619.0.0&sku_properties=147956252%3A7067547',
     },
     {
-      src: Image2,
-      title: '犬用主食罐',
-      link: 'https://detail.tmall.com/item.htm?id=755154798716&pisk=gRftvrV7Vkqgebf9-NynmmTVd-lAWJbw9G7SinxihMIdlGtMmKG6R2TwyAMsGZTXMMs07hbbbiCvAC9VInxMDIQV2yquZ7bN7IR_quVlarHNwQu65AiDApTvMF9njJ517IRbq2cbE7QNb6kCjcTXRyLDkxM1cjGBRH8mCnsXfpiByURXGi9XdDTyWFGjCFtQJUT-CFT6cDNB7U8shiObJBT2WItfcdadRX1t6n364jBkSCCRSxZhkZ1pWdK5J8lmgAYEqH_1TjhvvRvvV3xKGj1p7ZIZnec8n36yjLx1AWc9MwTAvLXT2fIAlaWXpsn_SgsCHiTFLoHv2t_GU6vElzt5_w1yOpV7yw1FjN5doqNX-gxC71OYNzR91hOp8sqE1nBCh1vwgcZv06QC1tIyY_fRihik_3M_JyHq3dTeQoYSicG0bM8pqySE3xJp8eKuJfHq3d9yJ34U_xk2d05..&spm=a21xtw.29178619.0.0&sku_properties=147956252%3A7067547',
-    },
-    {
       src: Image3,
       title: '黄金罐',
       link: 'https://detail.tmall.com/item.htm?id=908726569144&pisk=g2FqAjO9tsCq7fixn7Gw4nGMX8gjafSCu5isSP4ilmmmc5ZaSVupshAioQAok0O1kj6t_lozXmMji5yJ_yUTGZh1kjUx6fjCA6Nakrh9ifwNSS8kqVzoSK0GFb24oh5CA61Qkt0x1zjQ1jphnquBsfDmnLAo2qvDslDMZzm-WVxmSIbPz03sSnmMnb0ol2RmsKcMr30ZRKvMnx0or03isI0gjzbr50miOSkiLQutnNh-UTA1yEpiYrmysCVc6xnF5m3-R7ljnDDDcIAmBqkqxrmRmHKKcY4tQ5L9_Yz0pl33mnjZX7zuiJqhVKi0LVzQQrfDZjNYoJDgtGpgkjn4jAyRYBgqG8kUg-Q9qrqI0JcY5eSbzvyrp4Dk7KcbdyNtKSf2v0MK7ukQ3MR4xg7WX4Vkb5Upldkmy4oCza54pORqlph7Fdpth33rAZbDBdH0M4oCz9J9BxGxzD_4b&spm=a21xtw.29178619.0.0&sku_properties=147956252%3A7923519',
@@ -156,25 +151,19 @@ export default function Health() {
       </div>
 
       {/* 产品展示区域 */}
-      <div className="productionbase-nz-section">
+      <div className="product-grid-section">
         <div className="container">
-          <div className="products-grid">
+          <div className="product-grid">
             {imageList.map((item, index) => (
               <div key={index} className="product-item">
-                <div
-                  className="slider-main-container"
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    window.open(item.link);
-                  }}
-                >
-                  <div className="slider-item active">
-                    <img src={item.src} alt={item.title} className="slider-image" />
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <div className="product-image">
+                    <img src={item.src} alt={item.title} />
                   </div>
-                </div>
-                <div className="product-title">
-                  <h3>{item.title}</h3>
-                </div>
+                  <div className="product-title">
+                    <h3>{item.title}</h3>
+                  </div>
+                </a>
               </div>
             ))}
           </div>
