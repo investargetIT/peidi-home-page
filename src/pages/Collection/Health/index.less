@@ -150,7 +150,7 @@
 }
 
 // 产品网格展示区域样式
-.product-grid-section {
+.health-product-grid-section {
   background: #f8f8f8;
   padding: 80px 20px 60px 20px;
   margin: 40px auto;
@@ -167,7 +167,7 @@
     padding: 40px 15px 30px 15px;
   }
 
-  .product-grid {
+  .health-product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -190,7 +190,7 @@
     }
   }
 
-  .product-item {
+  .health-product-item {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -199,10 +199,25 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    position: relative;
+    height: 250px;
+
+    @media (max-width: 768px) {
+      height: 160px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 480px) {
+      height: 140px;
+    }
 
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+      @media (max-width: 768px) {
+        transform: translateY(-2px);
+      }
     }
 
     a {
@@ -210,40 +225,68 @@
       text-decoration: none;
       color: inherit;
       width: 100%;
+      height: 100%;
+      position: relative;
     }
 
-    .product-image {
+    .health-product-image {
       width: 100%;
-      height: 200px;
+      height: 100%;
       overflow: hidden;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center top;
         transition: transform 0.3s ease;
-      }
-    }
-
-    .product-title {
-      padding: 15px 10px;
-
-      h3 {
-        font-size: 14px;
-        font-weight: 500;
-        color: #333;
-        margin: 0;
-        line-height: 1.4;
-        text-align: center;
 
         @media (max-width: 768px) {
-          font-size: 12px;
-          padding: 10px 5px;
+          object-position: center center;
         }
       }
     }
 
-    &:hover .product-image img {
+    .health-product-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 10px;
+      z-index: 2;
+
+      h3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+        line-height: 1.3;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+          line-height: 1.2;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        padding: 6px 8px;
+      }
+
+      @media (max-width: 480px) {
+        padding: 4px 6px;
+      }
+    }
+
+    &:hover .health-product-image img {
       transform: scale(1.05);
     }
   }

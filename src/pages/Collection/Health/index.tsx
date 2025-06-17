@@ -143,7 +143,7 @@ export default function Health() {
             <div className="philosophy-values">
               <h2>好适嘉</h2>
               <p>
-                秉持“精准营养主义”的品牌理念，好适嘉始终坚持以宠物的需求为先，化繁为简，不去刻意追求吸睛的概念、猎奇的成分，而是着手打造真正贴合宠物日常饮食需求的产品。
+                秉持"精准营养主义"的品牌理念，好适嘉始终坚持以宠物的需求为先，化繁为简，不去刻意追求吸睛的概念、猎奇的成分，而是着手打造真正贴合宠物日常饮食需求的产品。
               </p>
             </div>
           </div>
@@ -151,15 +151,15 @@ export default function Health() {
       </div>
 
       {/* 产品展示区域 */}
-      <div className="product-grid-section">
-        <div className="product-grid">
+      <div className="health-product-grid-section">
+        <div className="health-product-grid">
           {imageList.map((item, index) => (
-            <div key={index} className="product-item">
+            <div key={index} className="health-product-item">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="product-image">
+                <div className="health-product-image">
                   <img src={item.src} alt={item.title} />
                 </div>
-                <div className="product-title">
+                <div className="health-product-title">
                   <h3>{item.title}</h3>
                 </div>
               </a>
