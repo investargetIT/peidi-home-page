@@ -8,6 +8,18 @@
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+  margin: 20px 0;
+}
+
+.news-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.news-image-grid .news-image-wrapper {
+  margin: 0;
 }
 
 .news-image-wrapper img {
@@ -71,5 +83,9 @@
 
   .news-subtitle {
     font-size: 18px;
+  }
+
+  .news-image-grid {
+    gap: 15px;
   }
 }

@@ -24,6 +24,7 @@ import Cover23 from './images/cover23.webp';
 import Cover24 from './images/cover24.png';
 import Cover25 from './images/cover25.webp';
 import Cover26 from './images/cover26.webp';
+import Cover27 from './images/cover27.webp';
 
 
 export const coverList = [
@@ -156,6 +157,11 @@ export const coverList = [
     cover: Cover26,
     time: '2025-04-21',
     title: '佩蒂股份2024净利润同比大增1742%，综合毛利提升至29.36%'
-  }
+  },
+  {
+    cover: Cover27,
+    time: '2025-05-11',
+    title: '它博会首发！爵宴原生风干粮系列薄脆版等新品来袭'
+  },
 
 ];
