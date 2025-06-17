@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import Banner from './images/banner.webp';
+import React from 'react';
+import { Button } from 'antd';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
-import BannerContainer from '@/components/BannerContainer';
+import MeatyBanner from '@/pages/Home/HomeBanner/images/meatyway.jpg';
+import LogoMeaty from '@/pages/Home/HomeBanner/images/meaty-logo.png';
 import Image1 from './images/1.webp';
 import Image1Hover from './images/1-hover.webp';
 import Image2 from './images/2.webp';
@@ -24,7 +25,16 @@ import Image9 from './images/9.webp';
 import Image9Hover from './images/9-hover.webp';
 
 import BannerImage from './images/banner-image.webp';
+
 export default function Meatyway() {
+  const bannerData = {
+    title: '天然成就美味',
+    subTitle: '天然膳食标准引领者',
+    image: MeatyBanner,
+    logo: LogoMeaty,
+    btnText: '立即查看',
+  };
+
   const imagesList = [
     {
       image: Image1,
@@ -75,7 +85,21 @@ export default function Meatyway() {
 
   return (
     <div className="philosophy-page">
-      <BannerContainer bannerImage={Banner} title="天然成就美味" />
+      {/* 使用类似HomeBanner的样式 */}
+      <div className="meaty-banner-container">
+        <div className="banner-container">
+          <div className="banner-slide" style={{ backgroundImage: `url(${bannerData.image})` }}>
+            <div className="banner-content alternate-layout">
+              <img src={bannerData.logo} alt={`${bannerData.title} Logo`} className="brand-logo" />
+              <div className="banner-text">
+                <h2>{bannerData.title}</h2>
+                <p>{bannerData.subTitle}</p>
+                <Button className="banner-btn">{bannerData.btnText}</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="philosophy-content">
         <div className="philosophy-container">
@@ -92,6 +116,31 @@ export default function Meatyway() {
           </div>
         </div>
       </div>
+
+      {/* 产品展示区域 */}
+      <div className="products-section">
+        <div className="products-grid">
+          {imagesList.map((item, index) => (
+            <div key={index} className="product-item">
+              <div className="product-image-wrapper">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="product-image"
+                  onMouseEnter={e => {
+                    e.currentTarget.src = item.hoverImage;
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.src = item.image;
+                  }}
+                />
+              </div>
+              <h3 className="product-title">{item.title}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* 页脚导航区域 */}
       <NewFooterNav />
 
