@@ -22,7 +22,7 @@ import Cover21 from './images/cover21.webp';
 import Cover22 from './images/cover22.webp';
 import Cover23 from './images/cover23.webp';
 import Cover24 from './images/cover24.png';
-
+import Cover25 from './images/cover25.webp';
 
 export const coverList = [
   {
@@ -144,5 +144,10 @@ export const coverList = [
     cover: Cover24,
     time: '2024-11-13',
     title: '双11收官战报！爵宴实力霸榜，全网销售突破4250万+！'
+  },
+  {
+    cover: Cover25,
+    time: '2025-03-02',
+    title: '加冕时刻！爵宴、好适嘉京宠展荣获「主粮类」「零食类」双金荣耀'
   },
 ];
