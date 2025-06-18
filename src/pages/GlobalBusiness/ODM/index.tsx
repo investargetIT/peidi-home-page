@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.less';
 import Banner from './images/ODM.png';
 
@@ -26,15 +25,23 @@ export default function ODM() {
             </p>
 
             <p className="description-text english">
-              Petty Group, the leader and disseminator of the concept of science and health care, adheres to the value of scientific and healthy products by virtue of its outstanding research and development ability, and provides ODM products with high nutrition, good efficacy and high added value for many international first-line brands.
+              Petty Group, the leader and disseminator of the concept of science and health care,
+              adheres to the value of scientific and healthy products by virtue of its outstanding
+              research and development ability, and provides ODM products with high nutrition, good
+              efficacy and high added value for many international first-line brands.
             </p>
 
             <p className="description-text english">
-              The product has 32 patents, including 8 domestic invention patents, 3 foreign invention patents and 20 utility model patents. Thanks to the capital support of listed companies, Petty will continue to increase investment in R&D, focusing on users, in line with the product concept of scientific feeding, creating a win-win ecological concept with partners, healthy and stable development concept, and practicing the concept of "loving cause, loving life".
+              The product has 32 patents, including 8 domestic invention patents, 3 foreign
+              invention patents and 20 utility model patents. Thanks to the capital support of
+              listed companies, Petty will continue to increase investment in R&D, focusing on
+              users, in line with the product concept of scientific feeding, creating a win-win
+              ecological concept with partners, healthy and stable development concept, and
+              practicing the concept of "loving cause, loving life".
             </p>
           </div>
         </div>
       </div>
     </div>
   );
-} 
+}

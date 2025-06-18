@@ -1,4 +1,3 @@
-import React from 'react';
 import Banner from './images/banner.webp';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';

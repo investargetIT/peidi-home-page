@@ -2,7 +2,7 @@
  * 悬浮按钮组件
  * 右侧贴边显示，包含回到顶部和社交媒体按钮
  */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './index.less';
 import TopIcon from './images/top_icon.png';
 import WeixinIcon from './images/weixin-icon.png';

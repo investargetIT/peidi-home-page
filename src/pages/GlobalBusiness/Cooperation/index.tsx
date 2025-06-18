@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.less';
 import Code from './images/code.jpg';
 
@@ -30,7 +29,9 @@ export default function ODM() {
 
             <div className="info-item english">
               <span className="info-label">Adress:</span>
-              <span className="info-value">Nord Wealth Center, 159 Haoyue Road, Qianjiang Century City, Hangzhou</span>
+              <span className="info-value">
+                Nord Wealth Center, 159 Haoyue Road, Qianjiang Century City, Hangzhou
+              </span>
             </div>
 
             <div className="info-item english">
@@ -50,4 +51,4 @@ export default function ODM() {
       </div>
     </div>
   );
-} 
+}
