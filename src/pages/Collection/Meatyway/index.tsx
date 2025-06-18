@@ -86,7 +86,7 @@ export default function Meatyway() {
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
-                  'https://peidicwyp.tmall.com/category-1752872716.htm?spm=a1z10.3-b-s.w5001-25306308228.4.34d7627cnPd84p&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                  'https://detail.tmall.com/item.htm?abbucket=6&id=620844478461&pisk=gafsJWqRZcm__bdxld4EOSW-fjvRfyPyXqTArZhZkCdOkjsN2N5Z_A7AdajQSISVknsfYHfaSnzici_f5dLt6FpKJULqXFLAkqTAYCpcQn-wcI_cVyrza77GSIAT4uPzC8vl3QmxMIn2vpLvGFEPv0bVSIAYc2lYU7_GjtPfFALvJyT2uFKADK3K9HYXWxIvXpnpoEAvMiKOJvLwlnHvDELLRUT2DmKvDenpSUHvWidYRWKHkILADIh9vJTLCH7_7s3UjVMLXN-IMjCBRoxR5sTHS69pB3KpsjeFOF962N5gw22vJ65BUpu40BQlLGLBN5ik59QW6E10yxtXh1ABAgN-ieXOf6pfTrV5-C6COC5TmYbFRhpWT9y3bKR1fTxkBJqhcwtND19Kfk-VUw59dgEEOivfH1Rd6kF54YhyVXdih7AjGetzRyMmnezgyxCqzrvWBeYnzyaIUxv9-e64RyM0sdLH-KzQRYYG.&rn=be0e57a926819f4646fc266dae25f69e&spm=a1z10.3-b-s.w4011-23129053535.56.2d01627cyG9CKo&sku_properties=147956252%3A3814968'
                 );
               }}
             >
@@ -125,7 +125,7 @@ export default function Meatyway() {
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
-                  'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                  'https://detail.tmall.com/item.htm?abbucket=6&id=739451027866&pisk=gOyZ-UvvEOBNBv3tsJM28Ztl2unspx7WI-gjmoqmfV0ihGBq0Pav5hMbmm24lyDjiNH_3yz0uKN_CAGcn2i2SCcDnecnqmRmi-gb3heUzK91W1ED3xMcPa65FlKtHxb5b7CodFnqcmXjSqqnBmMmKTHPFlEtkh8cVWXW0XGCmnAmorDntmimnmvDIMkn0cDDIjvgx20K-xvinmXnKmnWnI00oe0nf0AijxcD-HmrVx00ofDhYm3nmxDmsJhmapoxsiKGM4TWJ6kErl0enLx-bfjzfI9WFAmi_o2K861QLclZPXaNXzwgRo2_BXCDgxEQarP0rwOsS7oz8bNNzdzzWmqqmPWJ422a0JlTO39uYkr0NXyCqTHZIVVjBotP5kya5leUcnAnQANEaRkleF0bOuyq0-QALzr02ScU3FSz7En3KEyY2hOqsDnEPMSFQ7C2QK1XTXdvMfTKY4sGjIdxsRnEPM5yMIhsBDu5br5..&rn=be0e57a926819f4646fc266dae25f69e&spm=a1z10.3-b-s.w4011-23129053535.60.2d01627cyG9CKo&sku_properties=147956252%3A3334588'
                 );
               }}
             >
