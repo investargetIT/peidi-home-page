@@ -104,7 +104,7 @@ export default function Meatyway() {
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
-                  'https://peidicwyp.tmall.com/category-1752872717.htm?spm=a1z10.3-b-s.w5001-25306308228.5.77c0627c4S80Vm&search=y&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                  'https://detail.tmall.com/item.htm?abbucket=6&id=690835141425&pisk=gG4iJnNSNlo14a6Kvyg14ZzWqVDD5VgjG-LxHqHVYvkIHlEOhZD0a5Dx0xFtos2IpPHT6Vkmo7wuBAnvXy0Eabc23Fo2L2lrp-LY6rqBo7NbW1gA1VNslqWReaU015gju_HH5PYF8bVE_noVv2P16QlGeaQ8tGlskWW8kmatjfhJuqoZ02PEdjpZg-oZ8XkIGjJZuA5htvGv7xoZQBkEMfvquj-aTBlqZf8qbxoe8vGquxyqu6mEdjl9gOkauPUFpGv2pxhuaycijYPFVE8DPfJ-E5u2oE0qsccT_vY2uyZQxk6oQgOKhVH_af2fPFgZmozt8PWFu4r7KrmrriCsbSq3hVUFghkzXRnYWDbyKXZU6oz_IIYq1PU-mYihgEix8znz4RAfNWuZg-i7kTTsQSP7Pu3lSLGgY70h4aKe4RAwlmBzXntjbXGneGiQBhv55kvPt6xohclI_YChtnaSbXGnJ6fHqaiZOfAd.&rn=ec145cba012940d343c720a9c9247aaa&spm=a1z10.3-b-s.w4011-23129053535.52.67db627c9QhHNw&sku_properties=147956252%3A3334588'
                 );
               }}
             >
