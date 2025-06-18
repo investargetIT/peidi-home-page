@@ -34,6 +34,8 @@ export default function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      {/* todo,后续接入时路径需要调整 */}
+      <Route path="/homepage" element={<Home />} />
       {/* 关于佩蒂 */}
       <Route path="/pages/corporate-philosophy" element={<CorporatePhilosopy />} />
       <Route path="/pages/company-culture" element={<CompanyCulture />} />

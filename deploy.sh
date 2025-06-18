@@ -1,32 +1,18 @@
 #!/bin/bash
 
-# Exit on error
-set -e
+# 执行构建
+pnpm run build
 
-echo "Starting deployment process..."
+# 重命名 dist 目录
+mv dist homepage
 
-# Build the project
-echo "Building the project..."
-npm run build
+# 获取当前路径
+CURRENT_PATH=$(pwd)
 
-# Check if build was successful
-if [ $? -eq 0 ]; then
-    echo "Build successful!"
-else
-    echo "Build failed!"
-    exit 1
-fi
+# 上传到服务器
+scp -r $CURRENT_PATH/homepage root@121.43.145.161:/media/www
 
-# Add all changes to git
-echo "Adding changes to git..."
-git add .
+# 删除本地 homepage 文件夹
+rm -rf homepage
 
-# Commit changes
-echo "Committing changes..."
-git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')"
-
-# Push to main branch
-echo "Pushing to main branch..."
-git push origin main
-
-echo "Deployment completed successfully!" 
+echo "部署完成！"
