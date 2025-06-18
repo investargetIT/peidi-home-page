@@ -1,5 +1,3 @@
-import React from 'react';
-import { Button } from 'antd';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
@@ -95,29 +93,29 @@ export default function Chewnergy() {
           ))}
         </div>
       </div>
-      <div className="productionbase-nz-section">
+      <div className="chewnergy-feature-section">
         <div className="container">
-          <h2 className="productionbase-nz-title">30多年专注宠物牙齿健康 全球57项先进技术专利</h2>
+          <h2 className="chewnergy-feature-title">30多年专注宠物牙齿健康 全球57项先进技术专利</h2>
 
-          <div className="productionbase-nz-image">
+          <div className="chewnergy-feature-image">
             <img src={Footer1} alt="爵宴品牌形象" />
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">
+          <h2 className="chewnergy-feature-title">
             《宠物食品-狗咬胶》中国国标起草单位，第5代宠物咀嚼产品市场引导者
           </h2>
 
-          <div className="productionbase-nz-image">
+          <div className="chewnergy-feature-image">
             <img src={Footer2} alt="爵宴品牌理念" />
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">
+          <h2 className="chewnergy-feature-title">
             宠物口腔医学专家刘朗博士推荐 中检测产品追溯体系认证
           </h2>
 
-          <div className="productionbase-nz-image">
+          <div className="chewnergy-feature-image">
             <img src={Footer3} alt="爵宴品牌理念" />
           </div>
         </div>
