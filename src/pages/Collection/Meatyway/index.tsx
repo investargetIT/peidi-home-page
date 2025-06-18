@@ -57,9 +57,9 @@ export default function Meatyway() {
       </div>
 
       {/* 产品分类展示区域 - 使用container样式 */}
-      <div className="productionbase-nz-section">
+      <div className="meatyway-section">
         <div className="container">
-          <h2 className="productionbase-nz-title">风干粮系列</h2>
+          <h2 className="meatyway-title">风干粮系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -77,7 +77,7 @@ export default function Meatyway() {
         </div>
 
         <div className="container">
-          <h2 className="productionbase-nz-title">甄肉系列</h2>
+          <h2 className="meatyway-title">甄肉系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -95,7 +95,7 @@ export default function Meatyway() {
         </div>
 
         <div className="container">
-          <h2 className="productionbase-nz-title">果蔬系列</h2>
+          <h2 className="meatyway-title">果蔬系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -116,7 +116,7 @@ export default function Meatyway() {
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">新西兰系列</h2>
+          <h2 className="meatyway-title">新西兰系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -137,7 +137,7 @@ export default function Meatyway() {
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">美食家罐头系列</h2>
+          <h2 className="meatyway-title">美食家罐头系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -158,7 +158,7 @@ export default function Meatyway() {
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">冻干系列</h2>
+          <h2 className="meatyway-title">冻干系列</h2>
 
           <div className="slider-main-container">
             <div
@@ -179,20 +179,20 @@ export default function Meatyway() {
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">爵宴——敬你的最佳拍档</h2>
-          <p className="productionbase-nz-desc">
+          <h2 className="meatyway-title">爵宴——敬你的最佳拍档</h2>
+          <p className="meatyway-desc">
             爵宴认为宠物不仅是被呵护的家人，更是非凡的同行者，你们将一同解锁新体验甚至新成就，而TA将在这段旅程中成为与你相配的最佳拍档。
           </p>
-          <div className="productionbase-nz-image">
+          <div className="meatyway-image">
             <img src={Footer1} alt="爵宴品牌形象" />
           </div>
         </div>
         <div className="container">
-          <h2 className="productionbase-nz-title">天然有爱，天然宠爱。</h2>
-          <p className="productionbase-nz-desc">
+          <h2 className="meatyway-title">天然有爱，天然宠爱。</h2>
+          <p className="meatyway-desc">
             宠物赋予人更积极、快乐的体验，而自然是给TA最好的款待，在每一个欢乐时刻，愿总有爵宴相伴。
           </p>
-          <div className="productionbase-nz-image">
+          <div className="meatyway-image">
             <img src={Footer2} alt="爵宴品牌理念" />
           </div>
         </div>
