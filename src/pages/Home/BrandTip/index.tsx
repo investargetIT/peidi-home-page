@@ -20,7 +20,6 @@ export default function BrandTip() {
       <div className="brand-tip-wrapper">
         <div className="brand-tip-container">
           {/* 品牌小标题 */}
-          <div className="brand-tip-title">ABOUT US</div>
 
           {/* 品牌主标题 */}
           <div className="brand-tip-subtitle">关于佩蒂</div>

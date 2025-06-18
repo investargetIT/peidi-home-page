@@ -144,9 +144,9 @@ export default function Navbar() {
           {/* 右侧功能区 */}
           <div className="navbar-actions">
             {/* 联系我们按钮 */}
-            <a href="/investor-relations" className="contact-btn">
+            <Link to="/investor-relations" className="contact-btn">
               投资关系
-            </a>
+            </Link>
             <a
               href="https://peidigroup.com/"
               target="_blank"

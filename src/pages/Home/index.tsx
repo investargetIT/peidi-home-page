@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* 首页顶部banner区域 */}
-      <HomeBanner onLearnMoreClick={() => console.log('Learn more clicked')} />
+      <HomeBanner />
 
       {/* 品牌提示与图标展示区域 */}
       <BrandTip />

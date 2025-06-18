@@ -4,6 +4,7 @@
  */
 import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MeatyBanner from './images/meatyway.jpg';
 import HealthyBanner from './images/health.jpg';
 import ChewableBanner from './images/chewnergy.jpg';
@@ -12,16 +13,9 @@ import LogoHealthy from './images/health-logo.png';
 import LogoChewable from './images/chew-logo.png';
 import './index.less';
 
-/**
- * HomeBanner组件属性接口
- * @interface HomeBannerProps
- * @property {Function} onLearnMoreClick - 可选的"了解更多"按钮点击事件处理函数
- */
-interface HomeBannerProps {
-  onLearnMoreClick?: () => void;
-}
+export default function HomeBanner() {
+  const navigate = useNavigate();
 
-export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
   const bannerList = [
     {
       title: '天然成就美味',
@@ -29,6 +23,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
       image: MeatyBanner,
       logo: LogoMeaty,
       btnText: '立即查看',
+      link: '/collection/meatyway',
     },
     {
       title: '健康主食新标准',
@@ -36,6 +31,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
       image: HealthyBanner,
       logo: LogoHealthy,
       btnText: '立即查看',
+      link: '/collection/health',
     },
     {
       title: '宠物咀嚼标准定义者',
@@ -43,6 +39,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
       image: ChewableBanner,
       logo: LogoChewable,
       btnText: '立即查看',
+      link: '/collection/chewnergy',
     },
   ];
 
@@ -58,6 +55,11 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
   // 切换到指定索引的幻灯片
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
+  };
+
+  // 处理按钮点击
+  const handleButtonClick = () => {
+    navigate(bannerList[currentIndex].link);
   };
 
   // 设置自动轮播
@@ -92,7 +94,7 @@ export default function HomeBanner({ onLearnMoreClick }: HomeBannerProps) {
               <div className="banner-text">
                 <h2>{banner.title}</h2>
                 <p>{banner.subTitle}</p>
-                <Button className="banner-btn" onClick={onLearnMoreClick}>
+                <Button className="banner-btn" onClick={handleButtonClick}>
                   {banner.btnText}
                 </Button>
               </div>
