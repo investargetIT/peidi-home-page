@@ -167,7 +167,7 @@ export default function Meatyway() {
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
-                  'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                  'https://detail.tmall.com/item.htm?detail_redpacket_pop=true&id=824066994691&ltk2=175021214275037dtadd6w5majhiv8bw5wb&ns=1&priceTId=213e04ff17502121311282535e1273&query=%E5%86%BB%E5%B9%B2&skuId=5541840017617&spm=a21n57.1.hoverItem.10&utparam=%7B%22aplus_abtest%22%3A%22d275d392621d537afbdef6252bdb748e%22%7D&xxc=ad_ztc'
                 );
               }}
             >
