@@ -50,12 +50,13 @@ export default function Chewnergy() {
       <div className="meaty-banner-container">
         <div className="banner-container">
           <div className="banner-slide" style={{ backgroundImage: `url(${bannerData.image})` }}>
-            <div className="banner-content default-layout">
+            <div className="banner-content alternate-layout">
               <img src={bannerData.logo} alt={`${bannerData.title} Logo`} className="brand-logo" />
               <div className="banner-text">
                 <h2>{bannerData.title}</h2>
                 <p>{bannerData.subTitle}</p>
               </div>
+              <button className="banner-btn">{bannerData.btnText}</button>
             </div>
           </div>
         </div>

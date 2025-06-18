@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
