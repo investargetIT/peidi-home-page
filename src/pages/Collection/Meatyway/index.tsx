@@ -61,9 +61,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">风干粮系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -71,7 +71,7 @@ export default function Meatyway() {
                 );
               }}
             >
-              <img src={Dry} alt="Meatyway 鸭肉干零食" className="slider-image" />
+              <img src={Dry} alt="Meatyway 鸭肉干零食" className="meatyway-product-image" />
             </div>
           </div>
         </div>
@@ -79,9 +79,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">甄肉系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -89,7 +89,7 @@ export default function Meatyway() {
                 );
               }}
             >
-              <img src={TrueMeat} alt="Meatyway 姜黄鸡肉干" className="slider-image" />
+              <img src={TrueMeat} alt="Meatyway 姜黄鸡肉干" className="meatyway-product-image" />
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">果蔬系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -110,7 +110,7 @@ export default function Meatyway() {
               <img
                 src={Fruit}
                 alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
-                className="slider-image"
+                className="meatyway-product-image"
               />
             </div>
           </div>
@@ -118,9 +118,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">新西兰系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -131,7 +131,7 @@ export default function Meatyway() {
               <img
                 src={NZFood}
                 alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
-                className="slider-image"
+                className="meatyway-product-image"
               />
             </div>
           </div>
@@ -139,9 +139,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">美食家罐头系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -152,7 +152,7 @@ export default function Meatyway() {
               <img
                 src={NiceFood}
                 alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
-                className="slider-image"
+                className="meatyway-product-image"
               />
             </div>
           </div>
@@ -160,9 +160,9 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">冻干系列</h2>
 
-          <div className="slider-main-container">
+          <div className="meatyway-product-container">
             <div
-              className="slider-item active"
+              className="meatyway-product-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
@@ -173,7 +173,7 @@ export default function Meatyway() {
               <img
                 src={Cold}
                 alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
-                className="slider-image"
+                className="meatyway-product-image"
               />
             </div>
           </div>
