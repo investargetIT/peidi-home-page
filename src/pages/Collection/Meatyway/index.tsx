@@ -61,16 +61,14 @@ export default function Meatyway() {
       <div className="productionbase-nz-section">
         <div className="container">
           <h2 className="productionbase-nz-title">风干粮系列</h2>
-          <p className="productionbase-nz-desc">
-            采用新西兰优质原料，通过低温风干工艺，最大程度保留食材的营养成分和天然风味，为宠物提供健康美味的主食选择。
-          </p>
+
           <div className="slider-main-container">
             <div
               className="slider-item active"
               style={{ cursor: 'pointer' }}
               onClick={() => {
                 window.open(
-                  'https://peidicwyp.tmall.com/category-1752872720.htm?spm=a1z10.3-b-s.w5001-25306308228.8.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                  'https://detail.tmall.com/item.htm?abbucket=6&id=779237393226&pisk=ghQ-Jga_C-2luO7Ji_rmK6P4BTuLnofyhT5s-pvoAtBATOCl-g2rdy1en2xu49VdD962qLwz4BgdCtRnZ_tShqOpNYOIPH1fDT56q9CUaB9Cd9phqo4Ga_8eRRXLSPfrdSjUiTKBRnNB9B9Qi3ZgajpkRR2gJmcX48YCKBkJgriX_KOWO3t7MnO9OeOWVHNvhBdwd46CdSLXOQnBN0tIcmOyhYMSVH9jhBO-PBtBOSCX3BTBd9t7MsGOb4pKNdudjqUTG9lMW2gCkQKYm_9f-wPHN3p1NKEabZpw2d1WH226yw06pK7_noCVeg6kg9UTHFsNHwK6JzHwwi19lLY_XmLRiT79PNe-rIY2UhOf5WmwnZpldaKbsVKHlNx6Piq4EHYJ69_PeX3CCsfGzn7LBx9FqC8X9wPsvpKC43QGWwvSIUJsVSFxYD-Wg3yH12mB7_GvMdVV3DoeDIRvIS3-YD-WbIpggznEYnMN.&rn=11e52dbc785b0ead6e56652032442128&spm=a1z10.3-b-s.w4011-23129053535.48.7c11627cfpzYPi&sku_properties=122216494%3A120039'
                 );
               }}
             >
@@ -81,9 +79,7 @@ export default function Meatyway() {
 
         <div className="container">
           <h2 className="productionbase-nz-title">甄肉系列</h2>
-          <p className="productionbase-nz-desc">
-            精选天然食材制作的宠物零食，无添加防腐剂，口感丰富，营养均衡，是宠物日常训练和奖励的最佳选择。
-          </p>
+
           <div className="slider-main-container">
             <div
               className="slider-item active"
@@ -101,9 +97,7 @@ export default function Meatyway() {
 
         <div className="container">
           <h2 className="productionbase-nz-title">果蔬系列</h2>
-          <p className="productionbase-nz-desc">
-            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
-          </p>
+
           <div className="slider-main-container">
             <div
               className="slider-item active"
@@ -111,29 +105,6 @@ export default function Meatyway() {
               onClick={() => {
                 window.open(
                   'https://peidicwyp.tmall.com/category-1752872717.htm?spm=a1z10.3-b-s.w5001-25306308228.5.77c0627c4S80Vm&search=y&tsearch=y&scene=taobao_shop#TmshopSrchNav'
-                );
-              }}
-            >
-              <img
-                src={NZFood}
-                alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
-                className="slider-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <h2 className="productionbase-nz-title">新西兰系列</h2>
-          <p className="productionbase-nz-desc">
-            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
-          </p>
-          <div className="slider-main-container">
-            <div
-              className="slider-item active"
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                window.open(
-                  'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
                 );
               }}
             >
@@ -146,10 +117,29 @@ export default function Meatyway() {
           </div>
         </div>
         <div className="container">
+          <h2 className="productionbase-nz-title">新西兰系列</h2>
+
+          <div className="slider-main-container">
+            <div
+              className="slider-item active"
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                window.open(
+                  'https://peidicwyp.tmall.com/category-1752872719.htm?spm=a1z10.3-b-s.w5001-25306308228.7.79cd627clOdoAE&tsearch=y&scene=taobao_shop#TmshopSrchNav'
+                );
+              }}
+            >
+              <img
+                src={NZFood}
+                alt="Meatyway Foodie Dog 罐头鸭肉和山药/鸡肉和南瓜/牛肉胡萝卜"
+                className="slider-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="container">
           <h2 className="productionbase-nz-title">美食家罐头系列</h2>
-          <p className="productionbase-nz-desc">
-            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
-          </p>
+
           <div className="slider-main-container">
             <div
               className="slider-item active"
@@ -170,9 +160,7 @@ export default function Meatyway() {
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">冻干系列</h2>
-          <p className="productionbase-nz-desc">
-            新鲜食材制作的湿粮产品，水分含量高，口感丰富，易于消化吸收，为宠物提供全面均衡的营养补充。
-          </p>
+
           <div className="slider-main-container">
             <div
               className="slider-item active"
