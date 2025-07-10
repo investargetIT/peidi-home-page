@@ -60,9 +60,12 @@ export default function ProductionCapacity() {
       {/* 新西兰KCPF区块 */}
       <div className="productionbase-nz-section">
         <div className="container">
-          <h2 className="productionbase-nz-title">多元化团队</h2>
+          <h2 className="productionbase-nz-title">佩蒂营养研究院</h2>
           <p className="productionbase-nz-desc">
-            研发中心团队是一个多元化且充满活力的团队，致力于创新和卓越。海外研发团队在确保我们产品的本地化和文化适应性、弥合不同制造基地设施之间的环境和气候差距、增强我们的全球影响力方面发挥着至关重要的作用。他们与当地研发团队的无缝合作实现了高效的知识转移，并确保研究顺利转化为高质量的批量生产。这种密切的协调使我们能够开发出不仅符合国际标准而且符合当地品味和偏好的产品，最终推动我们在全球市场上的竞争优势。
+            研究院拥有40多位核心专职研究人员，与中国农业大学、华中农业大学、浙江大学、华南农业大
+            学、浙江农林科技大学、浙江农科院、宁夏大学、美国加州大学、新西兰梅西大学等大学和科研
+            机构，以及ACVIM美国兽医内科学会认证宠物营养专家、加州大学戴维斯分校认证临床营养专 家Dr.
+            Sarah Wilson建立了良好的合作关系。
           </p>
           <div className="productionbase-nz-image-container">
             <div className="slideshow-container">
@@ -168,7 +171,8 @@ export default function ProductionCapacity() {
         <div className="container">
           <h2 className="productionbase-nz-title">重视研发投入</h2>
           <p className="productionbase-nz-desc">
-            我们每年投入2.06%的研发经费，在创新的同时，更注重产品品质和营养价值的保障。我们在新产品稳定性测试、适口性测试、消化率测试等方面拥有行业领先的能力，确保产品符合最高标准。通过精心设计的检测流程和严格的质量控制，我们努力开发出配方科学、营养丰富、符合健康标准的优质产品，满足宠物对健康和品质的需求。我们的团队不断创新，旨在为宠物提供最好的营养健康产品，让它们的生活更健康、更快乐。
+            国内外研发团队超百人，每年超过3%的营业收入用于创新研发，近五年研发投入持续增长，2024
+            年投入近3000万元，位居行业前列。
           </p>
         </div>
         {/* 重视研发投入图片轮播，每行一张，5秒切换，支持圆点切换 */}
