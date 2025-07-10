@@ -222,7 +222,7 @@ export default function ProductCenter() {
                 <h1>小动物</h1>
               </div>
 
-              <div className="animal-product-display">
+              <div className="animal-product-display" style={{ display: 'none' }}>
                 {/* 顶部布局 - 可食用玩具和草编小屋 */}
                 <div className="animal-top-section">
                   {/* 左侧可食用玩具 */}
@@ -251,6 +251,23 @@ export default function ProductCenter() {
                       <img src={AnimalP5} alt="可食用玩具" />
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="snacks-grid">
+                <div className="product-item snack">
+                  <img src={AnimalP1} alt="咀嚼物1" />
+                </div>
+                <div className="product-item snack">
+                  <img src={AnimalP2} alt="咀嚼物2" />
+                </div>
+                <div className="product-item snack">
+                  <img src={AnimalP3} alt="零食1" />
+                </div>
+                <div className="product-item snack">
+                  <img src={AnimalP4} alt="零食2" />
+                </div>
+                <div className="product-item snack">
+                  <img src={AnimalP5} alt="零食3" />
                 </div>
               </div>
             </div>
