@@ -8,7 +8,7 @@ import Structure from './images/structure.webp';
 export default function GroupStructure() {
   return (
     <div className="philosophy-page">
-      <BannerContainer bannerImage={Banner} title="关于佩蒂——集团架构" />
+      <BannerContainer bannerImage={Banner} title="集团架构" />
 
       <div className="philosophy-content">
         <div className="philosophy-header">

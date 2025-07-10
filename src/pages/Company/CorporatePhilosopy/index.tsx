@@ -8,7 +8,7 @@ import Image from './images/1.webp';
 export default function CorporatePhilosopy() {
   return (
     <div className="philosophy-page">
-      <BannerContainer bannerImage={Banner} title="关于佩蒂——企业理念" />
+      <BannerContainer bannerImage={Banner} title="企业理念" />
 
       <div className="philosophy-content">
         <div className="philosophy-header">

@@ -116,7 +116,7 @@ export default function DevelopmentPath() {
 
   return (
     <div className="philosophy-page">
-      <BannerContainer bannerImage={Banner} title="关于佩蒂——发展历程" />
+      <BannerContainer bannerImage={Banner} title="发展历程" />
       <div className="philosophy-content">
         <div className="philosophy-header">
           <h2 className="philosophy-title">佩蒂30余年发展历程</h2>
