@@ -1,7 +1,8 @@
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
-import MeatyBanner from '@/pages/Home/HomeBanner/images/meatyway.jpg';
+// import MeatyBanner from '@/pages/Home/HomeBanner/images/meatyway.jpg';
+import MeatyBanner from './images/banner-1.png';
 import LogoMeaty from '@/pages/Home/HomeBanner/images/meaty-logo.png';
 
 import Dry from './images/dry.png';
@@ -28,15 +29,10 @@ export default function Meatyway() {
       {/* 使用类似HomeBanner的样式 */}
       <div className="meaty-banner-container">
         <div className="banner-container">
-          <div className="banner-slide" style={{ backgroundImage: `url(${bannerData.image})` }}>
-            <div className="banner-content alternate-layout">
-              <img src={bannerData.logo} alt={`${bannerData.title} Logo`} className="brand-logo" />
-              <div className="banner-text">
-                <h2>{bannerData.title}</h2>
-                <p>{bannerData.subTitle}</p>
-              </div>
-            </div>
-          </div>
+          <div
+            className="banner-slide"
+            style={{ backgroundImage: `url(${bannerData.image})` }}
+          ></div>
         </div>
       </div>
 

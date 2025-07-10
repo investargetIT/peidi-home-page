@@ -2,7 +2,8 @@ import React from 'react';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
-import HealthyBanner from '@/pages/Home/HomeBanner/images/health.jpg';
+// import HealthyBanner from '@/pages/Home/HomeBanner/images/health.jpg';
+import HealthyBanner from './images/banner-2.png';
 import LogoHealthy from '@/pages/Home/HomeBanner/images/health-logo.png';
 import Image1 from './images/1.png';
 import Image2 from './images/2.png';
@@ -27,11 +28,11 @@ import BannerImage from './images/banner-image.png';
 
 export default function Health() {
   const bannerData = {
-    title: '健康主食新标准',
-    subTitle: '精准营养主义',
+    // title: '健康主食新标准',
+    // subTitle: '精准营养主义',
     image: HealthyBanner,
-    logo: LogoHealthy,
-    btnText: '立即查看',
+    // logo: LogoHealthy,
+    // btnText: '立即查看',
   };
 
   const imageList = [
@@ -140,15 +141,10 @@ export default function Health() {
       {/* 使用类似HomeBanner的样式 */}
       <div className="meaty-banner-container">
         <div className="banner-container">
-          <div className="banner-slide" style={{ backgroundImage: `url(${bannerData.image})` }}>
-            <div className="banner-content alternate-layout">
-              <img src={bannerData.logo} alt={`${bannerData.title} Logo`} className="brand-logo" />
-              <div className="banner-text">
-                <h2>{bannerData.title}</h2>
-                <p>{bannerData.subTitle}</p>
-              </div>
-            </div>
-          </div>
+          <div
+            className="banner-slide"
+            style={{ backgroundImage: `url(${bannerData.image})` }}
+          ></div>
         </div>
       </div>
 
