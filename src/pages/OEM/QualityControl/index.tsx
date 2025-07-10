@@ -191,7 +191,7 @@ export default function QualityControl() {
         </div>
 
         <div className="container">
-          <h2 className="productionbase-nz-title">内部实验室</h2>
+          <h2 className="productionbase-nz-title">绿色环保</h2>
           <div className="philosophy-container">
             <div className="philosophy-image">
               <img src={Image5} alt="人与宠物的温馨互动" />
