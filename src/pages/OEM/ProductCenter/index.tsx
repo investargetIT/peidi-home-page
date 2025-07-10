@@ -102,7 +102,7 @@ export default function ProductCenter() {
             {/* 咀嚼物和零食区域 */}
             <div className="snacks-section" onMouseEnter={handleMouseEnterDog}>
               <div className="section-title">
-                <h2>咀嚼物和零食</h2>
+                <h2>咀嚼食品和零食</h2>
               </div>
               <div className="snacks-grid">
                 <div className="product-item snack">
