@@ -83,33 +83,7 @@ export default function CorporatePhilosopy() {
           <p className="philosophy-slogan">我们相信：心存高远，未来从来不远。</p>
         </div>
 
-        <div className="corporate-mission-section" style={{ backgroundPosition }}>
-          <h2 className="mission-title">企业文化</h2>
-          <div className="mission-overlay">
-            <div className="mission-content">
-              <div className="mission-left">
-                <div className="mission-item">
-                  <p className="mission-text">用全球好产品推动宠物健康标准升级的企业使命；</p>
-                </div>
-                <div className="mission-item">
-                  <p className="mission-text">"阳光、智慧、担当、真诚"的核心价值观；</p>
-                </div>
-              </div>
-              <div className="mission-right">
-                <div className="mission-item">
-                  <p className="mission-text">成为人宠和谐健康生态卓越建设者的愿景；</p>
-                </div>
-                <div className="mission-item">
-                  <p className="mission-text">
-                    "诚信、创新、发展"的经营理念以及"以诚取信，以信立业"的社会责任。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="founder-story-section">
+        {/* <div className="founder-story-section">
           <h2 className="founder-story-title">创始人故事</h2>
           <div className="founder-story-content">
             <p className="founder-story-subtitle">从"改变贫穷"到"关爱宠物"——佩蒂CEPT·创始人故事</p>
@@ -147,7 +121,7 @@ export default function CorporatePhilosopy() {
               每一个进入他公司的人都可以感受到，宠物是多么地可爱，人与宠物之间的感情是多么地纯粹。论释"爱"的真谛——无任何附加条件的爱，不离不弃。一个怀抱善心的民营创业者，不一定是最成功的，但一定能带领他的员工，让佩蒂获得最好的成功。
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="philosophy-image-full">
           <img src={Image4} alt="人与宠物的温馨互动" />
         </div>
