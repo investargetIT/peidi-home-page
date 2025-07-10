@@ -120,6 +120,21 @@ export default function Health() {
   const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐', '鲭鱼罐', '沙丁鱼罐'];
   const mainFoodCans = imageList.filter(item => mainFoodCanTitles.includes(item.title));
 
+  const dryFoodTitles = [
+    '全价鲜肉烘焙猫粮',
+    '冰宴冻干双拼犬粮',
+    '全价主食冻干生骨肉猫粮',
+    '全价主食冻干生骨肉犬粮',
+  ];
+
+  const dryFoods = imageList.filter(item => dryFoodTitles.includes(item.title));
+
+  const snackTitles = ['冻干零食系列', '烘干牛肉粒', '牛皮卷棒', '果蔬清口棒', '猫条'];
+  const snacks = imageList.filter(item => snackTitles.includes(item.title));
+
+  const petSuppliesTitles = ['猫砂', '宠物除臭喷雾'];
+  const petSupplies = imageList.filter(item => petSuppliesTitles.includes(item.title));
+
   return (
     <div className="philosophy-page">
       {/* 使用类似HomeBanner的样式 */}
@@ -154,9 +169,81 @@ export default function Health() {
       </div>
 
       {/* 产品展示区域 */}
-      <div className="health-product-grid-section">
+      {/* <div className="health-product-grid-section">
         <div className="health-product-grid">
           {imageList.map((item, index) => (
+            <div key={index} className="health-product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="health-product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="health-product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">主食罐</h2>
+        <div className="health-product-grid">
+          {mainFoodCans.map((item, index) => (
+            <div key={index} className="health-product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="health-product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="health-product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">主食干粮</h2>
+        <div className="health-product-grid">
+          {dryFoods.map((item, index) => (
+            <div key={index} className="health-product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="health-product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="health-product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">零食</h2>
+        <div className="health-product-grid">
+          {snacks.map((item, index) => (
+            <div key={index} className="health-product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="health-product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="health-product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">宠物用品</h2>
+        <div className="health-product-grid">
+          {petSupplies.map((item, index) => (
             <div key={index} className="health-product-item">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <div className="health-product-image">
@@ -193,33 +280,6 @@ export default function Health() {
             <div className="philosophy-values">
               <p>信息透明，原料可溯源，喂养更安心。从需求出发，给毛孩子针对性的精准营养主食。</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="health-product-grid-section">
-        <h2 className="health-section-title">主食罐</h2>
-        <div className="health-product-grid">
-          {mainFoodCans.map((item, index) => (
-            <div key={index} className="health-product-item">
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="health-product-image">
-                  <img src={item.src} alt={item.title} />
-                </div>
-                <div className="health-product-title">
-                  <h3>{item.title}</h3>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="productionbase-nz-section">
-        <div className="container">
-          <h2 className="productionbase-nz-title">天然有爱，天然宠爱。</h2>
-          <div className="productionbase-nz-image">
-            <img src={Footer2} alt="爵宴品牌理念" />
           </div>
         </div>
       </div>
