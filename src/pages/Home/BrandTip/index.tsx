@@ -26,7 +26,10 @@ export default function BrandTip() {
 
           {/* 品牌详细介绍 */}
           <div className="brand-tip-content">
-            待宠如己，每一次宠物把自己的一生都交给主人，它们配得上最好的款待。佩蒂从创办之初，就把对宠物的爱融入了自己的基因，对每一只宠物像爱自己孩子般不计回报。
+            公司自1992年创立之初就以独特的ODM模式和创新的产品来服务全球宠物用户，迄
+            今30余年，深度参与了海外成熟宠物市场健康标准的历次升级。公司于2017年成为
+            中国宠物行业首家上市公司。我们以推动全球宠物健康标准升级为己任，未来不仅将
+            继续为海外市场打造好产品，同时，也会持续将全球好产品带回给中国用户。
           </div>
           <div className="brand-about-us-btn-container">
             <Button className="brand-about-us-btn" type="primary" onClick={onLearnMoreClick}>

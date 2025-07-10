@@ -74,8 +74,20 @@
   font-size: 18px;
   line-height: 1.8;
   color: #333;
-  margin: 0;
+  margin: 10px 0;
   text-align: left;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 12px;
+  }
 }
 
 .philosophy-container {

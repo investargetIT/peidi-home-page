@@ -30,12 +30,21 @@ export default function CorporatePhilosopy() {
 
       <div className="philosophy-content">
         <div className="philosophy-header">
-          <h2 className="philosophy-title">30多年来致力于全球宠物健康</h2>
-          <p className="philosophy-subtitle">
+          <h2 className="philosophy-title">佩蒂价值观</h2>
+          {/* <p className="philosophy-subtitle">
             30 多年来佩蒂为全球各地的宠物主创造了数千种最畅销的产品。
+          </p> */}
+          <p className="philosophy-main-text">
+            阳光：乐观积极，用真诚有爱的态度跟用户和客户做朋友。
           </p>
           <p className="philosophy-main-text">
-            佩蒂成立于1992年，专注于围绕宠物健康建立科学食品体系，始终坚持用全球好产品不断推动宠物行业健康标准升级。30多年来，佩蒂一直担当全球宠物市场健康升级的助推器，为全球顶级宠物食品公司和宠物主打造了数以千计热销的健康产品。现在，佩蒂希望能赋能中国宠物行业健康升级，充分利用其在全球积累的研发优势、生产优势以及海外优质品牌服务中国市场，全面启动在宠物领域的布局，旨在成为中国第一的宠物健康生态集团。
+            保鲜：保持好奇探索之心，看齐国际营养理念及技术，坚持用产品创新提升宠物健康标准。
+          </p>
+          <p className="philosophy-main-text">
+            担当：践行企业社会责任，坚持做行业健康发展的引领者不动摇，做宠物赋能人类事业的推动者不动摇，做合作伙伴的赋能者不动摇。
+          </p>
+          <p className="philosophy-main-text">
+            靠谱：诚实有信，坚守产品品质，以婴儿食用标准为目标不断完善品控体系。
           </p>
           <div className="philosophy-image">
             <img src={Image1} alt="人与宠物的温馨互动" />
