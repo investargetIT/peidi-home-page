@@ -22,8 +22,22 @@ import AnimalSnack1 from '@/assets/animal/snacks/1.webp';
 import AnimalToy1 from '@/assets/animal/toy/1.webp';
 import AnimalToy2 from '@/assets/animal/toy/2.webp';
 import AnimalToy3 from '@/assets/animal/toy/3.webp';
+import AnimalP1 from '@/assets/animal/p1.jpg';
+import AnimalP2 from '@/assets/animal/p2.png';
+import AnimalP3 from '@/assets/animal/p3.png';
+import AnimalP4 from '@/assets/animal/p4.png';
+import AnimalP5 from '@/assets/animal/p5.png';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
+import DogP1 from '@/assets/dog/p1.jpg';
+import DogP2 from '@/assets/dog/p2.jpg';
+import DogP3 from '@/assets/dog/p3.jpg';
+import DogP4 from '@/assets/dog/p4.jpg';
+import DogP5 from '@/assets/dog/p5.jpg';
+import DogP6 from '@/assets/dog/p6.jpeg';
+import DogP7 from '@/assets/dog/p7.jpeg';
+import DogP8 from '@/assets/dog/p8.jpeg';
+import DogP9 from '@/assets/dog/p9.jpeg';
 
 export default function ProductCenter() {
   const [currentBg, setCurrentBg] = useState(DogBg);
@@ -106,25 +120,31 @@ export default function ProductCenter() {
               </div>
               <div className="snacks-grid">
                 <div className="product-item snack">
-                  <img src={DogSnack1} alt="咀嚼物1" />
+                  <img src={DogP1} alt="咀嚼物1" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack2} alt="咀嚼物2" />
+                  <img src={DogP2} alt="咀嚼物2" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack3} alt="零食1" />
+                  <img src={DogP3} alt="零食1" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack4} alt="零食2" />
+                  <img src={DogP4} alt="零食2" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack5} alt="零食3" />
+                  <img src={DogP5} alt="零食3" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack6} alt="零食4" />
+                  <img src={DogP6} alt="零食4" />
                 </div>
                 <div className="product-item snack">
-                  <img src={DogSnack7} alt="零食5" />
+                  <img src={DogP7} alt="零食5" />
+                </div>
+                <div className="product-item snack">
+                  <img src={DogP8} alt="零食5" />
+                </div>
+                <div className="product-item snack">
+                  <img src={DogP9} alt="零食5" />
                 </div>
               </div>
             </div>
@@ -208,27 +228,28 @@ export default function ProductCenter() {
                   {/* 左侧可食用玩具 */}
                   <div className="animal-edible-toy">
                     <div className="product-item animal-product large-toy">
-                      <img src={AnimalToy1} alt="可食用玩具" />
-                      <div className="product-label">可食用的玩具</div>
+                      <img src={AnimalP1} alt="可食用玩具" />
                     </div>
                   </div>
-
-                  {/* 中间草编小屋 */}
-                  <div className="animal-houses">
-                    <div className="product-item animal-product house">
-                      <img src={AnimalToy2} alt="草编小屋1" />
-                    </div>
-                    <div className="product-item animal-product house">
-                      <img src={AnimalToy3} alt="草编小屋2" />
+                  <div className="animal-edible-toy">
+                    <div className="product-item animal-product large-toy">
+                      <img src={AnimalP2} alt="可食用玩具" />
                     </div>
                   </div>
-                </div>
-
-                {/* 零食展示区域 */}
-                <div className="animal-snacks-section">
-                  <div className="product-item animal-product snacks-complete">
-                    <img src={AnimalSnack1} alt="小动物零食" />
-                    <div className="product-label">零食</div>
+                  <div className="animal-edible-toy">
+                    <div className="product-item animal-product large-toy">
+                      <img src={AnimalP3} alt="可食用玩具" />
+                    </div>
+                  </div>
+                  <div className="animal-edible-toy">
+                    <div className="product-item animal-product large-toy">
+                      <img src={AnimalP4} alt="可食用玩具" />
+                    </div>
+                  </div>
+                  <div className="animal-edible-toy">
+                    <div className="product-item animal-product large-toy">
+                      <img src={AnimalP5} alt="可食用玩具" />
+                    </div>
                   </div>
                 </div>
               </div>
