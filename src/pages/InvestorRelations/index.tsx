@@ -15,31 +15,31 @@ export default function InvestorRelations() {
   const [activeTab, setActiveTab] = useState('solution');
 
   const items: TabsProps['items'] = [
-    {
-      key: 'solution',
-      label: '资本市场综述',
-      children: <Solution />,
-    },
+    // {
+    //   key: 'solution',
+    //   label: '资本市场综述',
+    //   children: <Solution />,
+    // },
     {
       key: 'stock',
       label: '股价实时显示',
       children: <Stock />,
     },
-    {
-      key: 'pets',
-      label: '宠物产业基金',
-      children: <Pets />,
-    },
+    // {
+    //   key: 'pets',
+    //   label: '宠物产业基金',
+    //   children: <Pets />,
+    // },
     {
       key: 'market',
       label: '公司公告',
       children: <Market />,
     },
-    {
-      key: 'finance',
-      label: '财经类评论及新闻',
-      children: <Finance />,
-    },
+    // {
+    //   key: 'finance',
+    //   label: '财经类评论及新闻',
+    //   children: <Finance />,
+    // },
     {
       key: 'report',
       label: '定期报告',
@@ -60,7 +60,7 @@ export default function InvestorRelations() {
       <Tabs
         items={items}
         defaultActiveKey={activeTab}
-        onChange={(key) => setActiveTab(key)}
+        onChange={key => setActiveTab(key)}
         centered
       />
     </div>
