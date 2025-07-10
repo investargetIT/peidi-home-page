@@ -468,3 +468,109 @@
     margin: 40px auto;
   }
 }
+
+.contact-us-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.contact-info-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.location-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.location-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a2a4d;
+  margin: 0;
+}
+
+.location-details p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 10px 0;
+
+  strong {
+    font-weight: 600;
+    color: #333;
+    margin-right: 8px;
+  }
+}
+
+.location-details p:last-child {
+  margin-bottom: 0;
+}
+
+.email-card {
+  background: #1a2a4d;
+  color: #ffffff;
+
+  .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .location-name {
+    color: #ffffff;
+  }
+
+  .location-details p,
+  .location-details strong {
+    color: #f8f9fa;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .contact-info-section {
+    padding: 60px 20px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .location-card {
+    padding: 25px;
+  }
+
+  .location-name {
+    font-size: 20px;
+  }
+}
