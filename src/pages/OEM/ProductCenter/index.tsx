@@ -135,7 +135,7 @@ export default function ProductCenter() {
               ref={catSectionRef}
               onMouseEnter={handleMouseEnterCat}
             >
-              <div className="product-title cat-title">
+              <div className="product-title cat-title" style={{ marginBottom: 20 }}>
                 <h1>猫</h1>
               </div>
 
@@ -164,7 +164,7 @@ export default function ProductCenter() {
               ref={birdSectionRef}
               onMouseEnter={handleMouseEnterBird}
             >
-              <div className="product-title bird-title">
+              <div className="product-title bird-title" style={{ marginBottom: 20 }}>
                 <h1>鸟类</h1>
               </div>
 
@@ -198,7 +198,7 @@ export default function ProductCenter() {
               ref={animalSectionRef}
               onMouseEnter={handleMouseEnterAnimal}
             >
-              <div className="product-title animal-title">
+              <div className="product-title animal-title" style={{ marginBottom: 20 }}>
                 <h1>小动物</h1>
               </div>
 
