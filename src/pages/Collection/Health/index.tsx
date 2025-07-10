@@ -117,6 +117,9 @@ export default function Health() {
     },
   ];
 
+  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐', '鲭鱼罐', '沙丁鱼罐'];
+  const mainFoodCans = imageList.filter(item => mainFoodCanTitles.includes(item.title));
+
   return (
     <div className="philosophy-page">
       {/* 使用类似HomeBanner的样式 */}
@@ -168,22 +171,59 @@ export default function Health() {
         </div>
       </div>
 
-      <div className="productionbase-nz-section">
-        <div className="container">
-          <h2 className="productionbase-nz-title">爵宴——敬你的最佳拍档</h2>
-
-          <div className="productionbase-nz-image">
-            <img src={Footer1} alt="爵宴品牌形象" />
+      <div className="philosophy-content">
+        <div className="philosophy-container">
+          <div className="philosophy-image">
+            <img src={Footer1} alt="人与宠物的温馨互动" />
+          </div>
+          <div className="philosophy-text-content">
+            <div className="philosophy-values">
+              <p>佩蒂动物健康营养研究院研发。分子级配方设计，改善宠物亚健康。</p>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="philosophy-content">
+        <div className="philosophy-container">
+          <div className="philosophy-image">
+            <img src={Footer2} alt="人与宠物的温馨互动" />
+          </div>
+          <div className="philosophy-text-content">
+            <div className="philosophy-values">
+              <p>信息透明，原料可溯源，喂养更安心。从需求出发，给毛孩子针对性的精准营养主食。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">主食罐</h2>
+        <div className="health-product-grid">
+          {mainFoodCans.map((item, index) => (
+            <div key={index} className="health-product-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="health-product-image">
+                  <img src={item.src} alt={item.title} />
+                </div>
+                <div className="health-product-title">
+                  <h3>{item.title}</h3>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="productionbase-nz-section">
         <div className="container">
           <h2 className="productionbase-nz-title">天然有爱，天然宠爱。</h2>
-
           <div className="productionbase-nz-image">
             <img src={Footer2} alt="爵宴品牌理念" />
           </div>
         </div>
       </div>
+
       {/* 页脚导航区域 */}
       <NewFooterNav />
 
