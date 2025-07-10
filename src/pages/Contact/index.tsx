@@ -50,7 +50,7 @@ export default function GroupStructure() {
               <p>{serviceHotline.phone}</p>
             </div>
           </div>
-          <div className="location-card email-card">
+          <div className="location-card">
             <div className="card-header">
               <img src={emailInfo.icon} alt="Email" className="card-icon" />
               <h2 className="location-name">服务电子邮件</h2>
