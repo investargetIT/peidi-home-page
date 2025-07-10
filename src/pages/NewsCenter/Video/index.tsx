@@ -27,12 +27,12 @@ export default function Video() {
     },
     {
       src: '//media.cdn.ishopastro.com/764222003171040/media/video/44a1ad471008597875286746.mp4?width=1920&height=1080',
-      title: 'Meatyway 鸭肉原生风干狗粮',
+      title: '爵宴原生风干犬粮',
       poster: Bg3,
     },
     {
       src: '//media.cdn.ishopastro.com/764222003171040/media/video/2f9ceb4a1013546935906276.mp4?width=1920&height=1080',
-      title: 'Meatyway 美食罐头',
+      title: '爵宴美食家系列罐头',
       poster: Bg4,
     },
   ];

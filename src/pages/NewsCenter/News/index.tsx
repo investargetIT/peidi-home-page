@@ -30,7 +30,7 @@ export default function News() {
   return (
     <div className="news-page">
       <div className="news-content">
-        <h1 className="news-title">消息</h1>
+        <h1 className="news-title">新闻中心</h1>
 
         <div className="news-list">
           {currentItems.map((item, index) => {

@@ -56,7 +56,6 @@ export default function Chewnergy() {
                 <h2>{bannerData.title}</h2>
                 <p>{bannerData.subTitle}</p>
               </div>
-              <button className="banner-btn">{bannerData.btnText}</button>
             </div>
           </div>
         </div>

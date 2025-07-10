@@ -27,9 +27,21 @@ import Cover26 from './images/cover26.webp';
 import Cover27 from './images/cover27.webp';
 import Cover28 from './images/cover28.png';
 import Cover29 from './images/cover29.webp';
+import Cover30 from './images/cover30.png';
+import Cover31 from './images/cover31.webp';
 
 
 export const coverList = [
+  {
+    cover: Cover31,
+    time: '2025-06-27',
+    title: '任内首次访华，拉克森总理接见佩蒂股份董事长陈振标等行业优秀代表'
+  },
+  {
+    cover: Cover30,
+    time: '2025-06-20',
+    title: '618收官战报：全渠道GMV破3800万元，同比增长52%'
+  },
   {
     cover: Cover29,
     time: '2025-06-02',
