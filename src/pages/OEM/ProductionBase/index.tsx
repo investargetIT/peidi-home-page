@@ -16,7 +16,7 @@ import playIcon from './images/play-icon.svg';
 export default function ProductionBase() {
   return (
     <div className="philosophy-page">
-      <BannerContainer bannerImage={Banner} title="关于佩蒂——生产基地" />
+      <BannerContainer bannerImage={Banner} title="生产基地" />
 
       {/* 新西兰KCPF区块 */}
       <div className="productionbase-nz-section">

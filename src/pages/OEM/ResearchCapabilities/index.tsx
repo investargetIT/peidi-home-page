@@ -1,4 +1,4 @@
-import Banner from './images/banner.webp';
+import Banner from './images/banner.png';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
