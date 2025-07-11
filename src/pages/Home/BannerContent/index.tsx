@@ -30,7 +30,7 @@ export default function BannerContent() {
   useEffect(() => {
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 3000666);
 
     // Clean up on component unmount
     return () => {
@@ -42,19 +42,22 @@ export default function BannerContent() {
 
   return (
     <div className="banner-content-wrapper">
-      <div className="slider-main-container">
+      <div className="banner-content-slider-container">
         {banners.map((banner, index) => (
-          <div key={index} className={`slider-item ${index === currentIndex ? 'active' : ''}`}>
-            <img src={banner.src} alt={banner.alt} className="slider-image" />
+          <div
+            key={index}
+            className={`banner-content-slide ${index === currentIndex ? 'active' : ''}`}
+          >
+            <img src={banner.src} alt={banner.alt} className="banner-content-image" />
           </div>
         ))}
 
         {/* Navigation indicators */}
-        <div className="slider-dots">
+        <div className="banner-content-dots">
           {banners.map((_, index) => (
             <span
               key={index}
-              className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
+              className={`banner-content-dot ${index === currentIndex ? 'active' : ''}`}
               onClick={() => goToSlide(index)}
             />
           ))}
