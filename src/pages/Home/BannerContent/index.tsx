@@ -30,7 +30,7 @@ export default function BannerContent() {
   useEffect(() => {
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, 3000666);
+    }, 3000);
 
     // Clean up on component unmount
     return () => {
