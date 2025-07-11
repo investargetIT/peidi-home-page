@@ -62,10 +62,8 @@ export default function ProductionCapacity() {
         <div className="container">
           <h2 className="productionbase-nz-title">佩蒂营养研究院</h2>
           <p className="productionbase-nz-desc">
-            研究院拥有40多位核心专职研究人员，与中国农业大学、华中农业大学、浙江大学、华南农业大
-            学、浙江农林科技大学、浙江农科院、宁夏大学、美国加州大学、新西兰梅西大学等大学和科研
-            机构，以及ACVIM美国兽医内科学会认证宠物营养专家、加州大学戴维斯分校认证临床营养专 家Dr.
-            Sarah Wilson建立了良好的合作关系。
+            研究院拥有40多位核心专职研究人员，与中国农业大学、华中农业大学、浙江大学、华南农业大学、浙江农林科技大学、浙江农科院、宁夏大学、美国加州大学、新西兰梅西大学等大学和科研机构，以及ACVIM美国兽医内科学会认证宠物营养专家、加州大学戴维斯分校认证临床营养专
+            家Dr. Sarah Wilson建立了良好的合作关系。
           </p>
           <div className="productionbase-nz-image-container">
             <div className="slideshow-container">
