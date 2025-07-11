@@ -3,7 +3,7 @@ import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 // import HealthyBanner from '@/pages/Home/HomeBanner/images/health.jpg';
-import HealthyBanner from './images/banner-2.png';
+import HealthyBanner from './images/banner-health.jpg';
 import LogoHealthy from '@/pages/Home/HomeBanner/images/health-logo.png';
 import Image1 from './images/1.png';
 import Image2 from './images/2.png';

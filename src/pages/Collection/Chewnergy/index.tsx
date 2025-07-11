@@ -2,7 +2,7 @@ import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 // import ChewableBanner from '@/pages/Home/HomeBanner/images/chewnergy.jpg';
-import ChewableBanner from './images/banner-3.png';
+import ChewableBanner from './images/banner-chew.jpg';
 import LogoChewable from '@/pages/Home/HomeBanner/images/chew-logo.png';
 import BannerImage from './images/image-banner.png';
 import Image1 from './images/1.png';

@@ -2,7 +2,7 @@ import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 // import MeatyBanner from '@/pages/Home/HomeBanner/images/meatyway.jpg';
-import MeatyBanner from './images/banner-1.jpg';
+import MeatyBanner from './images/banner-meaty.jpg';
 import LogoMeaty from '@/pages/Home/HomeBanner/images/meaty-logo.png';
 
 import Dry from './images/dry.png';

@@ -6,8 +6,8 @@ import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MeatyBanner from './images/meatyway.jpg';
-import HealthyBanner from './images/health.jpg';
-import ChewableBanner from './images/chewnergy.jpg';
+import HealthyBanner from './images/health.png';
+import ChewableBanner from './images/chewnergy.png';
 import LogoMeaty from './images/meaty-logo.png';
 import LogoHealthy from './images/health-logo.png';
 import LogoChewable from './images/chew-logo.png';
@@ -89,16 +89,7 @@ export default function HomeBanner() {
           >
             <div
               className={`banner-content ${index === 2 ? 'default-layout' : 'alternate-layout'}`}
-            >
-              <img src={banner.logo} alt={`${banner.title} Logo`} className="brand-logo" />
-              <div className="banner-text">
-                <h2>{banner.title}</h2>
-                <p>{banner.subTitle}</p>
-                <Button className="banner-btn" onClick={handleButtonClick}>
-                  {banner.btnText}
-                </Button>
-              </div>
-            </div>
+            ></div>
           </div>
         ))}
 
