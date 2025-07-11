@@ -41,24 +41,6 @@ export default function GroupStructure() {
       <BannerContainer bannerImage={Banner} title="联系我们" />
       <div className="contact-info-section">
         <div className="location-grid">
-          <div className="location-card">
-            <div className="card-header">
-              <img src={serviceHotline.icon} alt={serviceHotline.name} className="card-icon" />
-              <h2 className="location-name">{serviceHotline.name}</h2>
-            </div>
-            <div className="location-details">
-              <p>{serviceHotline.phone}</p>
-            </div>
-          </div>
-          <div className="location-card">
-            <div className="card-header">
-              <img src={emailInfo.icon} alt="Email" className="card-icon" />
-              <h2 className="location-name">服务电子邮件</h2>
-            </div>
-            <div className="location-details">
-              <p>{emailInfo.email}</p>
-            </div>
-          </div>
           {locations.map((location, index) => (
             <div key={index} className="location-card">
               <h2 className="location-name">{location.name}</h2>
@@ -72,6 +54,15 @@ export default function GroupStructure() {
               </div>
             </div>
           ))}
+          <div className="location-card">
+            <div className="card-header">
+              <img src={emailInfo.icon} alt="Email" className="card-icon" />
+              <h2 className="location-name">服务电子邮件</h2>
+            </div>
+            <div className="location-details">
+              <p>{emailInfo.email}</p>
+            </div>
+          </div>
         </div>
       </div>
       <NewFooterNav />

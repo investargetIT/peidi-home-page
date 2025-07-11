@@ -118,7 +118,7 @@ export default function Health() {
     },
   ];
 
-  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐', '鲭鱼罐', '沙丁鱼罐'];
+  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐'];
   const mainFoodCans = imageList.filter(item => mainFoodCanTitles.includes(item.title));
 
   const dryFoodTitles = [
@@ -197,6 +197,26 @@ export default function Health() {
               </a>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="health-product-grid-section">
+        <h2 className="health-section-title">零食罐</h2>
+        <div className="health-product-grid">
+          {imageList
+            .filter(item => ['鲭鱼罐', '沙丁鱼罐'].includes(item.title))
+            .map((item, index) => (
+              <div key={index} className="health-product-item">
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <div className="health-product-image">
+                    <img src={item.src} alt={item.title} />
+                  </div>
+                  <div className="health-product-title">
+                    <h3>{item.title}</h3>
+                  </div>
+                </a>
+              </div>
+            ))}
         </div>
       </div>
 

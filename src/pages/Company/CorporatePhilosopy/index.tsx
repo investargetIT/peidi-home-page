@@ -7,21 +7,21 @@ import Image from './images/1.webp';
 
 export default function CorporatePhilosopy() {
   return (
-    <div className="philosophy-page">
+    <div className="corporate-philosophy-page">
       <BannerContainer bannerImage={Banner} title="企业理念" />
 
-      <div className="philosophy-content">
-        <div className="philosophy-header">
-          <h2 className="philosophy-title">佩蒂旨在成为中国领先的宠物健康生态集团</h2>
-          <p className="philosophy-subtitle">使命：用全球好产品推动宠物健康标准升级</p>
-          <p className="philosophy-main-text">
+      <div className="corporate-philosophy-content">
+        <div className="corporate-philosophy-header">
+          <h2 className="corporate-philosophy-title">佩蒂旨在成为中国领先的宠物健康生态集团</h2>
+          <p className="corporate-philosophy-subtitle">使命：用全球好产品推动宠物健康标准升级</p>
+          <p className="corporate-philosophy-main-text">
             公司自1992年创立之初就以独特的ODM模式和创新的产品来服务全球宠物用户，迄今30余年，深度参与了海外成熟宠物市场健康标准的历次升级。公司于2017年成为中国宠物行业首家上市公司。我们以推动全球宠物健康标准升级为己任，未来不仅将继续为海外市场打造好产品，同时，也会持续将全球好产品带回给中国用户。
           </p>
         </div>
 
-        <div className="philosophy-container">
-          <div className="philosophy-text-content">
-            <div className="philosophy-values">
+        <div className="corporate-philosophy-container">
+          <div className="corporate-philosophy-text-content">
+            <div className="corporate-philosophy-values">
               <p>愿景：做人宠和谐健康生态的卓越建设者</p>
               <p>
                 我们认为宠物作为伴侣动物，是能够治愈人心的健康使者，它们是人类美好生活的
@@ -31,7 +31,7 @@ export default function CorporatePhilosopy() {
             </div>
           </div>
 
-          <div className="philosophy-image">
+          <div className="corporate-philosophy-image">
             <img src={Image} alt="人与宠物的温馨互动" />
           </div>
         </div>
