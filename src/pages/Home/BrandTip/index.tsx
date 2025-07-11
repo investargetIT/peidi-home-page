@@ -8,10 +8,13 @@ import OemIcon from './images/oem.jpg';
 import NewsIcon from './images/news.jpg';
 import ChannelIcon from './images/channel.jpg';
 import AboutIcon from './images/about.jpg';
+import { useNavigate } from 'react-router-dom';
 
 export default function BrandTip() {
+  const navigate = useNavigate();
   const onLearnMoreClick = () => {
     console.log('Learn more clicked');
+    navigate('/pages/corporate-philosophy');
   };
 
   return (
@@ -41,12 +44,22 @@ export default function BrandTip() {
       <div className="brand-tip-icon-wrapper">
         <div className="brand-tip-icon-container">
           {/* OEM&ODM卡片 */}
-          <div className="brand-tip-card">
+          <div
+            className="brand-tip-card"
+            onClick={() => {
+              navigate('/pages/production-base');
+            }}
+          >
             <img src={OemIcon} alt="OEM&ODM" className="brand-tip-card-image" />
           </div>
 
           {/* 新闻中心卡片 */}
-          <div className="brand-tip-card">
+          <div
+            className="brand-tip-card"
+            onClick={() => {
+              navigate('/blogs/news');
+            }}
+          >
             <img src={NewsIcon} alt="新闻中心" className="brand-tip-card-image" />
           </div>
 
@@ -59,7 +72,12 @@ export default function BrandTip() {
           </div>
 
           {/* 关注佩蒂卡片 */}
-          <div className="brand-tip-card">
+          <div
+            className="brand-tip-card"
+            onClick={() => {
+              navigate('/contact-us');
+            }}
+          >
             <img src={AboutIcon} alt="关注佩蒂" className="brand-tip-card-image" />
           </div>
         </div>
