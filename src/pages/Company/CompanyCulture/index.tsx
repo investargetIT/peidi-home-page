@@ -25,48 +25,48 @@ export default function CorporatePhilosopy() {
   const backgroundPosition = `center ${50 + scrollPosition * 0.05}%`;
 
   return (
-    <div className="philosophy-page">
+    <div className="company-culture-page">
       <BannerContainer bannerImage={Banner} title="企业文化" />
 
-      <div className="philosophy-content">
-        <div className="philosophy-header">
-          <h2 className="philosophy-title">佩蒂价值观</h2>
-          {/* <p className="philosophy-subtitle">
+      <div className="company-culture-content">
+        <div className="company-culture-header">
+          <h2 className="company-culture-title">佩蒂价值观</h2>
+          {/* <p className="company-culture-subtitle">
             30 多年来佩蒂为全球各地的宠物主创造了数千种最畅销的产品。
           </p> */}
-          <p className="philosophy-main-text">
+          <p className="company-culture-main-text">
             阳光：乐观积极，用真诚有爱的态度跟用户和客户做朋友。
           </p>
-          <p className="philosophy-main-text">
+          <p className="company-culture-main-text">
             保鲜：保持好奇探索之心，看齐国际营养理念及技术，坚持用产品创新提升宠物健康标准。
           </p>
-          <p className="philosophy-main-text">
+          <p className="company-culture-main-text">
             担当：践行企业社会责任，坚持做行业健康发展的引领者不动摇，做宠物赋能人类事业的推动者不动摇，做合作伙伴的赋能者不动摇。
           </p>
-          <p className="philosophy-main-text">
+          <p className="company-culture-main-text">
             靠谱：诚实有信，坚守产品品质，以婴儿食用标准为目标不断完善品控体系。
           </p>
-          <div className="philosophy-image">
+          <div className="company-culture-image">
             <img src={Image1} alt="人与宠物的温馨互动" />
           </div>
         </div>
 
-        <div className="philosophy-header">
-          <h2 className="philosophy-title">董事长寄语</h2>
-          <p className="philosophy-subtitle">爱心事业，『信』者无疆</p>
-          <p className="philosophy-main-text">
+        <div className="company-culture-header">
+          <h2 className="company-culture-title">董事长寄语</h2>
+          <p className="company-culture-subtitle">爱心事业，『信』者无疆</p>
+          <p className="company-culture-main-text">
             "做人讲究的是信用，办企业也一样。"
             诚信为本，创新是源，有本有源才能使企业的良性发展成为必然。
             中华堂堂礼仪之邦，向来有"重信用、讲诚信"的优良传统。古人有"重然诺，轻生死"之说，其意就是不轻易对人许诺，但一经许诺，就要坚守信用，甚至于能将生死置之度外。
           </p>
         </div>
 
-        <div className="philosophy-container">
-          <div className="philosophy-image">
+        <div className="company-culture-container">
+          <div className="company-culture-image">
             <img src={Image2} alt="人与宠物的温馨互动" />
           </div>
-          <div className="philosophy-text-content">
-            <div className="philosophy-values">
+          <div className="company-culture-text-content">
+            <div className="company-culture-values">
               <p>
                 正如孔子先圣所言："人而无信，不知其可也。"
                 事业从无坦途，成功须靠拼搏。企业的道德首先是和诚信相连，生产经营与道德的有机结合才能使一个企业真正成为社会所需要的力量。我们相信更多的企业，都会悟到这个发展的真谛，运用自如得法，时时存乎于心。佩蒂企业一路走过的昨天、今天以及明天，正是基于所倡导的"服务社会、实现自我"的企业价值观，坚持"以诚取信，以信立业"，严格履行一个企业对社会、客户和员工应尽的义务，谋求公司与客户、公司与社会、公司与个人的和谐发展。
@@ -75,12 +75,12 @@ export default function CorporatePhilosopy() {
           </div>
         </div>
 
-        <div className="philosophy-values-section">
-          <p className="philosophy-values-text">
+        <div className="company-culture-values-section">
+          <p className="company-culture-values-text">
             作为拥有30年多历史的国内领先宠物食品供应商，佩蒂一直遵循"诚信、创新、发展"的经营理念，坚持以"孜求不断满足并超越客户期望"作为企业质量管理方针，严格按照国际食品法规加工生产高品质的专业宠物零食产品，增进人与宠物的彼此关爱，领跑中国的宠物爱心事业。
           </p>
 
-          <p className="philosophy-slogan">我们相信：心存高远，未来从来不远。</p>
+          <p className="company-culture-slogan">我们相信：心存高远，未来从来不远。</p>
         </div>
 
         {/* <div className="founder-story-section">
@@ -122,7 +122,7 @@ export default function CorporatePhilosopy() {
             </p>
           </div>
         </div> */}
-        <div className="philosophy-image-full">
+        <div className="company-culture-image-full">
           <img src={Image4} alt="人与宠物的温馨互动" />
         </div>
       </div>
