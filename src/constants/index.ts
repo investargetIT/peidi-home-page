@@ -6,7 +6,7 @@ export const menu = [
       { name: '企业理念', link: '/pages/corporate-philosophy', title: 'Corporate Philosophy' },
       { name: '企业文化', link: '/pages/company-culture', title: 'Company Culture' },
       { name: '发展历程', link: '/pages/development-path', title: 'Development Path' },
-      { name: '集团架构', link: '/pages/group-structure', title: 'Group Structure' },
+      // { name: '集团架构', link: '/pages/group-structure', title: 'Group Structure' },
     ],
   },
   {
