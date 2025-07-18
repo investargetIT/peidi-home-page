@@ -29,8 +29,7 @@ export default function BrandTip() {
 
           {/* 品牌详细介绍 */}
           <div className="brand-tip-content">
-            公司自1992年创立之初就以独特的ODM模式和创新的产品来服务全球宠物用户，迄今30余年，深度参与了海外成熟宠物市场健康标准的历次升级。公司于2017年成为中国宠物行业首家上市公司。我们以推动全球宠物健康标准升级为己任，未来不仅将
-            继续为海外市场打造好产品，同时，也会持续将全球好产品带回给中国用户。
+            公司自1992年创立之初就以独特的ODM模式和创新的产品来服务全球宠物用户，迄今30余年，深度参与了海外成熟宠物市场健康标准的历次升级。公司于2017年成为中国宠物行业首家上市公司。我们以推动全球宠物健康标准升级为己任，未来不仅将继续为海外市场打造好产品，同时，也会持续将全球好产品带回给中国用户。
           </div>
           <div className="brand-about-us-btn-container">
             <Button className="brand-about-us-btn" type="primary" onClick={onLearnMoreClick}>
