@@ -16,7 +16,7 @@ export default function GroupStructure() {
   const locations = [
     {
       name: '佩蒂动物营养科技股份有限公司',
-      phone: '0577-58127766',
+      phone: '0577-58189955',
       address: '浙江省温州市平阳县水头镇工业园区宠乐路2号',
     },
     {
@@ -54,7 +54,7 @@ export default function GroupStructure() {
               </div>
             </div>
           ))}
-          <div className="location-card">
+          {/* <div className="location-card">
             <div className="card-header">
               <img src={emailInfo.icon} alt="Email" className="card-icon" />
               <h2 className="location-name">服务电子邮件</h2>
@@ -62,7 +62,7 @@ export default function GroupStructure() {
             <div className="location-details">
               <p>{emailInfo.email}</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <NewFooterNav />

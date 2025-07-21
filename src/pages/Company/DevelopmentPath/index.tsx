@@ -314,7 +314,7 @@ export default function DevelopmentPath() {
 
           <div className="history-milestone">
             <div className="milestone-date">2014.12</div>
-            <div className="milestone-content">温州佩蒂更名为"佩蒂动物营养科技有限公司"。</div>
+            <div className="milestone-content">温州佩蒂更名为“佩蒂动物营养科技股份有限公司”。</div>
           </div>
 
           <div className="history-milestone">
@@ -329,7 +329,7 @@ export default function DevelopmentPath() {
 
           <div className="history-milestone">
             <div className="milestone-date">2017.07</div>
-            <div className="milestone-content">佩蒂股份在深圳创业板上市，股票代码"300673"。</div>
+            <div className="milestone-content">佩蒂股份在深圳证券交易所创业板上市，“股票代码30067“。</div>
           </div>
 
           <div className="history-milestone">
@@ -340,9 +340,7 @@ export default function DevelopmentPath() {
           <div className="history-milestone">
             <div className="milestone-date">2018.05.11</div>
             <div className="milestone-content">
-              佩蒂通过全资子公司新西兰北岛完成对BOP Industries Limited
-              100%股权的收购。据悉，BOP的主要资产为其持有的新西兰宠物食品公司Alpine Export NZ
-              Limited 100%的股权，该公司在新西兰主要从事宠物食品业务。
+              佩蒂通过全资子公司Petpal Pet Nutrition NZ Limited完成对新西兰BOP Industries Limited 100%股权的收购。
             </div>
           </div>
 
@@ -370,7 +368,7 @@ export default function DevelopmentPath() {
           <div className="history-milestone">
             <div className="milestone-date">2021.1</div>
             <div className="milestone-content">
-              佩蒂集团入选浙江省之江跨国公司研究院、浙江省境外投资企业协会联合发布的"2020年浙江本土民营企业跨国经营50强"之一。
+              佩蒂集团入选浙江省之江跨国公司研究院、浙江省境外投资企业协会联合发布的“2020年浙江本土民营企业跨国经营50强”。
             </div>
           </div>
 

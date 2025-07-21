@@ -17,22 +17,22 @@ export default function Investor() {
         <div className="contact-table">
           <div className="contact-row">
             <div className="contact-label">联系地址</div>
-            <div className="contact-value">浙江省平阳县水头镇工业园区宏东路2号</div>
+            <div className="contact-value">浙江省温州市平阳县水头镇工业园区宠乐路2号</div>
           </div>
 
           <div className="contact-row">
             <div className="contact-label">电话</div>
-            <div className="contact-value">0577-5818 9955</div>
+            <div className="contact-value">0577-58189955</div>
           </div>
 
           <div className="contact-row">
             <div className="contact-label">传真</div>
-            <div className="contact-value">0577-5818 9966</div>
+            <div className="contact-value">0577-63830321</div>
           </div>
 
           <div className="contact-row">
             <div className="contact-label">电子邮箱</div>
-            <div className="contact-value">cpet@peidibrand.com</div>
+            <div className="contact-value">ir@peidibrand.com</div>
           </div>
         </div>
       </div>

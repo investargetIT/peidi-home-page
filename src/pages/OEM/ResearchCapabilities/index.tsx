@@ -62,7 +62,7 @@ export default function ProductionCapacity() {
         <div className="container">
           <h2 className="productionbase-nz-title">佩蒂营养研究院</h2>
           <p className="productionbase-nz-desc">
-            研究院拥有40多位核心专职研究人员，与中国农业大学、华中农业大学、浙江大学、华南农业大学、浙江农林科技大学、浙江农科院、宁夏大学、美国加州大学、新西兰梅西大学等大学和科研机构，以及ACVIM美国兽医内科学会认证宠物营养专家、加州大学戴维斯分校认证临床营养专家Dr.Sarah
+            研究院与中国农业大学、华中农业大学、浙江大学、华南农业大学、浙江农林科技大学、浙江农科院、宁夏大学、美国加州大学、新西兰梅西大学等大学和科研机构，以及ACVIM美国兽医内科学会认证宠物营养专家、加州大学戴维斯分校认证临床营养专家Dr.Sarah
             Wilson建立了良好的合作关系。
           </p>
           <div className="productionbase-nz-image-container">
@@ -160,8 +160,7 @@ export default function ProductionCapacity() {
           <div className="philosophy-text-content">
             <div className="philosophy-values">
               <p>
-                研发团队作为主要参与者，参与起草了国家标准《宠物食品
-                狗咬胶》（GBT23185-2008），为宠物咬胶制定高标准，不仅惠及国内消费者，也在全球范围产生连锁反应。通过率先研发5代宠物咬胶食品，并不断迭代更新，为全球宠物营养和安全树立了新标杆。这种对卓越的追求确保全球宠物都能获得最优质的产品，体现了团队在行业的领先地位和专业性。目前，我们拥有52项国内专利和5项国际专利。
+                研发团队作为主要参与者，参与起草了国家标准《宠物食品狗咬胶》（GBT23185-2008），为宠物咬胶制定高标准，不仅惠及国内消费者，也在全球范围产生连锁反应。通过率先研发5代宠物咬胶食品，并不断迭代更新，为全球宠物营养和安全树立了新标杆。这种对卓越的追求确保全球宠物都能获得最优质的产品，体现了团队在行业的领先地位和专业性。目前，我们拥有52项国内专利和5项国际专利。
               </p>
             </div>
           </div>
@@ -169,8 +168,7 @@ export default function ProductionCapacity() {
         <div className="container">
           <h2 className="productionbase-nz-title">重视研发投入</h2>
           <p className="productionbase-nz-desc">
-            国内外研发团队超百人，每年超过3%的营业收入用于创新研发，近五年研发投入持续增长，2024
-            年投入近3000万元，位居行业前列。
+            国内外研发团队超百人，近五年研发投入持续增长，2024年投入近3000万元，位居行业前列。
           </p>
         </div>
         {/* 重视研发投入图片轮播，每行一张，5秒切换，支持圆点切换 */}

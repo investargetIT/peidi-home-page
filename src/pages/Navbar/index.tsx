@@ -145,7 +145,7 @@ export default function Navbar() {
           <div className="navbar-actions">
             {/* 联系我们按钮 */}
             <Link to="/investor-relations" className="contact-btn">
-              投资关系
+              投资者关系
             </Link>
             <a
               href="https://peidigroup.com/"
@@ -237,13 +237,13 @@ export default function Navbar() {
                 </Link>
               )
             )}
-            {/* Replace 联系我们 button with 投资关系 and 全球行业业务 buttons */}
+            {/* Replace 联系我们 button with 投资者关系 and 全球行业业务 buttons */}
             <Link
               to="/investor-relations"
               className="mobile-contact-btn"
               onClick={() => setMobileOpen(false)}
             >
-              投资关系
+              投资者关系
             </Link>
             <a
               href="https://peidigroup.com/"
