@@ -4,8 +4,37 @@ import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
 import Image from './images/1.jpg';
+import Bg1 from './images/1-bg.jpg';
+import { useState, useRef } from 'react';
 
 export default function CorporatePhilosopy() {
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  const videoList = [
+    {
+      src: '//media.cdn.ishopastro.com/764222003171040/media/video/88497bf71018772300497649.mp4?width=1280&height=720',
+      title: '佩蒂成立30周年',
+      // The poster URL should be a real image URL in your project
+      poster: Bg1,
+    },
+
+  ];
+
+  const handlePlayVideo = (src: string) => {
+    setPlayingVideo(src);
+
+    if (videoRefs.current[src]) {
+      videoRefs.current[src]?.play().catch(error => {
+        console.error('Error playing video:', error);
+      });
+    }
+  };
+
+  const setVideoRef = (el: HTMLVideoElement | null, src: string) => {
+    videoRefs.current[src] = el;
+  };
+
   return (
     <div className="corporate-philosophy-page">
       <BannerContainer bannerImage={Banner} title="企业理念" />
@@ -17,6 +46,35 @@ export default function CorporatePhilosopy() {
           <p className="corporate-philosophy-main-text">
             公司自1992年创立之初就以独特的ODM模式和创新的产品来服务全球宠物用户，迄今30余年，深度参与了海外成熟宠物市场健康标准的历次升级。公司于2017年成为中国宠物行业首家上市公司。
           </p>
+        </div>
+
+        <div className="video-content">
+          {videoList.map(item => (
+            <div className="video-item" key={item.src}>
+              <div className="video-container">
+                <video
+                  ref={el => setVideoRef(el, item.src)}
+                  src={item.src}
+                  poster={item.poster}
+                  controls={playingVideo === item.src}
+                  controlsList="nodownload"
+                  preload="none"
+                />
+
+                {playingVideo !== item.src && (
+                  <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
+                    <div className="play-button">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="rgba(0, 0, 0, 0.5)" />
+                        <path d="M16 12L10 16V8L16 12Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="video-title">{item.title}</div>
+            </div>
+          ))}
         </div>
 
         <div className="corporate-philosophy-container">
