@@ -48,7 +48,7 @@ export default function CorporatePhilosopy() {
           </p>
         </div>
 
-        <div className="video-content">
+        <div className="video-content" style={{ display: 'block' }} >
           {videoList.map(item => (
             <div className="video-item" key={item.src}>
               <div className="video-container">

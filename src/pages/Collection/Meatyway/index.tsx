@@ -16,14 +16,48 @@ import Footer2 from './images/footer2.png';
 import BannerImage from './images/banner-image.jpg';
 import Bg3 from './images/3-bg.jpg';
 import Bg4 from './images/4-bg.jpg';
+import { useState, useRef } from 'react';
 
 export default function Meatyway() {
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
   const bannerData = {
     title: '天然成就美味',
     subTitle: '天然膳食标准引领者',
     image: MeatyBanner,
     logo: LogoMeaty,
     btnText: '立即查看',
+  };
+
+
+
+  const videoList1 = [
+    {
+      src: '//media.cdn.ishopastro.com/764222003171040/media/video/44a1ad471008597875286746.mp4?width=1920&height=1080',
+      title: '爵宴原生风干犬粮',
+      poster: Bg3,
+    },
+  ];
+
+  const videoList2 = [
+    {
+      src: '//media.cdn.ishopastro.com/764222003171040/media/video/2f9ceb4a1013546935906276.mp4?width=1920&height=1080',
+      title: '爵宴美食家系列罐头',
+      poster: Bg4,
+    },
+  ];
+  const handlePlayVideo = (src: string) => {
+    setPlayingVideo(src);
+
+    if (videoRefs.current[src]) {
+      videoRefs.current[src]?.play().catch(error => {
+        console.error('Error playing video:', error);
+      });
+    }
+  };
+
+  const setVideoRef = (el: HTMLVideoElement | null, src: string) => {
+    videoRefs.current[src] = el;
   };
 
   return (
@@ -72,6 +106,35 @@ export default function Meatyway() {
               <img src={Dry} alt="Meatyway 鸭肉干零食" className="meatyway-product-image" />
             </div>
           </div>
+        </div>
+
+        <div className="video-content" style={{ display: 'block' }} >
+          {videoList1.map(item => (
+            <div className="video-item" key={item.src}>
+              <div className="video-container">
+                <video
+                  ref={el => setVideoRef(el, item.src)}
+                  src={item.src}
+                  poster={item.poster}
+                  controls={playingVideo === item.src}
+                  controlsList="nodownload"
+                  preload="none"
+                />
+
+                {playingVideo !== item.src && (
+                  <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
+                    <div className="play-button">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="rgba(0, 0, 0, 0.5)" />
+                        <path d="M16 12L10 16V8L16 12Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="video-title">{item.title}</div>
+            </div>
+          ))}
         </div>
 
         <div className="container">
@@ -155,6 +218,36 @@ export default function Meatyway() {
             </div>
           </div>
         </div>
+
+        <div className="video-content" style={{ display: 'block' }} >
+          {videoList2.map(item => (
+            <div className="video-item" key={item.src}>
+              <div className="video-container">
+                <video
+                  ref={el => setVideoRef(el, item.src)}
+                  src={item.src}
+                  poster={item.poster}
+                  controls={playingVideo === item.src}
+                  controlsList="nodownload"
+                  preload="none"
+                />
+
+                {playingVideo !== item.src && (
+                  <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
+                    <div className="play-button">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="rgba(0, 0, 0, 0.5)" />
+                        <path d="M16 12L10 16V8L16 12Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="video-title">{item.title}</div>
+            </div>
+          ))}
+        </div>
+
         <div className="container">
           <h2 className="meatyway-title">冻干系列</h2>
 
