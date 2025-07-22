@@ -7,6 +7,8 @@ import './index.less';
 import TopIcon from './images/top_icon.png';
 import WeixinIcon from './images/weixin-icon.png';
 import WeiboIcon from './images/weibo-icon.png';
+import QrCodeWeixin from './images/wechat-qr.jpg';
+import QrCodeWeibo from './images/weibo-qr.jpg';
 
 export default function FloatingButtons() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -125,7 +127,7 @@ export default function FloatingButtons() {
           }}
         >
           <img
-            src="/wechat-qr.jpg"
+            src={QrCodeWeixin}
             alt="微信二维码"
             style={{
               width: '120px',
@@ -160,7 +162,7 @@ export default function FloatingButtons() {
           }}
         >
           <img
-            src="/weibo-qr.jpg"
+            src={QrCodeWeibo}
             alt="微博二维码"
             style={{
               width: '120px',
