@@ -19,7 +19,7 @@ import Bg4 from './images/4-bg.jpg';
 import { useState, useRef } from 'react';
 
 export default function Meatyway() {
-  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const [playingVideo, setPlayingVideo] = useState<string[]>([]);
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
   const bannerData = {
     title: '天然成就美味',
@@ -28,8 +28,6 @@ export default function Meatyway() {
     logo: LogoMeaty,
     btnText: '立即查看',
   };
-
-
 
   const videoList1 = [
     {
@@ -47,7 +45,7 @@ export default function Meatyway() {
     },
   ];
   const handlePlayVideo = (src: string) => {
-    setPlayingVideo(src);
+    setPlayingVideo(prev => prev.includes(src) ? prev : [...prev, src]);
 
     if (videoRefs.current[src]) {
       videoRefs.current[src]?.play().catch(error => {
@@ -116,12 +114,12 @@ export default function Meatyway() {
                   ref={el => setVideoRef(el, item.src)}
                   src={item.src}
                   poster={item.poster}
-                  controls={playingVideo === item.src}
+                  controls={playingVideo.includes(item.src)}
                   controlsList="nodownload"
                   preload="none"
                 />
 
-                {playingVideo !== item.src && (
+                {!playingVideo.includes(item.src) && (
                   <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
                     <div className="play-button">
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -227,12 +225,12 @@ export default function Meatyway() {
                   ref={el => setVideoRef(el, item.src)}
                   src={item.src}
                   poster={item.poster}
-                  controls={playingVideo === item.src}
+                  controls={playingVideo.includes(item.src)}
                   controlsList="nodownload"
                   preload="none"
                 />
 
-                {playingVideo !== item.src && (
+                {!playingVideo.includes(item.src) && (
                   <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
                     <div className="play-button">
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
