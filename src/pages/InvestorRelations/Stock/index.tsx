@@ -18,7 +18,7 @@ export default function Market() {
       <div className="market-content">
         {/* Market content will go here */}
         <iframe
-          src="https://q.stock.sohu.com/cn/300673/index.shtml"
+          src="https://www.szse.cn/certificate/individual/index.html?code=300673"
           width="100%"
           height="1000px"
         ></iframe>

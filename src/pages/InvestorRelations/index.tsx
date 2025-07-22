@@ -8,7 +8,8 @@ import Market from './Market';
 import Finance from './Finance';
 import Report from './Report';
 import Investor from './Investor';
-import SolutionBanner from './images/solution-banner.jpg';
+// import SolutionBanner from './images/solution-banner.jpg';
+import SolutionBanner from './images/invest.jpg';
 import './index.less';
 
 export default function InvestorRelations() {
