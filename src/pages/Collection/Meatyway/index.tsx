@@ -14,6 +14,8 @@ import Cold from './images/cold.jpg';
 import Footer1 from './images/footer1.png';
 import Footer2 from './images/footer2.png';
 import BannerImage from './images/banner-image.jpg';
+import Bg3 from './images/3-bg.jpg';
+import Bg4 from './images/4-bg.jpg';
 
 export default function Meatyway() {
   const bannerData = {
