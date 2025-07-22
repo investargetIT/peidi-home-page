@@ -329,7 +329,7 @@ export default function DevelopmentPath() {
 
           <div className="history-milestone">
             <div className="milestone-date">2017.07</div>
-            <div className="milestone-content">佩蒂股份在深圳证券交易所创业板上市，“股票代码30067“。</div>
+            <div className="milestone-content">佩蒂股份在深圳证券交易所创业板上市，“股票代码300673“。</div>
           </div>
 
           <div className="history-milestone">
