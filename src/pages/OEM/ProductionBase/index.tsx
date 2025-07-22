@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Banner from './images/banner.jpg';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
@@ -13,7 +13,33 @@ import Image6 from './images/6.jpg';
 import Image7 from './images/7.jpg';
 import Image8 from './images/8.jpg';
 import playIcon from './images/play-icon.svg';
+import Bg2 from './images/2-bg.jpg';
 export default function ProductionBase() {
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  const videoList = [
+    {
+      src: '//media.cdn.ishopastro.com/764222003171040/media/video/a0b11b721008597875286728.mp4?width=1280&height=720',
+      title: '新西兰KCPF品牌',
+      poster: Bg2,
+    },
+  ];
+
+  const handlePlayVideo = (src: string) => {
+    setPlayingVideo(src);
+
+    if (videoRefs.current[src]) {
+      videoRefs.current[src]?.play().catch(error => {
+        console.error('Error playing video:', error);
+      });
+    }
+  };
+
+  const setVideoRef = (el: HTMLVideoElement | null, src: string) => {
+    videoRefs.current[src] = el;
+  };
+
   return (
     <div className="philosophy-page">
       <BannerContainer bannerImage={Banner} title="生产基地" />
@@ -28,20 +54,35 @@ export default function ProductionBase() {
           <div className="productionbase-nz-image">
             <img src={Image1} alt="新西兰KCPF工厂全景" />
           </div>
-          <div className="productionbase-nz-video" style={{ backgroundImage: `url(${Image2})` }}>
-            <div className="video-overlay">
-              <div className="video-play-btn">
-                <img src={playIcon} alt="播放按钮" />
+        </div>
+
+        <div className="video-content" style={{ display: 'block' }} >
+          {videoList.map(item => (
+            <div className="video-item" key={item.src}>
+              <div className="video-container">
+                <video
+                  ref={el => setVideoRef(el, item.src)}
+                  src={item.src}
+                  poster={item.poster}
+                  controls={playingVideo === item.src}
+                  controlsList="nodownload"
+                  preload="none"
+                />
+
+                {playingVideo !== item.src && (
+                  <div className="video-overlay" onClick={() => handlePlayVideo(item.src)}>
+                    <div className="play-button">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="rgba(0, 0, 0, 0.5)" />
+                        <path d="M16 12L10 16V8L16 12Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
               </div>
+              <div className="video-title">{item.title}</div>
             </div>
-            <video
-              src="//media.cdn.ishopastro.com/764222003171040/media/video/a2ee094e1043131291425520.mp4?width=1280&amp;height=720"
-              controls
-              controlsList="nodownload"
-              className="productionbase-nz-video-content"
-              style={{ display: 'none' }}
-            ></video>
-          </div>
+          ))}
         </div>
         <div className="container">
           <h2 className="productionbase-nz-title">新西兰Alphine</h2>
