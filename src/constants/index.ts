@@ -35,7 +35,7 @@ export const menu = [
     name: '新闻中心',
     children: [
       { name: '企业新闻', link: '/blogs/news', title: 'News' },
-      { name: '视频', link: '/blogs/video', title: 'Videos' },
+      // { name: '视频', link: '/blogs/video', title: 'Videos' },
     ],
   },
   { name: '联系我们', link: '/contact-us', title: 'Contact Us ' },
