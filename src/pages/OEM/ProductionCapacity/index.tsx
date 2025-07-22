@@ -1,10 +1,10 @@
-import Banner from './images/banner.webp';
+import Banner from './images/banner.jpg';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
-import Image1 from './images/1.webp';
-import Image2 from './images/2.webp';
+import Image1 from './images/1.jpg';
+import Image2 from './images/2.jpg';
 
 export default function ProductionCapacity() {
   return (

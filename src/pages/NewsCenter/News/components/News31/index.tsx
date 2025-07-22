@@ -1,17 +1,17 @@
 import './index.less';
-import Image1 from './images/image1.webp';
-import Image2 from './images/image2.webp';
-import Image3 from './images/image3.webp';
-import Image4 from './images/image4.webp';
-import Image5 from './images/image5.webp';
-import Image6 from './images/image6.webp';
-import Image7 from './images/image7.webp';
-import Image8 from './images/image8.webp';
-import Image9 from './images/image9.webp';
-import Image10 from './images/image10.webp';
-import Image11 from './images/image11.webp';
-import Image12 from './images/image12.webp';
-import Image13 from './images/image13.webp';
+import Image1 from './images/image1.jpg';
+import Image2 from './images/image2.jpg';
+import Image3 from './images/image3.jpg';
+import Image4 from './images/image4.jpg';
+import Image5 from './images/image5.jpg';
+import Image6 from './images/image6.jpg';
+import Image7 from './images/image7.jpg';
+import Image8 from './images/image8.jpg';
+import Image9 from './images/image9.jpg';
+import Image10 from './images/image10.jpg';
+import Image11 from './images/image11.jpg';
+import Image12 from './images/image12.jpg';
+import Image13 from './images/image13.jpg';
 
 export default function News29() {
   return (

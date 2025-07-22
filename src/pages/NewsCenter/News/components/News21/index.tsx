@@ -1,5 +1,5 @@
 import './index.less';
-import Image1 from './images/image1.webp';
+import Image1 from './images/image1.jpg';
 
 export default function News21() {
   return (

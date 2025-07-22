@@ -1,7 +1,7 @@
-import ConceptIcon from './images/concept.webp';
-import CoreIcon from './images/core.webp';
-import MissionIcon from './images/mission.webp';
-import VisionIcon from './images/vision.webp';
+import ConceptIcon from './images/concept.jpg';
+import CoreIcon from './images/core.jpg;
+import MissionIcon from './images/mission.jpg;
+import VisionIcon from './images/vision.jpg;
 import './index.less';
 
 export default function CultureIcons() {

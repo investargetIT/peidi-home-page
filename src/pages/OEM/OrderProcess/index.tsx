@@ -1,17 +1,17 @@
-import Banner from './images/banner.webp';
+import Banner from './images/banner.jpg';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
-import Image1 from './images/1.webp';
-import Image2 from './images/2.webp';
-import Image3 from './images/3.webp';
-import Image4 from './images/4.webp';
-import Image5 from './images/5.webp';
-import Image6 from './images/6.webp';
-import Image7 from './images/7.webp';
-import Image8 from './images/8.webp';
-import Image9 from './images/9.webp';
+import Image1 from './images/1.jpg';
+import Image2 from './images/2.jpg';
+import Image3 from './images/3.jpg';
+import Image4 from './images/4.jpg';
+import Image5 from './images/5.jpg';
+import Image6 from './images/6.jpg';
+import Image7 from './images/7.jpg';
+import Image8 from './images/8.jpg';
+import Image9 from './images/9.jpg';
 export default function OrderProcess() {
   return (
     <div className="philosophy-page">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.less';
-import Image1 from './images/image1.webp';
-import Image2 from './images/image2.webp';
+import Image1 from './images/image1.jpg';
+import Image2 from './images/image2.jpg';
 export default function News1() {
   return (
     <div className="news-container">

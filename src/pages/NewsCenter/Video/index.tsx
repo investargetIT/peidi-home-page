@@ -1,11 +1,11 @@
 import './index.less';
 import BannerContainer from '@/components/BannerContainer';
-import Banner from './images/banner.webp';
+import Banner from './images/banner.jpg';
 import { useState, useRef } from 'react';
-import Bg1 from './images/1-bg.webp';
-import Bg2 from './images/2-bg.webp';
-import Bg3 from './images/3-bg.webp';
-import Bg4 from './images/4-bg.webp';
+import Bg1 from './images/1-bg.jpg';
+import Bg2 from './images/2-bg.jpg';
+import Bg3 from './images/3-bg.jpg';
+import Bg4 from './images/4-bg.jpg';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 

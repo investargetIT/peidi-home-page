@@ -1,9 +1,9 @@
-import Banner from './images/banner.webp';
+import Banner from './images/banner.jpg';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
 import BannerContainer from '@/components/BannerContainer';
-import Image from './images/1.webp';
+import Image from './images/1.jpg';
 
 export default function CorporatePhilosopy() {
   return (

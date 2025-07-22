@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Banner from './images/banner.webp';
+import Banner from './images/banner.jpg';
 import './index.less';
 import NewFooterNav from '@/components/NewFooterNav';
 import CopyrightFooter from '@/components/CopyrightFooter';
