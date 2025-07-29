@@ -6,7 +6,7 @@ import { Button } from 'antd';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MeatyBanner from './images/meatyway.jpg';
-import HealthyBanner from './images/health.png';
+import HealthyBanner from './images/health.jpg';
 import ChewableBanner from './images/chewnergy.png';
 import LogoMeaty from './images/meaty-logo.png';
 import LogoHealthy from './images/health-logo.png';

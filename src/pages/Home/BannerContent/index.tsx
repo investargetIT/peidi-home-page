@@ -1,7 +1,7 @@
 import './index.less';
 import { useState, useEffect, useRef } from 'react';
 import Banner1 from './images/banner1.jpg';
-import Banner2 from './images/banner2.png';
+import Banner2 from './images/banner2.jpg';
 import Banner3 from './images/banner3.png';
 
 export default function BannerContent() {
