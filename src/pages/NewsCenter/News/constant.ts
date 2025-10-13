@@ -29,9 +29,20 @@ import Cover28 from './images/cover28.png';
 import Cover29 from './images/cover29.jpg';
 import Cover30 from './images/cover30.png';
 import Cover31 from './images/cover31.jpg';
-
+import Cover32 from './images/cover32.jpg';
+import Cover33 from './images/cover33.png';
 
 export const coverList = [
+    {
+    cover: Cover33,
+    time: '2025-09-10',
+    title: '载佩蒂股份：与生命同行，做人宠和谐健康生态的卓越建设者'
+  },
+  {
+    cover: Cover32,
+    time: '2025-08-24',
+    title: '载誉而归！爵宴豪取亚宠展“年度实力宠物食品品牌”三连冠'
+  },
   {
     cover: Cover31,
     time: '2025-06-27',
