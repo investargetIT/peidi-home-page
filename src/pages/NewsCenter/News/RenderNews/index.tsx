@@ -8,42 +8,66 @@ import CopyrightFooter from '@/components/CopyrightFooter';
 
 // Dynamically import news components
 const NewsComponents = {
-  1: lazy(() => import('../components/News33')),
-  2: lazy(() => import('../components/News32')),
-  3: lazy(() => import('../components/News31')),
-  4: lazy(() => import('../components/News30')),
-  5: lazy(() => import('../components/News29')),
-  6: lazy(() => import('../components/News28')),
-  7: lazy(() => import('../components/News27')),
-  8: lazy(() => import('../components/News26')),
-  9: lazy(() => import('../components/News25')),
-  10: lazy(() => import('../components/News24')),
-  11: lazy(() => import('../components/News23')),
-  12: lazy(() => import('../components/News22')),
-  13: lazy(() => import('../components/News21')),
-  14: lazy(() => import('../components/News20')),
-  15: lazy(() => import('../components/News19')),
-  16: lazy(() => import('../components/News18')),
-  17: lazy(() => import('../components/News17')),
-  18: lazy(() => import('../components/News16')),
-  19: lazy(() => import('../components/News15')),
-  20: lazy(() => import('../components/News14')),
-  21: lazy(() => import('../components/News13')),
-  22: lazy(() => import('../components/News12')),
-  23: lazy(() => import('../components/News11')),
-  24: lazy(() => import('../components/News10')),
-  25: lazy(() => import('../components/News9')),
-  26: lazy(() => import('../components/News8')),
-  27: lazy(() => import('../components/News7')),
-  28: lazy(() => import('../components/News6')),
-  29: lazy(() => import('../components/News5')),
-  30: lazy(() => import('../components/News4')),
-  31: lazy(() => import('../components/News3')),
-  32: lazy(() => import('../components/News2')),
-  33: lazy(() => import('../components/News1')),
+  1: lazy(() => import('../components/News37')),
+  2: lazy(() => import('../components/News36')),
+  3: lazy(() => import('../components/News35')),
+  4: lazy(() => import('../components/News34')),
+  5: lazy(() => import('../components/News33')),
+  6: lazy(() => import('../components/News32')),
+  7: lazy(() => import('../components/News31')),
+  8: lazy(() => import('../components/News30')),
+  9: lazy(() => import('../components/News29')),
+  10: lazy(() => import('../components/News28')),
+  11: lazy(() => import('../components/News27')),
+  12: lazy(() => import('../components/News26')),
+  13: lazy(() => import('../components/News25')),
+  14: lazy(() => import('../components/News24')),
+  15: lazy(() => import('../components/News23')),
+  16: lazy(() => import('../components/News22')),
+  17: lazy(() => import('../components/News21')),
+  18: lazy(() => import('../components/News20')),
+  19: lazy(() => import('../components/News19')),
+  20: lazy(() => import('../components/News18')),
+  21: lazy(() => import('../components/News17')),
+  22: lazy(() => import('../components/News16')),
+  23: lazy(() => import('../components/News15')),
+  24: lazy(() => import('../components/News14')),
+  25: lazy(() => import('../components/News13')),
+  26: lazy(() => import('../components/News12')),
+  27: lazy(() => import('../components/News11')),
+  28: lazy(() => import('../components/News10')),
+  29: lazy(() => import('../components/News9')),
+  30: lazy(() => import('../components/News8')),
+  31: lazy(() => import('../components/News7')),
+  32: lazy(() => import('../components/News6')),
+  33: lazy(() => import('../components/News5')),
+  34: lazy(() => import('../components/News4')),
+  35: lazy(() => import('../components/News3')),
+  36: lazy(() => import('../components/News2')),
+  37: lazy(() => import('../components/News1')),
 };
 
 export default function RenderNews() {
+  // FIXME: 发布后报错，后续再处理
+  // // 自动生成新闻组件映射
+  // const MAX_NEWS_COMPONENTS = 37; // 根据实际存在的组件数量调整
+
+  // // useMemo 缓存组件映射，避免重复生成
+  // const NewsComponents = useMemo(() => {
+  //   const components: Record<number, React.LazyExoticComponent<React.ComponentType<any>>> = {};
+
+  //   for (let i = 1; i <= MAX_NEWS_COMPONENTS; i++) {
+  //     // 注意：这里需要根据你的实际编号对应关系调整
+  //     // 如果News1对应新闻1，News2对应新闻2，则直接使用i
+  //     // 如果News1对应新闻33，News2对应新闻32，则使用 MAX_NEWS_COMPONENTS - i + 1
+  //     const componentNumber = MAX_NEWS_COMPONENTS - i + 1; // 保持你原有的反向对应关系
+
+  //     components[i] = lazy(() => import(`../components/News${componentNumber}/index.tsx`));
+  //   }
+
+  //   return components;
+  // }, []);
+
   // Get the id parameter from the URL
   const { id } = useParams<{ id: string }>();
   console.log('id', id);
