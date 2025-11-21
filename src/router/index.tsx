@@ -19,6 +19,8 @@ import Meatyway from '../pages/Collection/Meatyway';
 import Health from '../pages/Collection/Health';
 import Chewnergy from '../pages/Collection/Chewnergy';
 import SmartBones from '../pages/Collection/SmartBones';
+// 可持续发展
+import SustainableDevelopment from '../pages/SustainableDevelopment';
 // 联系我们
 import Contact from '../pages/Contact';
 // 新闻中心
@@ -54,6 +56,8 @@ export default function AppRouter() {
       <Route path="/collection/health" element={<Health />} />
       <Route path="/collection/chewnergy" element={<Chewnergy />} />
       <Route path="/collection/smartbones" element={<SmartBones />} />
+      {/* 可持续发展 */}
+      <Route path="/sustainable-development" element={<SustainableDevelopment />} />
       {/* 新闻中心 */}
       <Route path="/blogs/news" element={<News />} />
       <Route path="/blogs/video" element={<Video />} />
