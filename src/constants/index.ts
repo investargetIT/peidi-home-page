@@ -25,12 +25,25 @@ export const menu = [
     // link: '/products',
     title: 'All Products丨Peidi',
     children: [
-      { name: '爵宴', link: '/collection/meatyway', title: 'MeatyWay, Leading Pet Food Producers | Peidi' },
-      { name: '好适嘉', link: 'collection/health', title: 'Healthy Snacks for Dogs & Nutritious Cat Food | Peidi' },
-      { name: '齿能', link: '/collection/chewnergy', title: 'Healthy Dog Dental Chews, Dog Chews Safe for Teeth | Peidi' },
+      {
+        name: '爵宴',
+        link: '/collection/meatyway',
+        title: 'MeatyWay, Leading Pet Food Producers | Peidi',
+      },
+      {
+        name: '好适嘉',
+        link: 'collection/health',
+        title: 'Healthy Snacks for Dogs & Nutritious Cat Food | Peidi',
+      },
+      {
+        name: '齿能',
+        link: '/collection/chewnergy',
+        title: 'Healthy Dog Dental Chews, Dog Chews Safe for Teeth | Peidi',
+      },
       // { name: 'SmartBones', link: '/collection/smartbones', title: 'SmartBones for Dogs | Healthy & Safe | Peidi' },
     ],
   },
+  { name: '可持续发展', link: '/sustainable-development', title: 'Sustainable Development' },
   {
     name: '新闻中心',
     link: '/blogs/news',
