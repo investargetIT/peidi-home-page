@@ -6,6 +6,7 @@ import MeatyBanner from './images/banner-meaty.jpg';
 import LogoMeaty from '@/pages/Home/HomeBanner/images/meaty-logo.png';
 
 import Dry from './images/dry.png';
+import SourceBowl from './images/sourceBowl.jpg';
 import TrueMeat from './images/trueMeat.png';
 import NZFood from './images/nz-food.png';
 import Fruit from './images/fruit.png';
@@ -45,7 +46,7 @@ export default function Meatyway() {
     },
   ];
   const handlePlayVideo = (src: string) => {
-    setPlayingVideo(prev => prev.includes(src) ? prev : [...prev, src]);
+    setPlayingVideo(prev => (prev.includes(src) ? prev : [...prev, src]));
 
     if (videoRefs.current[src]) {
       videoRefs.current[src]?.play().catch(error => {
@@ -106,7 +107,7 @@ export default function Meatyway() {
           </div>
         </div>
 
-        <div className="video-content" style={{ display: 'block' }} >
+        <div className="video-content" style={{ display: 'block' }}>
           {videoList1.map(item => (
             <div className="video-item" key={item.src}>
               <div className="video-container">
@@ -133,6 +134,24 @@ export default function Meatyway() {
               <div className="video-title">{item.title}</div>
             </div>
           ))}
+        </div>
+
+        <div className="container">
+          <h2 className="meatyway-title">源力碗</h2>
+
+          <div className="meatyway-product-container">
+            <div
+              className="meatyway-product-item active"
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                window.open(
+                  'https://detail.tmall.com/item.htm?abbucket=20&id=966426176771&pisk=gNCmorbBRtJfqlhjnPAbnxcg8HxgMIO65Gh9XCKaU3-WXtBYf5xG8Zx9QhQvsPjW2sKAkI-MswshDnptH_Ay8eYZbjJZ4L862GhOk1XSsw_1MrOTlI_X1CrLvWCGlZO1LJ7rZsDyzeQy7qk4eQJXNn74vWFdr-8X6ardHZlRTUYK_CJ2QQoyVF32uGJqaU-W5Fo2_nzlz3ty7jlq_L7y5E-ZQGkqUY8BWA8qgFor4FKybCRNbazkW3-w_CSNzfeb0n5NM_rs_FzYoUoRtEvDYZ-VkZCPjDKCuUhisnxynZQ2qflNNO8FStK4d4K6Mn_eoGNIGIJGQsdPguPwT9slspR3Br9VSTj6M_zZ3HWADdCvEWokPT7AQssmSf8fM6pMAL4Z1ddP9pWFmVaCzI8Nfp1TAjtV7w1CpBVmAEXP-QjymYkFmql6BkWxCA92PUxLhLsxnkzMP-Uurvx63UT2vz4oC692PUA8rzD3OK8Wo4C..&rn=8412784c32ba69631a70d920b4d282a3&spm=a1z10.3-b-s.w4011-23129053535.54.26c4627cjJbhED&sku_properties=122216494%3A108973639'
+                );
+              }}
+            >
+              <img src={SourceBowl} alt="Meatyway 源力碗" className="meatyway-product-image" />
+            </div>
+          </div>
         </div>
 
         <div className="container">
@@ -217,7 +236,7 @@ export default function Meatyway() {
           </div>
         </div>
 
-        <div className="video-content" style={{ display: 'block' }} >
+        <div className="video-content" style={{ display: 'block' }}>
           {videoList2.map(item => (
             <div className="video-item" key={item.src}>
               <div className="video-container">
