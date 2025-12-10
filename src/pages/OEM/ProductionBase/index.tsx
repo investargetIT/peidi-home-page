@@ -14,6 +14,7 @@ import Image7 from './images/7.jpg';
 import Image8 from './images/8.jpg';
 import playIcon from './images/play-icon.svg';
 import Bg2 from './images/2-bg.jpg';
+import Image360VR from './images/360VR.png';
 export default function ProductionBase() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
@@ -56,7 +57,7 @@ export default function ProductionBase() {
           </div>
         </div>
 
-        <div className="video-content" style={{ display: 'block' }} >
+        <div className="video-content" style={{ display: 'block' }}>
           {videoList.map(item => (
             <div className="video-item" key={item.src}>
               <div className="video-container">
@@ -98,8 +99,17 @@ export default function ProductionBase() {
           <p className="productionbase-nz-desc">
             好嚼、德信生产基地2015年投入使用，总投资1400万美元，占地面积约4万平方米，工厂配备了行业领先的污水生物处理系统和辐照灭菌生产线。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image4} alt="新西兰KCPF工厂全景" />
+          <div
+            className="productionbase-nz-image"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://momento360.com/e/uc/79c6de4a1dc546cb859913abf0d5ba75?utm_campaign=embed&utm_source=other&size=medium&display-plan=true'
+              );
+            }}
+          >
+            <img className="productionbase-nz-360vr-bg" src={Image4} alt="新西兰KCPF工厂全景" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
           </div>
         </div>
         <div className="container">
@@ -107,8 +117,17 @@ export default function ProductionBase() {
           <p className="productionbase-nz-desc">
             巴啦啦生产基地建立于2017年总投资200万美元，占地面积约11000平方米。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image5} alt="新西兰KCPF工厂全景" />
+          <div
+            className="productionbase-nz-image"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open(
+                'https://momento360.com/e/uc/4f2940f59ab948668c334f1178abb7b0?utm_campaign=embed&utm_source=other&size=large&display-plan=true'
+              );
+            }}
+          >
+            <img className="productionbase-nz-360vr-bg" src={Image5} alt="新西兰KCPF工厂全景" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
           </div>
         </div>
         <div className="container">
@@ -125,8 +144,15 @@ export default function ProductionBase() {
           <p className="productionbase-nz-desc">
             温州佩蒂工厂于2002年正式成立，占地面积约33000平方米，主要生产动物皮嚼食、无皮嚼食、营养肉类零食、罐头食品等，拥有完善的生产和检测体系，工厂配有辐照灭菌生产线、污水处理系统、自动包装生产线，并具备微生物、理化指标分析、兽药残留等自检能力。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image7} alt="新西兰KCPF工厂全景" />
+          <div
+            className="productionbase-nz-image"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open('https://www.720yun.com/vr/819jz7wvea0');
+            }}
+          >
+            <img className="productionbase-nz-360vr-bg" src={Image7} alt="新西兰KCPF工厂全景" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
           </div>
         </div>
         <div className="container">
@@ -134,8 +160,15 @@ export default function ProductionBase() {
           <p className="productionbase-nz-desc">
             江苏康贝成立于2010年，总投资7500万人民币，占地约100亩，主要生产风干食品、冻干食品、膨化食品、营养肉类零食、鸟食及可食用小动物玩具，以及各类咀嚼食品。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image8} alt="新西兰KCPF工厂全景" />
+          <div
+            className="productionbase-nz-image"
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              window.open('https://www.720yun.com/vr/5f3jz7wasf3');
+            }}
+          >
+            <img className="productionbase-nz-360vr-bg" src={Image8} alt="新西兰KCPF工厂全景" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
           </div>
         </div>
       </div>

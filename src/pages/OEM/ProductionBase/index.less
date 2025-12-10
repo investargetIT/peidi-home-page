@@ -435,12 +435,47 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
 
   img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
+  }
+
+  .productionbase-nz-360vr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    background: rgba(0, 100, 100, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+
+    &::after {
+      content: '360° VR';
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+    }
+  }
+
+  .productionbase-nz-360vr-bg {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
@@ -458,6 +493,17 @@
   .productionbase-nz-desc {
     font-size: 16px;
     margin-bottom: 30px;
+  }
+
+  .productionbase-nz-image {
+    .productionbase-nz-360vr {
+      width: 15%;
+      padding: 3px;
+
+      &::after {
+        font-size: 10px;
+      }
+    }
   }
 }
 
