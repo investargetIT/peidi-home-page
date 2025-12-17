@@ -21,6 +21,10 @@ import Image13 from './images/13.png';
 import Image14 from './images/14.png';
 import Image15 from './images/15.png';
 import Image16 from './images/16.png';
+import Image17 from './images/17.jpg';
+import Image18 from './images/18.jpg';
+import Image19 from './images/19.jpg';
+import Image20 from './images/20.jpg';
 import Footer1 from './images/footer1.png';
 import Footer2 from './images/footer2.png';
 
@@ -116,9 +120,29 @@ export default function Health() {
       title: '宠物除臭喷雾',
       link: 'https://detail.tmall.com/item.htm?id=844147061503&spm=a21xtw.29178619.0.0&pisk=gxamvGNIOoobB9W-2zgfYWMN5CMMDqgsIRLtBVHN4YkWkR3xW0JrOjJw0jl2auVQIxC1cqEoI8yo3RV1GfkaQRDTDgQLGSgs79eGJwFXO8gLf-cqQ75Z6XJVwmPRQmAS79BdJ3drct3aBx_zJT-rOYlqgflVZQlKTVlZgV5oUfcBbKyaQ_mrsXTwgmkNzUlZUd8ZQmlyUfGKgnuZ3_VrFfGwgRuNZ4kS_XKO3xzakzW8eDkU1RRG0jimLSkk-7ZEgNDcRb8ahzGqmy--CFS8rjmmLSUhPvq-azUov0dOB4PQ2-lo-ZvIiuPnuf41ThDijrgoEJbe5bZ4nzogy1_3NqqurqUVCHN8ZxonyuI5Hc30nkMI0g67I7DYQrmynTHTv7UqqJWJrRigbr3zuT7h4B-yY-A25cBUDhts0bGopii7HnmWyaFdZ_xnCmlSgvClZhaI0bGoy_fkxwiqNjAR',
     },
+    {
+      src: Image17,
+      title: '脆脆薯片',
+      link: 'https://detail.tmall.com/item.htm?id=996453592059&mi_id=0000_mJVWyNq8ZBKY29xq1oOpCBnbmDRFQR4EmWztD10uZo&spm=a21xtw.29178619.0.0&sku_properties=147956252%3A7923519',
+    },
+    {
+      src: Image18,
+      title: '全价猫主食补水餐包',
+      link: 'https://detail.tmall.com/item.htm?id=991176515809&mi_id=0000rxTZHFrECJPjQGgEau9nW5NFYx4gnsHx6UsyLZHSg90&spm=a21xtw.29178619.0.0',
+    },
+    {
+      src: Image19,
+      title: '羊奶肉丝餐包',
+      link: 'https://detail.tmall.com/item.htm?id=990281197916&mi_id=0000sV6bfMyxAGu-Xcgxob8DeN0HEYuRwDrAW-YWABE2qXU&spm=a21xtw.29178619.0.0&sku_properties=147956252%3A75366085',
+    },
+    {
+      src: Image20,
+      title: '98K全价烘焙成猫粮',
+      link: 'https://detail.tmall.com/item.htm?id=986083916809&mi_id=0000qBWsROaRzbs4x4T7mQP0jDQjihRcxYw2trIZxvjAqSM&spm=a21xtw.29178619.0.0&sku_properties=122216494%3A132179',
+    }
   ];
 
-  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐'];
+  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐', '全价猫主食补水餐包', '羊奶肉丝餐包'];
   const mainFoodCans = imageList.filter(item => mainFoodCanTitles.includes(item.title));
 
   const dryFoodTitles = [
@@ -126,11 +150,12 @@ export default function Health() {
     '冰宴冻干双拼犬粮',
     '全价主食冻干生骨肉猫粮',
     '全价主食冻干生骨肉犬粮',
+    '98K全价烘焙成猫粮',
   ];
 
   const dryFoods = imageList.filter(item => dryFoodTitles.includes(item.title));
 
-  const snackTitles = ['冻干零食系列', '烘干牛肉粒', '牛皮卷棒', '果蔬清口棒', '猫条'];
+  const snackTitles = ['冻干零食系列', '烘干牛肉粒', '牛皮卷棒', '果蔬清口棒', '猫条', '脆脆薯片'];
   const snacks = imageList.filter(item => snackTitles.includes(item.title));
 
   const petSuppliesTitles = ['猫砂', '宠物除臭喷雾'];
