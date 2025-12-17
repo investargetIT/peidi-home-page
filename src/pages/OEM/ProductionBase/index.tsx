@@ -109,7 +109,7 @@ export default function ProductionBase() {
             }}
           >
             <img className="productionbase-nz-360vr-bg" src={Image4} alt="新西兰KCPF工厂全景" />
-            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="点击查看 360° 全景" />
           </div>
         </div>
         <div className="container">
@@ -127,7 +127,7 @@ export default function ProductionBase() {
             }}
           >
             <img className="productionbase-nz-360vr-bg" src={Image5} alt="新西兰KCPF工厂全景" />
-            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="点击查看 360° 全景" />
           </div>
         </div>
         <div className="container">
@@ -152,7 +152,7 @@ export default function ProductionBase() {
             }}
           >
             <img className="productionbase-nz-360vr-bg" src={Image7} alt="新西兰KCPF工厂全景" />
-            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="点击查看 360° 全景" />
           </div>
         </div>
         <div className="container">
@@ -168,7 +168,7 @@ export default function ProductionBase() {
             }}
           >
             <img className="productionbase-nz-360vr-bg" src={Image8} alt="新西兰KCPF工厂全景" />
-            <img className="productionbase-nz-360vr" src={Image360VR} alt="360VR" />
+            <img className="productionbase-nz-360vr" src={Image360VR} alt="点击查看 360° 全景" />
           </div>
         </div>
       </div>
