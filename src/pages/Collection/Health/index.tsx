@@ -25,6 +25,9 @@ import Image17 from './images/17.jpg';
 import Image18 from './images/18.jpg';
 import Image19 from './images/19.jpg';
 import Image20 from './images/20.jpg';
+import Image21 from './images/21.jpg';
+import Image22 from './images/22.jpg';
+import Image23 from './images/23.jpg';
 import Footer1 from './images/footer1.png';
 import Footer2 from './images/footer2.png';
 
@@ -139,10 +142,31 @@ export default function Health() {
       src: Image20,
       title: '98K全价烘焙成猫粮',
       link: 'https://detail.tmall.com/item.htm?id=986083916809&mi_id=0000qBWsROaRzbs4x4T7mQP0jDQjihRcxYw2trIZxvjAqSM&spm=a21xtw.29178619.0.0&sku_properties=122216494%3A132179',
-    }
+    },
+    {
+      src: Image21,
+      title: '冻干原切牛肝粒',
+      link: 'https://detail.tmall.com/item.htm?id=872874499999&mi_id=0000pMWVZB47pyvUwC7xckSQ65oMQ6iCUaM6c1Z_mBzzlaQ&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=122216494%3A42524918827',
+    },
+    {
+      src: Image22,
+      title: '冻干原切蛋黄粒',
+      link: 'https://detail.tmall.com/item.htm?id=872874499999&mi_id=0000pMWVZB47pyvUwC7xckSQ65oMQ6iCUaM6c1Z_mBzzlaQ&sku_properties=122216494%3A42524918828&spm=a21xtw.29178619.0.0&xxc=shop',
+    },
+    {
+      src: Image23,
+      title: '冻干原切鸡肝粒',
+      link: 'https://detail.tmall.com/item.htm?id=872874499999&mi_id=0000pMWVZB47pyvUwC7xckSQ65oMQ6iCUaM6c1Z_mBzzlaQ&sku_properties=122216494%3A42524918826&spm=a21xtw.29178619.0.0&xxc=shop',
+    },
   ];
 
-  const mainFoodCanTitles = ['98K猫主食罐', '黄金罐', '全价犬用主食罐', '全价猫主食补水餐包', '羊奶肉丝餐包'];
+  const mainFoodCanTitles = [
+    '98K猫主食罐',
+    '黄金罐',
+    '全价犬用主食罐',
+    '全价猫主食补水餐包',
+    '羊奶肉丝餐包',
+  ];
   const mainFoodCans = imageList.filter(item => mainFoodCanTitles.includes(item.title));
 
   const dryFoodTitles = [
@@ -155,7 +179,17 @@ export default function Health() {
 
   const dryFoods = imageList.filter(item => dryFoodTitles.includes(item.title));
 
-  const snackTitles = ['冻干零食系列', '烘干牛肉粒', '牛皮卷棒', '果蔬清口棒', '猫条', '脆脆薯片'];
+  const snackTitles = [
+    '冻干零食系列',
+    '烘干牛肉粒',
+    '牛皮卷棒',
+    '果蔬清口棒',
+    '猫条',
+    '脆脆薯片',
+    '冻干原切牛肝粒',
+    '冻干原切蛋黄粒',
+    '冻干原切鸡肝粒',
+  ];
   const snacks = imageList.filter(item => snackTitles.includes(item.title));
 
   const petSuppliesTitles = ['猫砂', '宠物除臭喷雾'];

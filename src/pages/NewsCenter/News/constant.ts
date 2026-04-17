@@ -35,8 +35,20 @@ import Cover34 from './images/cover34.png';
 import Cover35 from './images/cover35.png';
 import Cover36 from './images/cover36.jpg';
 import Cover37 from './images/cover37.jpg';
+import Cover38 from './images/cover38.png';
+import Cover39 from './images/cover39.png';
 
 export const coverList = [
+  {
+    cover: Cover39,
+    time: '2026-03-23',
+    title: '包揽双奖！爵宴、好适嘉亮相京宠展，荣膺主粮先锋奖、零食口碑奖',
+  },
+  {
+    cover: Cover38,
+    time: '2026-03-13',
+    title: '清朗金融网络，守护安心投资 | 佩蒂股份：2026年“3・15”投资者保护教育宣传专项行动启动',
+  },
   {
     cover: Cover37,
     time: '2025-11-15',
