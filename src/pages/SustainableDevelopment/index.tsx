@@ -23,13 +23,20 @@ export default function SustainableDevelopment() {
 
         <div className="container">
           <h2 className="sustainable-development-title">成果与报告</h2>
-          <p className="sustainable-development-desc">
+          <p className="sustainable-development-desc flex flex-col">
             <a
               href="https://www.peidibrand.com/assets/media/%E4%BD%A9%E8%92%82%E8%82%A1%E4%BB%BD2024%E5%B9%B4%E5%BA%A6%E7%8E%AF%E5%A2%83%E3%80%81%E7%A4%BE%E4%BC%9A%E5%92%8C%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86%EF%BC%88ESG%EF%BC%89%E6%8A%A5%E5%91%8A20250424V5.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               佩蒂股份2024年度环境、社会和公司治理（ESG）报告
+            </a>
+            <a
+              href="https://www.peidibrand.com/assets/media/%E4%BD%A9%E8%92%82%E8%82%A1%E4%BB%BD2025%E5%B9%B4%E5%BA%A6%E7%8E%AF%E5%A2%83%E3%80%81%E7%A4%BE%E4%BC%9A%E5%92%8C%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86(ESG)%E6%8A%A5%E5%91%8A.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              佩蒂股份2025年度环境、社会和公司治理（ESG）报告
             </a>
           </p>
         </div>
