@@ -85,7 +85,11 @@ export default function HomeBanner() {
           <div
             key={index}
             className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${banner.image})`, cursor: 'pointer' }}
+            style={{
+              backgroundImage: `url(${banner.image})`,
+              cursor: 'pointer',
+              backgroundPosition: 'top right'
+            }}
             onClick={() => {
               navigate(banner.link);
             }}
