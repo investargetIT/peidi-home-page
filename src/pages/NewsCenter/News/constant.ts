@@ -37,8 +37,14 @@ import Cover36 from './images/cover36.jpg';
 import Cover37 from './images/cover37.jpg';
 import Cover38 from './images/cover38.png';
 import Cover39 from './images/cover39.png';
+import Cover40 from './images/cover40.png';
 
 export const coverList = [
+  {
+    cover: Cover40,
+    time: '2026-05-11',
+    title: '它博会发布！爵宴品牌全新升级，全价风干幼犬粮等众多新品上线',
+  },
   {
     cover: Cover39,
     time: '2026-03-23',

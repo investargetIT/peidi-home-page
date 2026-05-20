@@ -289,19 +289,21 @@ export default function Meatyway() {
         <div className="container">
           <h2 className="meatyway-title">爵宴——敬你的最佳拍档</h2>
           <p className="meatyway-desc">
-            爵宴认为宠物不仅是被呵护的家人，更是非凡的同行者，你们将一同解锁新体验甚至新成就，而TA将在这段旅程中成为与你相配的最佳拍档。
+            我们坚持“科学的天然膳食”：
+            全球严选优质的天然食材，以确保原料的纯粹与高品质；坚持轻度加工，以更少的加工、更低的温度还原食材的营养与本味；并通过持续的科学验证，确保每一口食物：真天然、真还原、真有效。
           </p>
           <div className="meatyway-image">
-            <img src={Footer1} alt="爵宴品牌形象" />
+            <img src={Footer2} alt="爵宴品牌形象" />
           </div>
         </div>
         <div className="container">
           <h2 className="meatyway-title">天然有爱，天然宠爱。</h2>
           <p className="meatyway-desc">
-            宠物赋予人更积极、快乐的体验，而自然是给TA最好的款待，在每一个欢乐时刻，愿总有爵宴相伴。
+            我们践行“释放天性的摇尾生活”：
+            通过设计丰容零食体验与倡导人宠互动时刻，支持每一天的天性释放，让高质量的爱与陪伴，充盈宠物的每个瞬间。我们期待，与所有养宠人共同奔赴一场更长久、更健康的欢聚。
           </p>
           <div className="meatyway-image">
-            <img src={Footer2} alt="爵宴品牌理念" />
+            <img src={Footer1} alt="爵宴品牌理念" />
           </div>
         </div>
       </div>
