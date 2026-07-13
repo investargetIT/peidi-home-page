@@ -38,8 +38,14 @@ import Cover37 from './images/cover37.jpg';
 import Cover38 from './images/cover38.png';
 import Cover39 from './images/cover39.png';
 import Cover40 from './images/cover40.png';
+import Cover41 from './images/cover41.png';
 
 export const coverList = [
+  {
+    cover: Cover41,
+    time: '2026-07-13',
+    title: '618收官战报：爵宴全渠道GMV突破5000万元',
+  },
   {
     cover: Cover40,
     time: '2026-05-11',
