@@ -479,6 +479,31 @@
   }
 }
 
+// 双图上下布局（新西兰Alphine），第一张保持原大小比例，第二张撑满宽度
+.productionbase-nz-image-pair {
+  display: block;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // 第一张图保持原始尺寸比例，不被拉伸
+  img:first-child {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: fill;
+  }
+
+  // 第二张图撑满宽度
+  img:last-child {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
 // 响应式设计
 @media (max-width: 768px) {
   .productionbase-nz-section {
@@ -503,6 +528,12 @@
       &::after {
         font-size: 10px;
       }
+    }
+  }
+
+  .productionbase-nz-image-pair {
+    img:last-child {
+      margin-top: 12px;
     }
   }
 }

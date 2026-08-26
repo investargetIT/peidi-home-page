@@ -12,6 +12,8 @@ import Image5 from './images/5.jpg';
 import Image6 from './images/6.jpg';
 import Image7 from './images/7.jpg';
 import Image8 from './images/8.jpg';
+import Image9 from './images/9.png';
+import Image10 from './images/10.jpg';
 import playIcon from './images/play-icon.svg';
 import Bg2 from './images/2-bg.jpg';
 import Image360VR from './images/360VR.png';
@@ -90,8 +92,9 @@ export default function ProductionBase() {
           <p className="productionbase-nz-desc">
             成立于1996年，2018年加入佩蒂集团，占地面积约2400平方米，厂区内装配有先进的风干粮制作产线，以及臭氧气味处理系统。
           </p>
-          <div className="productionbase-nz-image">
-            <img src={Image3} alt="新西兰KCPF工厂全景" />
+          <div className="productionbase-nz-image productionbase-nz-image-pair">
+            <img src={Image9} alt="新西兰Alphine工厂全景" />
+            <img src={Image10} alt="新西兰Alphine工厂全景" />
           </div>
         </div>
         <div className="container">
