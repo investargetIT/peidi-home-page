@@ -39,8 +39,20 @@ import Cover38 from './images/cover38.png';
 import Cover39 from './images/cover39.png';
 import Cover40 from './images/cover40.png';
 import Cover41 from './images/cover41.png';
+import Cover42 from './images/cover42.jpg';
+import Cover43 from './images/cover43.png';
 
 export const coverList = [
+  {
+    cover: Cover43,
+    time: '2026-09-10',
+    title: '全球视野，中国匠心｜佩蒂股份34年的长期主义答卷',
+  },
+  {
+    cover: Cover42,
+    time: '2026-08-24',
+    title: '“爵”对实力！爵宴斩获“年度最受欢迎食品品牌大奖”',
+  },
   {
     cover: Cover41,
     time: '2026-07-13',
