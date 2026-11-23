@@ -41,8 +41,20 @@ import Cover40 from './images/cover40.png';
 import Cover41 from './images/cover41.png';
 import Cover42 from './images/cover42.jpg';
 import Cover43 from './images/cover43.png';
+import Cover44 from './images/cover44.jpg';
+import Cover45 from './images/cover45.jpg';
 
 export const coverList = [
+  {
+    cover: Cover44,
+    time: '2026-11-16',
+    title: '双11荣耀收官：爵宴全渠道GMV破6000万元再创新高',
+  },
+  {
+    cover: Cover45,
+    time: '2026-10-08',
+    title: '从“喂养”到“守护”，佩蒂股份与复星诊断达成宠物健康领域战略合作',
+  },
   {
     cover: Cover43,
     time: '2026-09-10',
